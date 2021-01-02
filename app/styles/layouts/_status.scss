@@ -1,0 +1,40 @@
+@use '../settings/colors';
+
+.status{
+    padding: 4% 0;
+    border-collapse: separate;
+    border-spacing:  0 1px;
+
+    &--key{
+        padding: 4% 0;
+        width: 70%;
+        height: auto;
+        background-color: colors.$background-light;    
+        margin-bottom: auto;
+    }
+}
+.status__img-wrap{
+    padding: 0 5%;
+}
+.status__info-wrap,.status__title{
+    text-align: center;
+    font-size: 12px;
+    box-sizing: content-box;
+    width: 19%;
+}
+.status__title{
+    color: lightslategray;
+    font-weight: bold;
+    &--success{
+        color: colors.$text-dark;
+    }
+    &--first{
+        padding-left: 2%;
+    }
+    &--active{
+        width: 24%;
+    }
+}
+.status__info-wrap{
+    padding: 2% 0 0 0;
+}

@@ -1,0 +1,32 @@
+@use '../settings/colors';
+
+.billing{
+    padding: 0 2%;
+    border-collapse: separate;
+    border-spacing: 10px 0;
+}
+
+.billing__row{
+    background-color: colors.$background-light;
+}
+
+.billing__header{
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 2% 2% 4% 2%;
+    width: 50%;
+}
+
+.billing__data{
+    width: 50%;
+    text-align: left;
+    font-size: 14px;
+    padding: 2%;
+}
+
+.link-button-wrap{
+    padding: 10%;
+    text-align: center;
+    margin: auto;
+}

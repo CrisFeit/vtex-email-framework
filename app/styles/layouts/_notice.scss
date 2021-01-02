@@ -1,0 +1,33 @@
+@use '../settings/colors';
+
+.notice{
+    background-color: colors.$background-light;
+    padding: 2% 0;
+    border-collapse: separate;
+    
+    &--key{
+        background-color: colors.$background-grey;
+        padding: 4%;
+    }
+}
+
+.notice__topic-wrap{
+    margin: auto;
+    text-align: center;
+    padding: 0 10% 5% 10%;
+}
+
+.notice__topic-img{
+    width: 100%;
+    margin: auto;
+}
+
+.notice__client-wrap{
+    text-align: center;
+    padding: 0 2%;
+    margin: auto;
+}
+
+.notice__message-wrap{
+    padding: 0 2%;
+}

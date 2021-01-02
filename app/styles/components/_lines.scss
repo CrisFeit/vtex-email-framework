@@ -1,0 +1,14 @@
+@use '../settings/colors';
+
+%border-line{
+    width: 95%;
+    border-collapse: separate;
+    background-color: colors.$background-light;
+    border-bottom: 1px solid colors.$border-line;
+
+}
+.border-line--center{
+    @extend %border-line;
+    width: 90%;
+    margin: auto;
+}

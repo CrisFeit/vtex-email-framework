@@ -1,0 +1,42 @@
+
+@use '../settings/colors';
+
+%link-button{
+  display: block;
+  width: fit-content;
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+  font-size: 14px;
+  margin: auto;
+  text-align: center;
+  padding: 2% 4%;
+  text-decoration: none;
+  border-radius: 50px;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.link-tag{
+  font-weight: bold;
+  text-decoration: none;
+}
+.link-button--dark{
+  @extend %link-button;
+  color: colors.$text-light;
+  background-color: colors.$background-dark;
+}
+.link-button--light{
+  @extend %link-button;
+  color: colors.$text-dark;
+  background-color: colors.$background-light;
+  border: 1px solid colors.$background-dark;
+}
+
+.link-button--billet{
+  @extend %link-button;
+  font-size: 12px;
+  padding: 5% 2%;
+  width: 100%;
+  color: colors.$text-light;
+  background-color: colors.$background-dark;
+}

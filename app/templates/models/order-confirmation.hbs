@@ -1,0 +1,567 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml" style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important;">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>{{_accountInfo.TradingName}}</title>
+<!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+  </xml>
+  <![endif]-->
+  <style>
+a[x-apple-data-detectors] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+}
+</style>
+  <style>
+@media (max-width: 600px) {
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
+</style>
+  <style>
+@media screen and (min-width: 30em) {
+
+  .w-50-ns {
+    width: 50% !important;
+  }
+
+  .pr4-ns {
+    padding-right: 2rem !important;
+  }
+
+  .ph4-ns {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+
+  .mv1-ns {
+    margin-top: .25rem !important;
+    margin-bottom: .25rem !important;
+  }
+
+  .mv4-ns {
+    margin-top: 2rem !important;
+    margin-bottom: 2rem !important;
+  }
+}
+</style>
+</head>
+    <body style="-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; width: 100%; height: 100%; margin: 0; padding: 0; background: #f1f1f1 !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; margin: 0; padding: 0; background: #f1f1f1; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; width: 100%; height: 100%; line-height: 100% !important;">
+			<tr style="box-sizing: border-box !important;">
+				<td align="left" valign="top" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+					<table class="mv4-ns" width="100%" align="center" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; max-width: 40rem; width: 100%; background-color: #fff; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" bgcolor="#fff">
+
+            <tr style="box-sizing: border-box !important;">
+              <td class="ph4-ns" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; width: 100%; padding-bottom: 2rem; text-align: center !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="center">
+<div style="box-sizing: border-box; width: 8rem; margin-bottom: 1rem; margin-top: 2rem; margin-right: auto; margin-left: auto !important;">
+  <a href="http://{{_accountInfo.HostName}}.com.br" style="box-sizing: border-box !important;">
+    <img alt="" border="0" width="auto" src="http://licensemanager.vtex.com.br/api/site/pub/accounts/{{_accountInfo.Id}}/logos/show" style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100%; border: none; max-height: 80px !important;">
+  </img></a>
+</div>
+                <h1 style="margin: 0; font-size: 50px; line-height: 58px; box-sizing: border-box !important;">Obrigado pelo seu pedido.</h1>
+              </td>
+            </tr>
+
+<tr style="box-sizing: border-box !important;">
+  <td class="ph4-ns" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; width: 100%; padding-bottom: 2rem; padding-top: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+    <p style="box-sizing: border-box; margin-top: 2rem !important;">
+{{#if orders}}
+  {{#if orders.0.clientProfileData.firstName}}
+    {{#compare orders.0.clientProfileData.firstName '!=' 'isAnonymous'}}
+      Olá, {{orders.0.clientProfileData.firstName}}.
+    {{/compare}}
+  {{/if}}
+{{else}}
+  {{#if clientProfileData.firstName}}
+    {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+      Olá, {{clientProfileData.firstName}}.
+    {{/compare}}
+  {{/if}}
+{{/if}}
+      Estamos aguardando a aprovação do pagamento para dar andamento ao seu pedido.
+    </p>
+
+<p style="box-sizing: border-box;">Você pode <a href="{{ordersUrl}}" style="box-sizing: border-box !important;">acompanhar este pedido no nosso site</a>.</p>
+    {{#each orders.0.paymentData.transactions}}
+      {{#each payments}}
+        {{#eq paymentSystemName 'Boleto Bancário'}}
+          <p style="box-sizing: border-box !important;">Não se esqueça de fazer o pagamento do boleto bancário, caso ainda não o tenha feito.</p>
+          <p style="box-sizing: border-box !important;">
+            <a href="{{replace url '{Installment}' installments}}" style="box-sizing: border-box; border-radius: .25rem; display: inline-block; font-weight: 500; color: #fff; background-color: #19a974; padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; text-decoration: none !important;">Abrir boleto bancário</a>
+          </p>
+        {{/eq}}
+      {{/each}}
+    {{/each}}
+  </td>
+</tr>
+            <tr style="box-sizing: border-box !important;">
+              <td class="ph4-ns" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-top-style: solid; border-top-width: 1px; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; border-width: .5rem; width: 100%; padding-top: 2rem; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+                <h3 style="margin: 0; font-size: 20px; line-height: 36px; text-transform: uppercase; letter-spacing: 1.2pt; font-weight: 300; box-sizing: border-box; margin-top: 0 !important;">Resumo de seu(s) pacote(s)</h3>
+                {{#each orders}}
+{{#richShippingData shippingData}}
+  {{#group logisticsInfo by="packageId"}}
+    {{#each items}}
+      {{#compare @index '==' 0}}
+        <div style="box-sizing: border-box; max-width: 24rem; padding-bottom: .5rem; padding-top: 1rem !important;">
+          <div style="box-sizing: border-box; border-style: solid; border-width: 1px; border-color: #aaa; border-radius: .25rem !important;">
+
+            <div style="box-sizing: border-box; padding-top: 1rem; padding-left: 1rem; padding-right: 1rem !important;">
+              {{#eq selectedDeliveryChannel "pickup-in-point"}}
+                <h4 style="margin: 0; font-size: 16px; line-height: 29px; text-transform: uppercase; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">Retirar</h4>
+              {{else}}
+                <h4 style="margin: 0; font-size: 16px; line-height: 29px; text-transform: uppercase; letter-spacing: .9pt; box-sizing: border-box; margin-bottom: .5rem !important;">Receber</h4>
+              {{/eq}}
+
+              {{#eq ../items.length 1}}
+                {{#each ../../../items}}
+                  {{#compare id '==' ../../items.0.itemId}}
+                    <div style="box-sizing: border-box; font-weight: 700; width: 80% !important;">{{name}}</div>
+                  {{/compare}}
+                {{/each}}
+              {{else}}
+                {{../items.length}}
+                itens
+              {{/eq}}
+
+              {{#if deliveryWindow}}
+em
+<div style="box-sizing: border-box; margin-bottom: .25rem; margin-top: .5rem; font-size: 1.5rem !important;">
+  {{formatDate deliveryWindow.startDateUtc}}
+</div>
+<div style="box-sizing: border-box; padding-bottom: 1rem !important;">
+  entre
+  {{formatTime deliveryWindow.startDateUtc}}
+  e
+  {{formatTime deliveryWindow.endDateUtc}}
+</div>
+              {{else}}
+                {{#if shippingEstimateDate}}
+{{#eq deliveryChannel "pickup-in-point"}}
+  a partir de
+{{else}}
+  até
+{{/eq}}
+
+{{formatDate shippingEstimateDate}}
+                {{else}}
+{{#eq shippingEstimateDays "0"}}
+  <div style="box-sizing: border-box; padding-bottom: 1rem; margin-top: .5rem; font-size: 1.5rem !important;">
+    {{#eq selectedDeliveryChannel "pickup-in-point"}}
+      a partir de hoje
+    {{else}}
+      hoje
+    {{/eq}}
+  </div>
+
+{{else}}
+  {{#eq selectedDeliveryChannel "pickup-in-point"}}
+    a partir de
+  {{else}}
+    em até
+  {{/eq}}
+
+  <div style="box-sizing: border-box; padding-bottom: 1rem; margin-top: .5rem; font-size: 1.5rem !important;">
+{{#compare shippingEstimateDays ">" "1"}}
+  {{#eq shippingEstimateDaysType "bd"}}
+    {{shippingEstimateDays}} dias úteis
+  {{else}}
+    {{#eq shippingEstimateDaysType "d"}}
+      {{shippingEstimateDays}} dias
+    {{else}}
+      {{#eq shippingEstimateDaysType "h"}}
+        {{shippingEstimateDays}} horas
+      {{else}}
+        {{shippingEstimateDays}} minutos
+      {{/eq}}
+    {{/eq}}
+  {{/eq}}
+{{else}}
+  {{#eq shippingEstimateDaysType "bd"}}
+    {{shippingEstimateDays}} dia útil
+  {{else}}
+    {{#eq shippingEstimateDaysType "d"}}
+      {{shippingEstimateDays}} dia
+    {{else}}
+      {{#eq shippingEstimateDaysType "h"}}
+        {{shippingEstimateDays}} hora
+      {{else}}
+        {{shippingEstimateDays}} minuto
+      {{/eq}}
+    {{/eq}}
+  {{/eq}}
+{{/compare}}
+  </div>
+{{/eq}}
+                {{/if}}
+              {{/if}}
+            </div>
+
+            <div style="box-sizing: border-box; border-top-style: solid; border-top-width: 1px; border-color: #aaa; padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem !important;">
+              {{#eq selectedDeliveryChannel "pickup-in-point"}}
+                {{#each slas}}
+                  {{#compare ../selectedSla '==' id}}
+                    {{pickupStoreInfo.friendlyName}}
+                  {{/compare}}
+                {{/each}}
+              {{else}}
+                {{#if ../../../giftRegistryData}}
+                  {{../../../giftRegistryData.description}}
+                {{else}}
+                  {{#each ../../availableAddresses}}
+                    {{#eq ../addressId addressId}}
+                      {{street}}, {{number}}
+                    {{/eq}}
+                  {{/each}}
+                {{/if}}
+              {{/eq}}
+            </div>
+          </div>
+        </div>
+      {{/compare}}
+    {{/each}}
+  {{/group}}
+{{/richShippingData}}
+                {{/each}}
+              </td>
+            </tr>
+
+            {{#compare split "!=" true}}
+            <tr style="box-sizing: border-box !important;">
+              <td class="ph4-ns" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-top-style: solid; border-top-width: 1px; border-color: #eee; width: 100%; padding-top: 2rem; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+                <h3 style="font-size: 20px; line-height: 36px; text-transform: uppercase; letter-spacing: 1.2pt; font-weight: 300; margin-top: 16px; box-sizing: border-box; margin: 0 !important;">Pagamento</h3>
+                {{#each orders.0.paymentData.transactions}}
+{{#compare payments.length "==" 1}}
+  {{#each payments}}
+  <div style="box-sizing: border-box; line-height: 1.5; font-size: 1.25rem !important;">
+    {{paymentSystemName}}
+    {{#if lastDigits}} final {{lastDigits}} {{/if}}
+    <br/>R$ {{formatCurrency value}}
+    {{#eq installments 1}}
+      à vista
+    {{else}}
+      em {{installments}}x
+    {{/eq}}
+  </div>
+  {{/each}}
+{{/compare}}
+
+{{#compare payments.length "!=" 1}}
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  {{#each payments}}
+  <tr style="box-sizing: border-box !important;">
+    <td style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; padding-top: .25rem; padding-bottom: .25rem; font-size: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+      {{paymentSystemName}}
+      {{#if lastDigits}} final {{lastDigits}} {{/if}}
+      {{#eq installments 1}}
+        à vista
+      {{else}}
+        em {{installments}}x
+      {{/eq}}
+    </td>
+    <td style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; padding-top: .25rem; padding-bottom: .25rem; font-size: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">R$ {{formatCurrency value}}</td>
+  </tr>
+  {{/each}}
+</table>
+{{/compare}}
+                  <div style="box-sizing: border-box; display: inline-block; background-color: #ccc; padding-top: .25rem; padding-bottom: .25rem; padding-left: .5rem; padding-right: .5rem; margin-top: .5rem; font-size: .875rem !important;">Aguardando aprovação</div>
+                {{/each}}
+              </td>
+            </tr>
+            {{/compare}}
+
+            {{#each orders}}
+						<tr style="box-sizing: border-box !important;">
+							<td class="ph4-ns" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-top-style: solid; border-top-width: 1px; border-color: #eee; width: 100%; padding-top: 2rem; padding-bottom: 2rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+								<h2 style="margin: 0; font-size: 24px; line-height: 24px; font-weight: 300; box-sizing: border-box;">Pedido <span style="font-weight: 500 !important;">#{{orderId}}</span></h2>
+                <p style="box-sizing: border-box; color: #999; margin-bottom: .5rem; margin-top: .25rem !important;">Fornecido e entregue por {{sellers.0.name}}</p>
+
+                {{#compare split "==" true}}
+                  <div class="w-50-ns" style="box-sizing: border-box; float: left; _display: inline; width: 100%; padding-bottom: 1rem; vertical-align: top !important;">
+                    <h3 style="margin: 0; font-size: 20px; line-height: 36px; text-transform: uppercase; letter-spacing: 1.2pt; font-weight: 300; margin-top: 16px; box-sizing: border-box !important;">Pagamento</h3>
+                    {{#each paymentData.transactions}}
+{{#compare payments.length "==" 1}}
+  {{#each payments}}
+  <div style="box-sizing: border-box; line-height: 1.5; font-size: 1.25rem !important;">
+    {{paymentSystemName}}
+    {{#if lastDigits}} final {{lastDigits}} {{/if}}
+    <br/>R$ {{formatCurrency value}}
+    {{#eq installments 1}}
+      à vista
+    {{else}}
+      em {{installments}}x
+    {{/eq}}
+  </div>
+  {{/each}}
+{{/compare}}
+
+{{#compare payments.length "!=" 1}}
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  {{#each payments}}
+  <tr style="box-sizing: border-box !important;">
+    <td style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; padding-top: .25rem; padding-bottom: .25rem; font-size: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+      {{paymentSystemName}}
+      {{#if lastDigits}} final {{lastDigits}} {{/if}}
+      {{#eq installments 1}}
+        à vista
+      {{else}}
+        em {{installments}}x
+      {{/eq}}
+    </td>
+    <td style="line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; padding-top: .25rem; padding-bottom: .25rem; font-size: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">R$ {{formatCurrency value}}</td>
+  </tr>
+  {{/each}}
+</table>
+{{/compare}}
+                    <div style="box-sizing: border-box; display: inline-block; background-color: #ccc; padding-top: .25rem; padding-bottom: .25rem; padding-left: .5rem; padding-right: .5rem; margin-top: .5rem; font-size: .875rem !important;">Aguardando aprovação</div>
+                    {{/each}}
+                  </div>
+                {{/compare}}
+
+<div class="pr4-ns" style="box-sizing: border-box; max-width: 24rem; float: left; _display: inline; width: 100%; padding-bottom: 1rem; vertical-align: top !important;">
+  <h3 style="margin: 0; font-size: 20px; line-height: 36px; text-transform: uppercase; letter-spacing: 1.2pt; font-weight: 300; margin-top: 16px; box-sizing: border-box !important;">Resumo</h3>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+    {{#each totals}}
+      {{#if value}}
+      <tr style="box-sizing: border-box !important;">
+        <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; padding-top: .25rem; padding-bottom: .25rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+          {{#eq id "Items"}}Itens{{/eq}}
+          {{#eq id "Shipping"}}Entrega{{/eq}}
+          {{#eq id "Discounts"}}Descontos{{/eq}}
+          {{#eq id "Tax"}}Taxas{{/eq}}
+        </td>
+        <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; border-bottom-style: solid; border-bottom-width: 1px; border-color: #eee; padding-top: .25rem; padding-bottom: .25rem; text-align: right !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="right">R$ {{formatCurrency value}}</td>
+      </tr>
+      {{/if}}
+    {{/each}}
+    {{#if value}}
+      <tr style="box-sizing: border-box !important;">
+        <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; font-weight: 500; padding-top: .25rem; padding-bottom: .25rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">Total</td>
+        <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; font-weight: 500; padding-top: .25rem; padding-bottom: .25rem; text-align: right !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="right">R$ {{formatCurrency value}}</td>
+      </tr>
+    {{/if}}
+  </table>
+</div>
+                {{#richShippingData shippingData}}
+                  {{#group logisticsInfo by="addessId"}}
+                    <div style="box-sizing: border-box; clear: both; float: none; padding-top: 1rem !important;">
+
+{{#compare items.0.selectedDeliveryChannel '==' null}}
+  <div style="box-sizing: border-box; max-width: 24rem; background-color: #eee; padding: 1rem; margin-bottom: 1rem !important;">
+    <h4 style="margin: 0; font-size: 16px; line-height: 29px; text-transform: uppercase; letter-spacing: .9pt; box-sizing: border-box !important;">Receber</h4>
+
+{{#if orders.0.giftRegistryData}}
+  {{orders.0.giftRegistryData.description}}
+{{else}}
+  {{#each ../../shippingData.availableAddresses}}
+    {{#eq ../addressId AddressId}}
+      <strong>{{receiverName}}</strong>
+      <br/>{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
+      <br/>{{neighborhood}} - {{city}} - {{state}}
+      <br/>CEP {{postalCode}}
+    {{/eq}}
+  {{/each}}
+{{/if}}
+  </div>
+{{/compare}}
+
+{{#eq items.0.selectedDeliveryChannel "delivery"}}
+  <div style="box-sizing: border-box; max-width: 24rem; background-color: #eee; padding: 1rem; margin-bottom: 1rem !important;">
+    <h4 style="margin: 0; font-size: 16px; line-height: 29px; text-transform: uppercase; letter-spacing: .9pt; box-sizing: border-box !important;">Receber</h4>
+
+{{#if orders.0.giftRegistryData}}
+  {{orders.0.giftRegistryData.description}}
+{{else}}
+  {{#each ../../shippingData.availableAddresses}}
+    {{#eq ../addressId AddressId}}
+      <strong>{{receiverName}}</strong>
+      <br/>{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
+      <br/>{{neighborhood}} - {{city}} - {{state}}
+      <br/>CEP {{postalCode}}
+    {{/eq}}
+  {{/each}}
+{{/if}}
+  </div>
+{{/eq}}
+{{#eq items.0.selectedDeliveryChannel "pickup-in-point"}}
+  <div style="box-sizing: border-box; max-width: 24rem; background-color: #eee; padding: 1rem; margin-bottom: 1rem !important;">
+    <h4 style="margin: 0; font-size: 16px; line-height: 29px; text-transform: uppercase; letter-spacing: .9pt; box-sizing: border-box !important;">Retirar</h4>
+{{#each items.0.slas}}
+  {{#compare ../items.0.selectedSla '==' id}}
+    <strong>{{pickupStoreInfo.friendlyName}}</strong>
+    {{#with pickupStoreInfo.address}}
+      <br/>{{street}}, {{number}}{{#if complement}}, {{complement}}{{/if}}
+      <br/>{{neighborhood}}
+    {{/with}}
+  {{/compare}}
+{{/each}}
+  </div>
+{{/eq}}
+                      {{#group items by="packageId"}}
+                        {{#compare item.length '>' 1}}
+                          <h3 style="margin: 0; font-size: 20px; line-height: 36px; text-transform: uppercase; letter-spacing: 1.2pt; font-weight: 300; margin-top: 16px; box-sizing: border-box; margin-bottom: .5rem !important;">Pacote {{#math index '+' 1}}{{/math}}</h3>
+                        {{/compare}}
+
+{{#each items}}
+  {{#compare @index '==' 0}}
+    {{#each ../../../../items}}
+      {{#eq id ../itemId}}
+          <div style="box-sizing: border-box; max-width: 24rem; font-weight: 500; background-color: #eee; padding-top: .5rem; padding-bottom: .5rem; padding-left: 1rem; padding-right: 1rem; margin-top: 1rem; margin-bottom: 1rem !important;">
+            {{#compare ../selectedDeliveryChannel "!=" "pickup-in-point"}}
+              {{#if ../deliveryWindow}}
+                <div style="box-sizing: border-box; color: #777; font-size: .75rem !important;">Agendada para</div>
+              {{else}}
+                <div style="box-sizing: border-box; color: #777; font-size: .75rem !important;">{{../selectedSla}}</div>
+              {{/if}}
+            {{/compare}}
+
+            {{#if ../deliveryWindow}}
+{{formatDate ../deliveryWindow.startDateUtc}}
+entre
+{{formatTime ../deliveryWindow.startDateUtc}}
+e
+{{formatTime ../deliveryWindow.endDateUtc}}
+            {{else}}
+              {{#unless ../shippingEstimateDate}}
+{{#eq ../shippingEstimateDays "0"}}
+  {{#eq ../selectedDeliveryChannel "pickup-in-point"}}
+    A partir de hoje
+  {{else}}
+    Hoje
+  {{/eq}}
+
+{{else}}
+  {{#eq ../selectedDeliveryChannel "pickup-in-point"}}
+    A partir de
+  {{else}}
+    Em até
+  {{/eq}}
+
+{{#compare shippingEstimateDays ">" "1"}}
+  {{#eq shippingEstimateDaysType "bd"}}
+    {{shippingEstimateDays}} dias úteis
+  {{else}}
+    {{#eq shippingEstimateDaysType "d"}}
+      {{shippingEstimateDays}} dias
+    {{else}}
+      {{#eq shippingEstimateDaysType "h"}}
+        {{shippingEstimateDays}} horas
+      {{else}}
+        {{shippingEstimateDays}} minutos
+      {{/eq}}
+    {{/eq}}
+  {{/eq}}
+{{else}}
+  {{#eq shippingEstimateDaysType "bd"}}
+    {{shippingEstimateDays}} dia útil
+  {{else}}
+    {{#eq shippingEstimateDaysType "d"}}
+      {{shippingEstimateDays}} dia
+    {{else}}
+      {{#eq shippingEstimateDaysType "h"}}
+        {{shippingEstimateDays}} hora
+      {{else}}
+        {{shippingEstimateDays}} minuto
+      {{/eq}}
+    {{/eq}}
+  {{/eq}}
+{{/compare}}
+{{/eq}}
+              {{else}}
+{{#eq ../deliveryChannel "pickup-in-point"}}
+  A partir de
+{{else}}
+  Até
+{{/eq}}
+
+{{formatDate ../shippingEstimateDate}}
+              {{/unless}}
+            {{/if}}
+          </div>
+      {{/eq}}
+    {{/each}}
+  {{/compare}}
+{{/each}}
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" style="box-sizing: border-box; border-collapse: collapse; border-spacing: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <thead>
+  </thead>
+  <tbody>
+  {{#each items}}
+    {{#each ../../../../items}}
+      {{#eq @index ../itemIndex}}
+        <tr style="box-sizing: border-box !important;">
+          <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; width: 4rem; padding-right: .5rem; padding-top: .5rem; padding-bottom: .5rem; vertical-align: top; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left" valign="top"><img alt="" src="{{imageUrl}}" style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100% !important;"/></td>
+          <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-top: .5rem; padding-bottom: .5rem; vertical-align: top !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left" valign="top">
+            <div class="mv1-ns" style="box-sizing: border-box; line-height: 1.25; font-size: 1rem !important;">{{name}}</div>
+            <div style="box-sizing: border-box; color: #777 !important;">
+              {{quantity}} un.
+              {{#if sellingPrice}}
+                R$ {{formatCurrency sellingPrice}}
+              {{else}}
+                Grátis
+              {{/if}}
+            </div>
+          </td>
+        </tr>
+        {{#each bundleItems}}
+          {{#if name}}
+            <tr style="box-sizing: border-box !important;">
+              <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; width: 4rem; padding-right: .5rem; padding-top: .5rem; padding-bottom: .5rem; vertical-align: top; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left" valign="top"><img alt="" src="{{imageUrl}}" style="vertical-align: top; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; max-width: 100% !important;"/></td>
+              <td style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; padding-top: .5rem; padding-bottom: .5rem; vertical-align: top !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left" valign="top">
+                <div class="mv1-ns" style="box-sizing: border-box; line-height: 1.25; font-size: 1rem !important;">{{name}}</div>
+                <div style="box-sizing: border-box; color: #777 !important;">
+                  {{quantity}} un.
+                  {{#if price}}
+                    R$ {{formatCurrency price}}
+                  {{else}}
+                    Grátis
+                  {{/if}}
+                </div>
+              </td>
+            </tr>
+          {{/if}}
+        {{/each}}
+      {{/eq}}
+    {{/each}}
+    </tbody>
+  {{/each}}
+</table>
+                      {{/group}}
+                    </div>
+                  {{/group}}
+                {{/richShippingData}}
+							</td>
+						</tr>
+            {{/each}}
+
+            <tr style="box-sizing: border-box !important;">
+              <td class="ph4-ns" style="font-size: 14px; line-height: 20px; box-sizing: border-box; border-collapse: collapse; text-align: left; border-top-style: solid; border-top-width: 1px; border-color: #eee; padding-top: 1rem; padding-bottom: 1rem !important; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;" align="left">
+                <p style="box-sizing: border-box !important;">
+                  O prazo dos pacotes deverá ser considerado somente após a confirmação do pagamento.
+                </p>
+<p style="box-sizing: border-box !important;">
+  Atenciosamente,<br/>Equipe {{_accountInfo.TradingName}}
+</p>
+              </td>
+            </tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
