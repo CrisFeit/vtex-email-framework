@@ -1,0 +1,15 @@
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Node modules
+node_modules/
+node_modules
+
+# App archives
+# .env
+*.map
+*.log
+dist
+dist/
