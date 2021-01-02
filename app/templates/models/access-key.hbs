@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <!-- So that mobile webkit will display zoomed in -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- disable auto telephone linking in iOS -->
+    <title>{{_accountInfo.TradingName}}</title>
+    <style type="text/css">
+        p {
+            font-family: Fabriga, -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body marginwidth="0" marginheight="0" bgcolor="#fff" style="padding:0px 0px;color:#333;" leftmargin="0" topmargin="0">
+    <!-- 100% wrapper (grey background) -->
+    <table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0" align="left" valign="top">
+        <tbody>
+            <tr>
+                <td align="center" valign="top">
+                    <table width="100%" style="max-width: 32rem;" align="center" cellpadding="0" cellspacing="0"
+                        border="0" valign="top">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div
+                                        style="border:1px solid #e3e4e6;border-radius:8px;margin-top:1rem;margin-bottom:1rem;padding-top:3rem;padding-right:3rem;padding-bottom:3rem;padding-left:3rem">
+                                        <img src="https://master--qamarketplace.myvtex.com/_v/public/assets/v1/published/vtex.messages-templates@0.1.12/public/react/cdbfb2a8b730a7ee840752d7af7ddc1c.png"
+                                            width="77px" height="28px"
+                                            style="display:block;outline:none;border:none;text-decoration:none"
+                                            class="CToWUd">
+                                        {{#eq aditionalData.locale "pt-BR"}}
+                                        <p style="font-size:24px;color:#25354d;margin-bottom:0px">
+                                            <strong>Seu código de acesso é:</strong></p>
+                                        <p style="color:#dd1659;font-size:42px;margin-top:0px;margin-bottom:2rem">
+                                            <strong>{{aditionalData.accessKey}}</strong></p>
+                                        <p style="font-size:16px;color:#3f3f40">
+                                            Olá, {{to.0.name}},</p>
+                                        <p style="font-size:16px;color:#3f3f40">
+                                            Por favor, retorne à página de login e insira o código acima para confirmar
+                                            sua identidade.
+                                        </p>
+                                        <p style="margin-bottom:0px;font-size:16px;color:#3f3f40">
+                                            Abraços,</p>
+                                        <p style="margin-top:0px;font-size:16px;color:#3f3f40">
+                                            Equipe VTEX</p><br>
+                                        <div
+                                            style="color:#e3e4e6;border-top:1px solid #e3e4e6;border-bottom:0px solid #e3e4e6;margin-bottom:2rem;margin-top:1rem">
+                                        </div>
+                                        <p style="font-size:12px;color:#727273;margin-top:.25rem;margin-bottom:0px">
+                                            Atualizamos nosso email do código de acesso. <a href="https://help.vtex.com/announcements/novo-layout-no-e-mail-de-codigo-de-acesso--5h0Q4Bwps65m7BI2tPocnO" alt="Leia mais"
+                                                style="font-weight:bold;color:#3F3F40">Leia mais</a>
+                                        </p><br>
+                                        <p style="font-size:12px;color:#727273;margin-bottom:0px">
+                                            Esse email é enviado automaticamente e não recebe respostas
+                                        </p>
+                                        <p style="font-size:12px;color:#727273;margin-top:.25rem;margin-bottom:0px">
+                                            Precisa de ajuda? <a href="https://help.vtex.com/?locale=pt" alt="VTEX Help"
+                                                style="font-weight:bold;color:#3F3F40">Fale Conosco</a>
+                                        </p><br>
+                                        <p style="font-size:12px;color:#727273;margin-bottom:0px">
+                                            © VTEX Praia de Botafogo, 300, 3º Andar, Botafogo, Rio de Janeiro, RJ,
+                                            22250-040
+                                        </p>
+                                        {{else eq aditionalData.locale "es-AR"}}
+                                        <p style="font-size:24px;color:#25354d;margin-bottom:0px">
+                                            <strong>Su clave de acceso es:</strong></p>
+                                        <p style="color:#dd1659;font-size:42px;margin-top:0px;margin-bottom:2rem">
+                                            <strong>{{aditionalData.accessKey}}</strong></p>
+                                        <p style="font-size:16px;color:#3f3f40">
+                                            Hola, {{to.0.name}},</p>
+                                        <p style="font-size:16px;color:#3f3f40">
+                                            Regrese a la página de login e ingrese el código de arriba para confirmar su
+                                            identidad.
+                                        </p>
+                                        <p style="margin-bottom:0px;font-size:16px;color:#3f3f40">
+                                            Atentamente,</p>
+                                        <p style="margin-top:0px;font-size:16px;color:#3f3f40">
+                                            Equipo VTEX</p><br>
+                                        <div
+                                            style="color:#e3e4e6;border-top:1px solid #e3e4e6;border-bottom:0px solid #e3e4e6;margin-bottom:2rem;margin-top:1rem">
+                                        </div>
+                                        <p style="font-size:12px;color:#727273;margin-top:.25rem;margin-bottom:0px">
+                                            Hemos actualizado nuestro correo de envío de clave de acesso. <a href="https://help.vtex.com/announcements/nuevo-layout-en-el-e-mail-de-codigo-de-acesso--5h0Q4Bwps65m7BI2tPocnO" alt="Lea más"
+                                                style="font-weight:bold;color:#3F3F40">Lea más</a>
+                                        </p><br>
+                                        <p style="font-size:12px;color:#727273;margin-bottom:0px">
+                                            Este correo electrónico se envía automáticamente y no recibe respuestas.
+                                        </p>
+                                        <p style="font-size:12px;color:#727273;margin-top:.25rem;margin-bottom:0px">
+                                            ¿Necesitas ayuda? <a href="https://help.vtex.com/?locale=es" alt="VTEX Help"
+                                                style="font-weight:bold;color:#3F3F40">Contáctanos</a>
+                                        </p><br>
+                                        <p style="font-size:12px;color:#727273;margin-bottom:0px">
+                                            © VTEX Praia de Botafogo, 300, 3º Andar, Botafogo, Rio de Janeiro, RJ,
+                                            22250-040
+                                        </p>
+                                        {{else}}
+                                        <p style="font-size:24px;color:#25354d;margin-bottom:0px">
+                                            <strong>Your access code is:</strong></p>
+                                        <p style="color:#dd1659;font-size:42px;margin-top:0px;margin-bottom:2rem">
+                                            <strong>{{aditionalData.accessKey}}</strong></p>
+                                        <p style="font-size:16px;color:#3f3f40">
+                                            Hello, {{to.0.name}},</p>
+                                        <p style="font-size:16px;color:#3f3f40">
+                                            Please, return to the login page and insert the code above to verify your
+                                            identity.
+                                        </p>
+                                        <p style="margin-bottom:0px;font-size:16px;color:#3f3f40">
+                                            Best regards,</p>
+                                        <p style="margin-top:0px;font-size:16px;color:#3f3f40">
+                                            VTEX Team</p><br>
+                                        <div
+                                            style="color:#e3e4e6;border-top:1px solid #e3e4e6;border-bottom:0px solid #e3e4e6;margin-bottom:2rem;margin-top:1rem">
+                                        </div>
+                                        <p style="font-size:12px;color:#727273;margin-top:.25rem;margin-bottom:0px">
+                                            We've updated our access code email. <a href="https://help.vtex.com/announcements/new-access-code-email-template--5h0Q4Bwps65m7BI2tPocnO" alt="Read more"
+                                                style="font-weight:bold;color:#3F3F40">Read more</a>
+                                        </p><br>
+                                        <p style="font-size:12px;color:#727273;margin-bottom:0px">
+                                            This email is automatically sent and doesn't receive responses.
+                                        </p>
+                                        <p style="font-size:12px;color:#727273;margin-top:.25rem;margin-bottom:0px">
+                                            Need help? <a href="https://help.vtex.com/?locale=en" alt="VTEX Help"
+                                                style="font-weight:bold;color:#3F3F40">Contact us</a>
+                                        </p><br>
+                                        <p style="font-size:12px;color:#727273;margin-bottom:0px">
+                                            © VTEX Praia de Botafogo, 300, 3º Andar, Botafogo, Rio de Janeiro, RJ,
+                                            22250-040
+                                        </p>
+                                        {{/eq}}
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!--/600px container -->
+    <!--/100% wrapper-->
+</body>
+
+</html>

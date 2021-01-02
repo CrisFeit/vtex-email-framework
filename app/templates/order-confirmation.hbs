@@ -1,0 +1,495 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
+  xmlns:v="urn:schemas-microsoft-com:vml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{_accountInfo.AccountName}}</title>
+</head>
+
+<body>
+  <table class="header">
+    <tr class="header__row">
+      <td class="header__wrap">
+        <a href="http://{{_accountInfo.AccountName}}.com.br" target="_blank" rel="noopener noreferrer">
+          <img class="header__logo" src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/logo.png"
+            alt="Logo {{_accountInfo.AccountName}}">
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <table class="notice" role="main">
+    <tr class="notice__topic">
+      <td class="notice__topic-wrap">
+        <a href="http://{{_accountInfo.AccountName}}.com.br">
+          <img class="notice__topic-img"
+            src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/emails-order-confirmation.png"
+            alt="Pedido Confirmado">
+        </a>
+      </td>
+    </tr>
+    <tr class="notice__client">
+      <td class="notice__client-wrap">
+        <h1 class="heading">
+          {{#if orders}}
+          {{#if orders.0.clientProfileData.firstName}}
+          {{#compare orders.0.clientProfileData.firstName '!=' 'isAnonymous'}}
+          Olá, {{orders.0.clientProfileData.firstName}}.
+          {{/compare}}
+          {{/if}}
+          {{else}}
+          {{#if clientProfileData.firstName}}
+          {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+          Olá, {{clientProfileData.firstName}}.
+          {{/compare}}
+          {{/if}}
+          {{/if}}
+        </h1>
+        <p class="acknowledgment">obrigada por comprar com a {{_accountInfo.AccountName}}</p>
+      </td>
+    </tr>
+    <tr class="notice__message">
+      <td class="notice__message-wrap">
+        <p class="paragraph">
+          Acabamos de receber o seu pedido.
+          <br />
+          Estamos aguardando a confirmação do seu pagamento para iniciar o envio.
+        </p>
+        <p class="paragraph">
+          Qualquer dúvida, nossa equipe de atendimento poderá entrar em contato
+          <br />
+          para verificar as suas informações, combinado?
+        </p>
+        <p class="paragraph">
+          <a class="link-button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
+            Ver detalhes do pedido
+          </a>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+
+  <h3 class="subheading">
+    Acompanhe seu pedido
+  </h3>
+  <table class="billing">
+    <tr class="billing__row">
+      <th class="billing__header" cellspacing="10px">Endereço</th>
+      <th class="billing__header" cellspacing="10px">Pagamento</th>
+    </tr>
+    {{!-- Shipping --}}
+    <tr class="billing__row">
+      <td class="billing__data" width="50%" cellspacing="10px">
+        {{#each orders}}
+        {{#richShippingData shippingData}}
+        {{#group logisticsInfo by="addessId"}}
+        <div>
+          {{#compare items.0.selectedDeliveryChannel '==' null}}
+          <div>
+            <h4>
+              Receber</h4>
+
+            {{#if orders.0.giftRegistryData}}
+            {{orders.0.giftRegistryData.description}}
+            {{else}}
+            {{#each ../../shippingData.availableAddresses}}
+            {{#eq ../addressId AddressId}}
+            <strong>{{receiverName}}</strong>
+            <br />{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
+            <br />{{neighborhood}} - {{city}} - {{state}}
+            <br />CEP {{postalCode}}
+            {{/eq}}
+            {{/each}}
+            {{/if}}
+          </div>
+          {{/compare}}
+
+          {{#eq items.0.selectedDeliveryChannel "delivery"}}
+          <div>
+            <h4>
+              Receber</h4>
+
+            {{#if orders.0.giftRegistryData}}
+            {{orders.0.giftRegistryData.description}}
+            {{else}}
+            {{#each ../../shippingData.availableAddresses}}
+            {{#eq ../addressId AddressId}}
+            <strong>{{receiverName}}</strong>
+            <br />{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
+            <br />{{neighborhood}} - {{city}} - {{state}}
+            <br />CEP {{postalCode}}
+            {{/eq}}
+            {{/each}}
+            {{/if}}
+          </div>
+          {{/eq}}
+          {{#eq items.0.selectedDeliveryChannel "pickup-in-point"}}
+          <div>
+            <h4>
+              Retirar</h4>
+            {{#each items.0.slas}}
+            {{#compare ../items.0.selectedSla '==' id}}
+            <strong>{{pickupStoreInfo.friendlyName}}</strong>
+            {{#with pickupStoreInfo.address}}
+            <br />{{street}}, {{number}}{{#if complement}}, {{complement}}{{/if}}
+            <br />{{neighborhood}}
+            {{/with}}
+            {{/compare}}
+            {{/each}}
+          </div>
+          {{/eq}}
+        </div>
+        {{/group}}
+        {{/richShippingData}}
+        {{/each}}
+      </td>
+      {{!-- Shipping --}}
+
+      {{!-- Payment --}}
+      <td class="billing__data" width="50%" cellspacing="10px">
+
+        {{#compare split "!=" true}}
+        {{#each orders.0.paymentData.transactions}}
+        {{#compare payments.length "==" 1}}
+        {{#each payments}}
+        <div>
+          {{paymentSystemName}}
+          {{#if lastDigits}} final {{lastDigits}} {{/if}}
+          <br />R$ {{formatCurrency value}}
+          {{#eq installments 1}}
+          à vista
+          {{else}}
+          em {{installments}}x
+          {{/eq}}
+        </div>
+
+        {{/each}}
+        {{/compare}}
+
+        {{#compare payments.length "!=" 1}}
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          {{#each payments}}
+          <tr>
+            <td align="left">
+              {{paymentSystemName}}
+              {{#if lastDigits}} final {{lastDigits}} {{/if}}
+              {{#eq installments 1}}
+              à vista
+              {{else}}
+              em {{installments}}x
+              {{/eq}}
+            </td>
+            <td align="left">R$ {{formatCurrency value}}</td>
+          </tr>
+          {{/each}}
+        </table>
+        {{/compare}}
+
+        <div>Aguardando aprovação</div>
+        {{#each payments}}
+        {{#eq paymentSystemName 'Boleto Bancário'}}
+        <div class="link-button-wrap">
+          <a class="link-button--billet" href="{{replace url '{Installment}' installments}}">Boleto Bancário</a>
+        </div>
+        {{/eq}}
+        {{/each}}
+        {{/each}}
+        {{/compare}}
+
+
+        {{#each orders}}
+        {{#compare split "==" true}}
+        <div>
+          <h3>
+            Pagamento</h3>
+          {{#each paymentData.transactions}}
+          {{#compare payments.length "==" 1}}
+          {{#each payments}}
+          <div>
+            {{paymentSystemName}}
+            {{#if lastDigits}} final {{lastDigits}} {{/if}}
+            <br />R$ {{formatCurrency value}}
+            {{#eq installments 1}}
+            à vista
+            {{else}}
+            em {{installments}}x
+            {{/eq}}
+          </div>
+          {{/each}}
+          {{/compare}}
+
+          {{#compare payments.length "!=" 1}}
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            {{#each payments}}
+            <tr>
+              <td align="left">
+                {{paymentSystemName}}
+                {{#if lastDigits}} final {{lastDigits}} {{/if}}
+                {{#eq installments 1}}
+                à vista
+                {{else}}
+                em {{installments}}x
+                {{/eq}}
+              </td>
+              <td align="left">R$ {{formatCurrency value}}</td>
+            </tr>
+            {{/each}}
+          </table>
+          {{/compare}}
+          <div>Aguardando aprovação</div>
+
+          {{/each}}
+        </div>
+
+        {{/compare}}
+        {{/each}}
+      </td>
+      {{!-- Payment --}}
+    </tr>
+  </table>
+  {{!-- Status --}}
+
+  <table class="status" cellspacing="2px">
+    <tr class="status__row">
+      <td class="status__img-wrap" colspan="5">
+        <img class="status__img"
+          src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/status-order-confirmation.png" />
+      </td>
+    </tr>
+    <tr class="status__row">
+      <td class="status__title status__title--first status__title--active status__title--success" width="24%">
+        Pedido Realizado
+      </td>
+      <td class="status__title " width="19%">
+        Pagamento Confirmado
+      </td>
+      <td class="status__title" width="19%">
+        Pedido Faturado
+      </td>
+      <td class="status__title" width="19%">
+        Em Transporte
+      </td>
+      <td class="status__title" width="19%">
+        Pedido Entregue
+      </td>
+    </tr>
+    <tr class="status__row">
+      <td class="status__info-wrap">
+
+        {{#each orders}}
+        {{#if creationDate}}
+        {{formatDateTime creationDate}}
+        {{/if}}
+        {{/each}}
+      </td>
+      <td class="status__info-wrap">
+
+      </td>
+      <td class="status__info-wrap">
+
+      </td>
+      <td class="status__info-wrap">
+
+      </td>
+      <td class="status__info-wrap">
+
+      </td>
+    </tr>
+  </table>
+  {{!-- Status --}}
+
+
+  <h3 class="subheading">
+    {{#each orders}}
+    Pedido #{{orderId}}
+    {{/each}}
+  </h3>
+
+  {{!-- Products --}}
+  <table class="products">
+
+    {{#each orders}}
+    {{#richShippingData shippingData}}
+    {{#group logisticsInfo by="addessId"}}
+
+    {{#group items by="packageId"}}
+
+    {{#each items}}
+    {{#each ../../../../items}}
+    {{#eq @index ../itemIndex}}
+    <tr class="products__row">
+      <td class="products__quantity">{{quantity}}</td>
+      <td class="products__img">
+        {{#if detailUrl}}
+        <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
+          <img alt="produto" src="{{imageUrl}}">
+        </a>
+        {{else}}
+        <img alt="produto" src="{{imageUrl}}">
+        {{/if}}
+      </td>
+
+      <td class="products__name">{{name}}
+      <td>
+
+      <td class="products__price products__price--listprice" width="15%">
+        {{#compare listPrice '>' sellingPrice}}
+        <del>R$ {{formatCurrency listPrice}}</del>
+        {{/compare}}
+      </td>
+      <td class="products__price">
+        <strong class="products__price--selling">
+          {{#if sellingPrice}}
+          R$ {{formatCurrency sellingPrice}}
+          {{else}}
+          Grátis
+          {{/if}}
+        </strong>
+      </td>
+    </tr>
+    {{#each bundleItems}}
+    {{#if name}}
+        <tr>
+            <td class="products__img">
+                {{#if detailUrl}}
+                <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
+                    <img alt="produto" src="{{imageUrl}}">
+                </a>
+                {{else}}
+                <img alt="produto" src="{{imageUrl}}">
+                {{/if}}
+            </td>
+            <td>
+                <div class="mv1-ns">
+                    {{name}}</div>
+                <div>
+                    {{quantity}} un.
+                    {{#if price}}
+                    R$ {{formatCurrency price}}
+                    {{else}}
+                    Grátis
+                    {{/if}}
+                </div>
+            </td>
+        </tr>
+    {{/if}}
+    {{/each}}
+    {{/eq}}
+    {{/each}}
+
+    {{/each}}
+
+    </div>
+    {{/group}}
+    {{/group}}
+    {{/richShippingData}}
+    {{/each}}
+  </table>
+  {{!-- Products --}}
+
+  {{!-- Totals --}}
+  <table class="totals">
+
+    {{#each orders}}
+
+    {{#each totals}}
+    {{#if value}}
+    <tr class="totals__items">
+      <td class="totals__space" width="40%"></td>
+      <td class="totals__item" align="left" colspan="2" width="40%">
+        {{#eq id "Items"}}Itens{{/eq}}
+        {{#eq id "Shipping"}}Entrega{{/eq}}
+        {{#eq id "Discounts"}}Descontos{{/eq}}
+        {{#eq id "Tax"}}Taxas{{/eq}}
+      </td>
+      <td class="totals__item-value" align="right" width="20%">R$ {{formatCurrency value}}</td>
+    </tr>
+    {{/if}}
+    {{/each}}
+    {{#if value}}
+    <tr class="totals__amount">
+      <td class="totals__space" width="40%"></td>
+      <td class="totals__amount-title" align="left" colspan="2" width="40%">
+        Total
+      </td>
+      <td class="totals__amount-value" align="right" width="20%">R$ {{formatCurrency value}}</td>
+    </tr>
+    {{/if}}
+
+    {{/each}}
+    </td>
+    </tr>
+  </table>
+  {{!-- Totals --}}
+  <br /><br />
+
+  {{!-- Diclaimer --}}
+  <table class="disclaimer">
+    <tr class="disclaimer__row">
+      <td class="disclaimer__wrap">
+        <h3 class="disclaimer__heading">
+          E agora, o que preciso fazer?
+        </h3>
+        <p class="paragraph">
+          Assim que o pagamento for confirmado, enviaremos um e-mail com instruções para acompanhar o seu pedido. Você
+          precisa apenas ficar de olho! :)
+        </p>
+        <p class="paragraph">
+          Até breve!
+          <br />
+          <strong>
+            Time {{_accountInfo.AccountName}}
+          </strong>
+        </p>
+      </td>
+    </tr>
+  </table>
+  {{!-- Diclaimer --}}
+  {{!-- Footer --}}
+  <table class="footer">
+    <tr class="footer__row">
+      <td class="footer__wrap-logo" width="50%">
+        <img class="footer__logo" src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/logo.png"
+          alt="Loja {{_accountInfo.AccountName}}">
+      </td>
+      <td class="footer__wrap-social" width="50%">
+        <div class="footer__wrap-social-logo">
+          <p class="footer__social-text">Siga a gente</p>
+
+          <a class="footer__social-logo footer__social-logo--left" href="https://www.instagram.com/{{_accountInfo.AccountName}}"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M15.1138 13.1642C15.1138 14.5053 14.0268 15.5923 12.6857 15.5923C11.3447 15.5923 10.2576 14.5053 10.2576 13.1642C10.2576 11.8232 11.3447 10.7361 12.6857 10.7361C14.0268 10.7361 15.1138 11.8232 15.1138 13.1642Z"
+                fill="white" />
+              <path
+                d="M18.3642 8.86835C18.2475 8.55206 18.0613 8.26577 17.8193 8.03078C17.5843 7.78882 17.2982 7.60261 16.9818 7.48588C16.7251 7.3862 16.3395 7.26754 15.6293 7.23521C14.861 7.20018 14.6307 7.19263 12.6857 7.19263C10.7405 7.19263 10.5102 7.19998 9.7421 7.23502C9.03189 7.26754 8.64611 7.3862 8.38963 7.48588C8.07315 7.60261 7.78686 7.78882 7.55206 8.03078C7.3101 8.26577 7.12389 8.55187 7.00697 8.86835C6.90728 9.12502 6.78863 9.5108 6.7563 10.221C6.72126 10.9891 6.71371 11.2194 6.71371 13.1646C6.71371 15.1096 6.72126 15.3399 6.7563 16.1082C6.78863 16.8184 6.90728 17.204 7.00697 17.4607C7.12389 17.7772 7.30991 18.0632 7.55187 18.2982C7.78686 18.5402 8.07295 18.7264 8.38944 18.8431C8.64611 18.943 9.03189 19.0617 9.7421 19.094C10.5102 19.129 10.7403 19.1364 12.6855 19.1364C14.6309 19.1364 14.8612 19.129 15.6291 19.094C16.3393 19.0617 16.7251 18.943 16.9818 18.8431C17.617 18.5981 18.1192 18.096 18.3642 17.4607C18.4639 17.204 18.5826 16.8184 18.6151 16.1082C18.6501 15.3399 18.6575 15.1096 18.6575 13.1646C18.6575 11.2194 18.6501 10.9891 18.6151 10.221C18.5828 9.5108 18.4641 9.12502 18.3642 8.86835ZM12.6857 16.9049C10.6197 16.9049 8.94498 15.2304 8.94498 13.1644C8.94498 11.0985 10.6197 9.42389 12.6857 9.42389C14.7515 9.42389 16.4262 11.0985 16.4262 13.1644C16.4262 15.2304 14.7515 16.9049 12.6857 16.9049ZM16.5741 10.1502C16.0913 10.1502 15.6999 9.75877 15.6999 9.27601C15.6999 8.79325 16.0913 8.40185 16.5741 8.40185C17.0569 8.40185 17.4483 8.79325 17.4483 9.27601C17.4481 9.75877 17.0569 10.1502 16.5741 10.1502Z"
+                fill="white" />
+              <path
+                d="M12.6857 0.478516C5.68066 0.478516 0 6.15917 0 13.1642C0 20.1693 5.68066 25.8499 12.6857 25.8499C19.6908 25.8499 25.3714 20.1693 25.3714 13.1642C25.3714 6.15917 19.6908 0.478516 12.6857 0.478516ZM19.9261 16.1674C19.8909 16.9429 19.7676 17.4723 19.5876 17.9357C19.2092 18.9142 18.4357 19.6877 17.4572 20.0661C16.994 20.2461 16.4644 20.3692 15.6891 20.4047C14.9123 20.4401 14.6642 20.4486 12.6859 20.4486C10.7074 20.4486 10.4595 20.4401 9.6825 20.4047C8.90726 20.3692 8.37765 20.2461 7.91444 20.0661C7.4282 19.8832 6.98802 19.5965 6.62411 19.2258C6.25362 18.8621 5.96695 18.4217 5.78402 17.9357C5.60401 17.4725 5.4807 16.9429 5.44547 16.1676C5.40966 15.3907 5.40134 15.1425 5.40134 13.1642C5.40134 11.186 5.40966 10.9378 5.44528 10.161C5.48051 9.38558 5.60362 8.85617 5.78364 8.39276C5.96656 7.90671 6.25343 7.46634 6.62411 7.10263C6.98783 6.73194 7.4282 6.44527 7.91425 6.26235C8.37765 6.08233 8.90706 5.95922 9.6825 5.9238C10.4593 5.88837 10.7074 5.87986 12.6857 5.87986C14.664 5.87986 14.9121 5.88837 15.6889 5.92399C16.4644 5.95922 16.9938 6.08233 17.4572 6.26215C17.9432 6.44508 18.3836 6.73194 18.7475 7.10263C19.118 7.46654 19.4049 7.90671 19.5876 8.39276C19.7678 8.85617 19.8909 9.38558 19.9263 10.161C19.9618 10.9378 19.9701 11.186 19.9701 13.1642C19.9701 15.1425 19.9618 15.3907 19.9261 16.1674Z"
+                fill="white" />
+            </svg>
+          </a>
+
+          <a class="footer__social-logo footer__social-logo--right" href="https://www.facebook.com/{{_accountInfo.AccountName}}beleza"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M26 13.0143C26 5.9719 20.2924 0.264282 13.25 0.264282C6.20762 0.264282 0.5 5.9719 0.5 13.0143C0.5 20.0567 6.20762 25.7643 13.25 25.7643C13.3247 25.7643 13.3994 25.7643 13.4741 25.7593V15.8382H10.7349V12.6457H13.4741V10.2949C13.4741 7.57063 15.1376 6.08645 17.5681 6.08645C18.7335 6.08645 19.7346 6.17112 20.0234 6.21096V9.05979H18.35C17.0302 9.05979 16.7712 9.68733 16.7712 10.6087V12.6407H19.9338L19.5204 15.8332H16.7712V25.2712C22.1003 23.7422 26 18.8365 26 13.0143Z"
+                fill="white" />
+            </svg>
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>
+  {{!-- Footer --}}
+</body>
+
+</html>

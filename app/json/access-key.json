@@ -1,0 +1,43 @@
+{
+	"to": [
+		{
+			"name": "nome.sobrenome",
+			"email": "nome.sobrenome@gmail.com"
+		}
+	],
+	"aditionalData": {
+		"accessKey": "00500",
+		"locale": "pt-BR",
+		"userAgent": "Edge, Windows",
+		"geolocation": {
+			"country": "Brazil",
+			"region": "SP",
+			"city": "São Paulo",
+			"ip": "000.000.000.12"
+		}
+	},
+	"_accountInfo": {
+		"MainAccountName": "my-store",
+		"AccountName": "my-store",
+		"Cnpj": "06884321000770",
+		"Id": "8694848-656-656-b032-0589e0d58f1e",
+		"IsActive": true,
+		"IsOperating": false,
+		"CreationDate": "2021-01-01T00:00:00",
+		"OperationDate": null,
+		"CompanyName": " IMPORTACAO E EXPORTACAO LTDA",
+		"TradingName": " IMPORTACAO E EXPORTACAO LTDA",
+		"City": null,
+		"Complement": null,
+		"Country": null,
+		"State": null,
+		"Address": null,
+		"District": null,
+		"Number": null,
+		"PostalCode": null,
+		"Licences": null,
+		"ParentAccountName": null,
+		"InactivationDate": null,
+		"Platform": "vtex"
+	}
+}

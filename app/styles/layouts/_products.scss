@@ -1,0 +1,48 @@
+@use '../settings/colors';
+
+.products{
+    width: 95%;
+    padding: 4% 2%;
+    border-collapse: separate;
+    background-color: colors.$background-light;
+    border-spacing: 0 10px;
+    border-bottom: 1px solid colors.$border-line;
+}
+
+.products__row{
+    padding: 4% 0;
+}
+
+.products__quantity{
+    display: inline-block;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 0;
+    margin-left: auto;
+    width: 23px;
+    height: 23px;
+    line-height: 2;
+    background-color: colors.$brand-secondary;
+}
+.products__img{
+    min-width: 50px;
+    text-align: left;
+}
+.products__name{
+    padding: 0 1%;
+    font-size: 12px;
+    width: 50%;
+    text-align: left;
+}
+
+.products__price{
+    font-size: 12px;
+    width: 15%;
+    &--selling{
+        padding-left: 5%;
+        font-weight: bold;
+        color: colors.$brand-primary;
+    }
+}
