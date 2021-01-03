@@ -21,7 +21,7 @@ function findModel(templateName){
 
 const viewFiles = fs.readdirSync(root('app/templates'));
 const fileNames = viewFiles
-    .filter(folder => folder != 'models')
+    .filter(folder => /.hbs$/gi.test(folder))
     .map(template=> {
         return {
             file : template.split('.')[0],

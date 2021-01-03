@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
-const templateFiles = fs.readdirSync(path.resolve('app','templates')).filter(folder => folder != 'models');
+const templateFiles = fs.readdirSync(path.resolve('app','templates')).filter(folder => /.hbs$/gi.test(folder));
 
 module.exports = merge(common, {
   output: {
