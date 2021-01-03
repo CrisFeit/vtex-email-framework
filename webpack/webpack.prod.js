@@ -10,7 +10,7 @@ const templateFiles = fs.readdirSync(path.resolve('app','templates')).filter(fol
 
 module.exports = merge(common, {
   output: {
-    path: path.resolve('app','dist'),
+    path: path.resolve('dist'),
   },
   mode: 'production',
 
