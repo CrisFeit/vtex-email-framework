@@ -40,6 +40,10 @@
 .products__price{
     font-size: 12px;
     width: 15%;
+    &--discount{
+        color: colors.$text-dark;
+        text-decoration: line-through;
+    }
     &--selling{
         padding-left: 5%;
         font-weight: bold;

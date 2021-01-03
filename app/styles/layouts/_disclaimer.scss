@@ -1,15 +1,15 @@
-// @use '../settings/colors';
+@use '../settings/colors';
 
-// .disclaimer{
-//     padding: 0 2%;
-//     border-collapse: separate;
-//     background-color: colors.$background-light;
-// }
+.disclaimer{
+    padding: 0 2%;
+    border-collapse: separate;
+    background-color: colors.$background-light;
+}
 
-// .disclaimer__heading{
-//   color: colors.$text-dark;
-//   padding: 5% 0 2%;
-//   font-size: 15px;
-//   text-align: center;
-//   font-weight: normal;
-// }
+.disclaimer__heading{
+  color: colors.$text-dark;
+  padding: 5% 0 2%;
+  font-size: 15px;
+  text-align: center;
+  font-weight: normal;
+}
