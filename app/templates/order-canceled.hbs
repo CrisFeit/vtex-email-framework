@@ -101,7 +101,7 @@
 
       <td class="products__price products__price--listprice" width="15%">
         {{#compare listPrice '>' sellingPrice}}
-        <p class="products__price--discount">R$ {{formatCurrency listPrice}}</p>
+        <del>R$ {{formatCurrency listPrice}}</del>
         {{/compare}}
       </td>
       <td class="products__price">
