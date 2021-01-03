@@ -1,4 +1,8 @@
-var Handlebars = require('hbs');
+
+/* 
+---------------------------------------READ ONLY----------------------------------------------- 
+*/
+const Handlebars = require('hbs');
 
 function _formatDateTime(value, format){
   value = new Date(value);

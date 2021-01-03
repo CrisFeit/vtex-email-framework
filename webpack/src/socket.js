@@ -15,7 +15,6 @@ export function connect() {
             connect()
             attempts++;
             if (attempts > maxAttempts) {
-                console.error("Could not reconnect to dev server.");
                 location.reload();
                 return;
             }

@@ -1,13 +1,13 @@
 {
   "name": "email-factory",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "main": "server.node.js",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently 'npm:client' 'npm:server'",
     "server": "nodemon",
     "client": "webpack serve --hot --config ./webpack/webpack.dev.js",
-    "build": "webpack --config ./webpack/webpack.prod.js"
+    "build": "webpack --config ./webpack/webpack.prod.js && node ./webpack/webpack.dist.js"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
@@ -23,6 +23,7 @@
     "hbs": "^4.1.1",
     "html-inline-css-webpack-plugin": "^1.9.1",
     "html-webpack-plugin": "^4.5.0",
+    "juice": "^7.0.0",
     "mini-css-extract-plugin": "^1.3.3",
     "nodemon": "^2.0.6",
     "postcss": "^8.2.2",

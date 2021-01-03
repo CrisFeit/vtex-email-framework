@@ -6,13 +6,14 @@
 * Sass
 * Hot Reload
 * Dashboard
-* Boilerplates
+* Boilerplate
 * Data Binding
 * Template Engine
 ### Production
 * Minify css
 * Autoprefixer
-* Inject inline css
+* Inline styles
+* Embedded styles
 ## Requirements
 * Node.js >=14
 ## Install
