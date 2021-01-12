@@ -1,10 +1,12 @@
 {
-  "name": "email-factory",
-  "version": "2.1.1",
+  "name": "vtex-email-tool",
+  "version": "2.1.2",
   "main": "server.node.js",
   "license": "MIT",
+  "repository": "git@github.com:CrisFeit/email-factory.git",
+  "author": "Cristiano Rocha",
   "scripts": {
-    "dev": "concurrently 'npm:client' 'npm:server'",
+    "dev": "concurrently 'yarn:client' 'yarn:server'",
     "server": "nodemon",
     "client": "webpack serve --hot --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js && node ./webpack/webpack.dist.js"
