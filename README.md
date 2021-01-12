@@ -1,15 +1,15 @@
-# Email Factory
- ### Development environment for transactional emails
+# <p style="text-align: center;"> Vtex Email Framework </p>
+ ### Development environment setup for vtex transactional emails
 
 ##  Features
 ### Development
 * Sass
 * Hot Reload
-* Dashboard
 * Boilerplate
-* Data Binding
+* Dashboard
 * Template Engine
 ### Production
+* PostCss
 * Minify css
 * Autoprefixer
 * Inline styles
