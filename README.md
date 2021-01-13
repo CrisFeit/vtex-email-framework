@@ -1,6 +1,5 @@
-# <p style="text-align: center;"> Vtex Email Framework </p>
- ### Development environment setup for vtex transactional emails
-
+# Vtex Email Framework
+### Development environment setup for vtex transactional emails
 ##  Features
 ### Development
 * Sass
@@ -51,7 +50,11 @@ npm | yarn dev
 npm | yarn build
 ```
 ## References
-[Handlebars](https://handlebarsjs.com/)
-[Vtex Templates](https://help.vtex.com/tutorial/list-of-e-mail-templates-in-the-message-center--3g2S2kqBOoSGcCaqMYK2my)
+[Handlebars](https://handlebarsjs.com/)  
+
+[Emails Support](https://www.campaignmonitor.com/css/)  
+
+[Vtex Templates](https://help.vtex.com/tutorial/list-of-e-mail-templates-in-the-message-center--3g2S2kqBOoSGcCaqMYK2my)  
+
 [Vtex Message Center](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/5uvq01BDu6nnDEJpseR1aH)
 
