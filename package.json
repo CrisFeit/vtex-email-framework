@@ -4,7 +4,7 @@
   "main": "server.node.js",
   "license": "MIT",
   "author": "Cristiano Rocha",
-  "repository": "git@github.com:CrisFeit/vtex-email-framework.git",
+  "repository": "https://github.com/CrisFeit/vtex-email-framework",
   "scripts": {
     "dev": "concurrently 'yarn:client' 'yarn:server'",
     "server": "nodemon",
