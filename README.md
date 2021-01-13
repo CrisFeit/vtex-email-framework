@@ -5,14 +5,16 @@
 ### Development
 * Sass
 * Hot Reload
-* Boilerplate
+* Partial Files
 * Dashboard
+* Boilerplate
+* Syntax Highlight
 * Template Engine
 ### Production
-* PostCss
 * Minify css
 * Autoprefixer
 * Inline styles
+* HTML Attributes
 * Embedded styles
 ## Requirements
 * Node.js >=14
@@ -21,7 +23,7 @@
   npm | yarn install
 ```
 ## Guide
-* File names must be the same
+* Data and template file name must be the same
 ```
 app
 │
@@ -31,6 +33,13 @@ app
 └───templates
     │   order-confirmation.hbs
     │   payment-aproved.hbs
+    └───partials
+        │   Header.hbs
+        │   Shelf.hbs
+```
+* Partials
+```html
+<Shelf class="partial">{{> Shelf}}</Shelf>
 ```
 ## Comand
 - Development
@@ -41,3 +50,8 @@ npm | yarn dev
 ```bash
 npm | yarn build
 ```
+## References
+[Handlebars](https://handlebarsjs.com/)
+[Vtex Templates](https://help.vtex.com/tutorial/list-of-e-mail-templates-in-the-message-center--3g2S2kqBOoSGcCaqMYK2my)
+[Vtex Message Center](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/5uvq01BDu6nnDEJpseR1aH)
+

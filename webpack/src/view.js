@@ -13,7 +13,8 @@ export default function dashboard() {
         const storage = JSON.parse(getstorage())
         for (let key in storage) {
             if (storage[key]) {
-                document.getElementById(key).click()
+                const toggle = document.getElementById(key)
+                if(toggle) toggle.click()
             }
         }
     }

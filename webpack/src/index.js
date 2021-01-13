@@ -1,4 +1,4 @@
-import '../../app/styles/style.scss'
+import '../../app/sass/style.scss'
 import router from './router'
 import { connect } from './socket'
 

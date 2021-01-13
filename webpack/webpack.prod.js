@@ -5,8 +5,10 @@ const common = require('./webpack.common')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
 const templateFiles = fs.readdirSync(path.resolve('app','templates')).filter(folder => /.hbs$/gi.test(folder));
+const partialsFiles = fs.readdirSync(path.resolve('app','templates','partials')).filter(folder => /.hbs$/gi.test(folder));
 
 module.exports = merge(common, {
   output: {
@@ -25,8 +27,16 @@ module.exports = merge(common, {
       minify: false
       })
     }),
+    ...partialsFiles.map(partial => {
+      return new HtmlWebpackPartialsPlugin({
+        path: `app/templates/partials/${partial}`,
+        location:  partial.replace(/.hbs/gi,''),
+        priority: 'replace',
+        template_filename: [...templateFiles.map(file => file)]
+      })
+    }),
     new HTMLInlineCSSWebpackPlugin(),
-  ],
+  ],  
 
   module: {
     rules: [
