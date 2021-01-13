@@ -1,4 +1,4 @@
-<table class="Shelf">
+<table class="shelf">
     {{#richShippingData shippingData}}
     {{#group logisticsInfo by="addessId"}}
 
@@ -6,7 +6,7 @@
     {{#each items}}
     {{#each ../../../../items}}
     {{#eq @index ../itemIndex}}
-    <tr class="Shelf__row">
+    <tr class="shelf__row">
         <td class="products__quantity">{{quantity}}</td>
         <td class="products__img">
             {{#if detailUrl}}
