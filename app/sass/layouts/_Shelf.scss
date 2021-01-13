@@ -1,6 +1,6 @@
 @use '../settings/colors';
 
-.products{
+.Shelf{
     width: 95%;
     padding: 4% 2%;
     border-collapse: separate;
@@ -9,7 +9,7 @@
     border-bottom: 1px solid colors.$border-line;
 }
 
-.products__row{
+.Shelf__row{
     padding: 4% 0;
 }
 

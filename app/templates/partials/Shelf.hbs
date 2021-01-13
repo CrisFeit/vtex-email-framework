@@ -1,0 +1,75 @@
+<table class="Shelf">
+    {{#richShippingData shippingData}}
+    {{#group logisticsInfo by="addessId"}}
+
+    {{#group items by="packageId"}}
+    {{#each items}}
+    {{#each ../../../../items}}
+    {{#eq @index ../itemIndex}}
+    <tr class="Shelf__row">
+        <td class="products__quantity">{{quantity}}</td>
+        <td class="products__img">
+            {{#if detailUrl}}
+            <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
+                <img alt="produto" src="{{imageUrl}}">
+            </a>
+            {{else}}
+            <img alt="produto" src="{{imageUrl}}">
+            {{/if}}
+        </td>
+
+        <td class="products__name">{{name}}
+        <td>
+
+        <td class="products__price products__price--listprice" width="15%">
+            {{#compare listPrice '>' sellingPrice}}
+            <del>R$ {{formatCurrency listPrice}}</del>
+            {{/compare}}
+        </td>
+        <td class="products__price">
+            <strong class="products__price--selling">
+                {{#if sellingPrice}}
+                R$ {{formatCurrency sellingPrice}}
+                {{else}}
+                Grátis
+                {{/if}}
+            </strong>
+        </td>
+    </tr>
+    {{#each bundleItems}}
+    {{#if name}}
+    <tr>
+        <td class="products__img">
+            {{#if detailUrl}}
+            <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
+                <img alt="produto" src="{{imageUrl}}">
+            </a>
+            {{else}}
+            <img alt="produto" src="{{imageUrl}}">
+            {{/if}}
+        </td>
+        <td>
+            <div class="mv1-ns">
+                {{name}}</div>
+            <div>
+                {{quantity}} un.
+                {{#if price}}
+                R$ {{formatCurrency price}}
+                {{else}}
+                Grátis
+                {{/if}}
+            </div>
+        </td>
+    </tr>
+    {{/if}}
+    {{/each}}
+    {{/eq}}
+    {{/each}}
+
+    {{/each}}
+
+    </div>
+    {{/group}}
+    {{/group}}
+    {{/richShippingData}}
+</table>

@@ -1,6 +1,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const hbs = require('hbs');
 const cors = require('cors')
 const express = require('express');
 const app = express();
@@ -29,8 +30,9 @@ const fileNames = viewFiles
         }
 });
 
-require('hbs').registerHelper('clearText', (value)=> value.replace(/\W+/g,' '));
 require(root('app/helpers/vtex-helpers-v3.2.2'))
+hbs.registerHelper('clearText', (value)=> value.replace(/\W+/g,' '));
+hbs.registerPartials(root('app/templates/partials'), function (err) {});
 
 app.use(cors())
 app.use(express.json());
