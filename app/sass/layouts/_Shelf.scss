@@ -13,7 +13,7 @@
     padding: 4% 0;
 }
 
-.products__quantity{
+.product__quantity{
     display: inline-block;
     text-align: center;
     font-size: 11px;
@@ -26,18 +26,18 @@
     line-height: 2;
     background-color: colors.$brand-secondary;
 }
-.products__img{
+.product__img{
     min-width: 50px;
     text-align: left;
 }
-.products__name{
+.product__name{
     padding: 0 1%;
     font-size: 12px;
     width: 50%;
     text-align: left;
 }
 
-.products__price{
+.product__price{
     font-size: 12px;
     width: 15%;
     &--discount{

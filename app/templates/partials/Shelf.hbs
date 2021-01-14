@@ -7,8 +7,8 @@
     {{#each ../../../../items}}
     {{#eq @index ../itemIndex}}
     <tr class="shelf__row">
-        <td class="products__quantity">{{quantity}}</td>
-        <td class="products__img">
+        <td class="product__quantity">{{quantity}}</td>
+        <td class="product__img">
             {{#if detailUrl}}
             <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
                 <img alt="produto" src="{{imageUrl}}">
@@ -18,16 +18,16 @@
             {{/if}}
         </td>
 
-        <td class="products__name">{{name}}
+        <td class="product__name">{{name}}
         <td>
 
-        <td class="products__price products__price--listprice" width="15%">
+        <td class="product__price product__price--listprice" width="15%">
             {{#compare listPrice '>' sellingPrice}}
-                <p class="products__price--discount">R$ {{formatCurrency listPrice}}</p>
+                <p class="product__price--discount">R$ {{formatCurrency listPrice}}</p>
             {{/compare}}
         </td>
-        <td class="products__price">
-            <strong class="products__price--selling">
+        <td class="product__price">
+            <strong class="product__price--selling">
                 {{#if sellingPrice}}
                 R$ {{formatCurrency sellingPrice}}
                 {{else}}
@@ -39,7 +39,7 @@
     {{#each bundleItems}}
     {{#if name}}
     <tr>
-        <td class="products__img">
+        <td class="product__img">
             {{#if detailUrl}}
             <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
                 <img alt="produto" src="{{imageUrl}}">
