@@ -1,5 +1,5 @@
 # VTEX Email Framework
-### Development environment setup for vtex transactional emails
+### Development environment setup for VTEX transactional emails
 ##  Features
 ### Development
 * Sass
