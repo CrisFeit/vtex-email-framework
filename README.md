@@ -1,4 +1,4 @@
-# Vtex Email Framework
+# VTEX Email Framework
 ### Development environment setup for vtex transactional emails
 ##  Features
 ### Development
