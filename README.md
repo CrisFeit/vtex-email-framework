@@ -1,7 +1,6 @@
 # VTEX Email Framework
 ### Development environment setup for VTEX transactional emails
-![Badge](https://img.shields.io/badge/license-MIT-brightgreen)
- ![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework)
+![Badge](https://img.shields.io/badge/license-MIT-brightgreen) ![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework) ![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework)
 ##  Features
 ### Development
 * Sass
@@ -18,10 +17,10 @@
 * HTML Attributes
 * Embedded styles
 ## Requirements
-* Node.js >=14
+![Badge](https://img.shields.io/badge/node.js->=14-%brightgreen?style=for-the-badge&logo=node.js)
 ## Install
 ```bash
-  npm | yarn install
+  npm run install | yarn install
 ```
 ## Guide
 * Data and template file name must be the same
@@ -45,11 +44,11 @@ app
 ## Comand
 - Development
 ```bash
-npm | yarn dev
+npm run dev | yarn dev
 ```
 - Production
 ```bash
-npm | yarn build
+npm run build | yarn build
 ```
 ## References
 [Handlebars](https://handlebarsjs.com/)  
