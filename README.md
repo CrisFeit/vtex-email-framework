@@ -1,6 +1,7 @@
 # VTEX Email Framework
 ### Development environment setup for VTEX transactional emails
-![Badge](https://img.shields.io/badge/licence-MIT-brightgreen) ![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework)
+![Badge](https://img.shields.io/badge/license-MIT-brightgreen)
+ ![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework)
 ##  Features
 ### Development
 * Sass
