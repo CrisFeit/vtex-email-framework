@@ -13,3 +13,5 @@ node_modules
 *.log
 dist
 dist/
+build
+build/
