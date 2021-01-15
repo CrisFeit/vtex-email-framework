@@ -17,7 +17,7 @@
 * HTML Attributes
 * Embedded styles
 ## Requirements
-![Badge](https://img.shields.io/badge/node.js->=14-%brightgreen?style=for-the-badge&logo=node.js)
+![Badge](https://img.shields.io/badge/%20node-%20%3E%3D_14-brightgreen?logo=node.js)
 ## Install
 ```bash
   npm run install | yarn install
