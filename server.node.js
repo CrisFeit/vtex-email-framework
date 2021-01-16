@@ -14,8 +14,8 @@ function root(folders){
 }
 
 function findModel(templateName){
-    if (fs.existsSync(root( 'app/templates/models'))) {
-        if(fs.readdirSync(root('app/templates/models')).includes(templateName)) return templateName
+    if (fs.existsSync(root( 'app/templates/defaults'))) {
+        if(fs.readdirSync(root('app/templates/defaults')).includes(templateName)) return templateName
     }
     return null
 }
@@ -49,8 +49,8 @@ fileNames.forEach(({file}) => {
     app.get(`/${file}` , (req,res)=> {
         res.render(file,require(root(`app/json/${file}.json`)))
     })
-    app.get(`/templates/models/${file}` , (req,res)=> {
-        res.render(root(`app/templates/models/${file}`),require(root(`app/json/${file}.json`)))
+    app.get(`/templates/defaults/${file}` , (req,res)=> {
+        res.render(root(`app/templates/defaults/${file}`),require(root(`app/json/${file}.json`)))
     })
 });
 
