@@ -11,7 +11,7 @@
     "client": "webpack serve --hot --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js && node ./webpack/webpack.dist.js"
   },
-  "devDependencies": {
+  "dependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
