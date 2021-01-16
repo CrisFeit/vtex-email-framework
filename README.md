@@ -1,6 +1,6 @@
 # VTEX Email Framework
 ### Development environment setup for VTEX transactional emails
-![Badge](https://img.shields.io/github/license/CrisFeit/vtex-email-framework) ![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework) ![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework) [![devDependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg?type=dev)](https://github.com/CrisFeit/vtex-email-framework?type=dev)
+[![Badge](https://img.shields.io/github/license/CrisFeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/blob/master/LICENSE) [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/issues) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
 ##  Features
 ### Development
 * Sass
