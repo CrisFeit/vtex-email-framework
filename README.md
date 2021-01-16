@@ -17,10 +17,11 @@
 * HTML Attributes
 * Embedded styles
 ## Requirements
-![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)
+[![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com)
+[![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
 ## Install
 ```bash
-  npm run install | yarn install
+  yarn install
 ```
 ## Guide
 * Data and template file name must be the same
@@ -44,11 +45,11 @@ app
 ## Comand
 - Development
 ```bash
-npm run dev | yarn dev
+yarn dev
 ```
 - Production
 ```bash
-npm run build | yarn build
+yarn build
 ```
 ## References
 [Handlebars](https://handlebarsjs.com/)  
