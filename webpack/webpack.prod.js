@@ -32,7 +32,7 @@ module.exports = merge(common, {
         path: `app/templates/partials/${partial}`,
         location:  partial.replace(/.hbs/gi,''),
         priority: 'replace',
-        template_filename: [...templateFiles.map(file => file)]
+        template_filename: [...templateFiles]
       })
     }),
     new HTMLInlineCSSWebpackPlugin(),
