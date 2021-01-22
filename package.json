@@ -5,8 +5,6 @@
   "license": "MIT",
   "author": "Cristiano Rocha",
   "homepage": "https://github.com/CrisFeit/vtex-email-framework",
-  "repository": "git@github.com:CrisFeit/vtex-email-framework.git",
-  "keywords": ["vtex","vtex-emails","vtex emails"],
   "scripts": {
     "dev": "concurrently 'yarn:client' 'yarn:server'",
     "server": "nodemon",
