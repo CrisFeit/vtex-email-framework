@@ -28,19 +28,13 @@
     <tr class="notice__client">
       <td class="notice__client-wrap">
         <h1 class="heading">
-          {{#if orders}}
-          {{#if orders.0.clientProfileData.firstName}}
-          {{#compare orders.0.clientProfileData.firstName '!=' 'isAnonymous'}}
-          Olá, {{orders.0.clientProfileData.firstName}}.
-          {{/compare}}
-          {{/if}}
-          {{else}}
-          {{#if clientProfileData.firstName}}
-          {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-          Olá, {{clientProfileData.firstName}}.
-          {{/compare}}
-          {{/if}}
-          {{/if}}
+          {{#each orders}}
+            {{#if clientProfileData.firstName}}
+              {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                  Olá, {{clientProfileData.firstName}}.
+              {{/compare}}
+            {{/if}}
+         {{/each}}
         </h1>
         <p class="acknowledgment">obrigada por comprar com a {{_accountInfo.AccountName}}</p>
       </td>

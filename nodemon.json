@@ -5,7 +5,7 @@
     "fixtures/*",
     "node_modules/**/node_modules"
   ],
-  "verbose": true,
+  "verbose": false,
   "env": {
     "NODE_ENV": "development"
   },

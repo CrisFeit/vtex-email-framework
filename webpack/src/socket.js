@@ -8,16 +8,15 @@ export function connect() {
 
     socket.addEventListener('close', () => {
         const interAttemptTimeoutMilliseconds = 200;
-        const maxDisconnectedTimeMilliseconds = 4000;
-        const maxAttempts = Math.round(maxDisconnectedTimeMilliseconds / interAttemptTimeoutMilliseconds);
+        const maxAttempts = 3
         let attempts = 0;
         const reloadIfCanConnect = () => {
-            connect()
             attempts++;
-            if (attempts > maxAttempts) {
+            if (attempts >= maxAttempts) {
                 location.reload();
                 return;
             }
+            connect()
             socket = new WebSocket(socketUrl);
             socket.addEventListener('error', () => {
                 setTimeout(reloadIfCanConnect, interAttemptTimeoutMilliseconds);

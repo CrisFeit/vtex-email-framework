@@ -19,19 +19,11 @@
         <tr class="notice__client">
             <td class="notice__client-wrap">
                 <h1 class="heading">
-                    {{#if orders}}
-                    {{#if orders.0.clientProfileData.firstName}}
-                    {{#compare orders.0.clientProfileData.firstName '!=' 'isAnonymous'}}
-                    {{orders.0.clientProfileData.firstName}},
-                    {{/compare}}
-                    {{/if}}
-                    {{else}}
-                    {{#if clientProfileData.firstName}}
-                    {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                    {{clientProfileData.firstName}},
-                    {{/compare}}
-                    {{/if}}
-                    {{/if}}
+                 {{#if clientProfileData.firstName}}
+                     {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                          Olá, {{clientProfileData.firstName}}.
+                      {{/compare}}
+                {{/if}}
                 </h1>
                 <p class="acknowledgment">seu pedido foi cancelado.</p>
             </td>
@@ -39,19 +31,13 @@
         <tr class="notice__message">
             <td class="notice__message-wrap">
                 <p class="paragraph">
-                    Oi {{#if orders}}
-                    {{#if orders.0.clientProfileData.firstName}}
-                    {{#compare orders.0.clientProfileData.firstName '!=' 'isAnonymous'}}
-                    {{orders.0.clientProfileData.firstName}}
-                    {{/compare}}
-                    {{/if}}
-                    {{else}}
-                    {{#if clientProfileData.firstName}}
-                    {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                    {{clientProfileData.firstName}}
-                    {{/compare}}
-                    {{/if}}
-                    {{/if}}, tudo bem?
+                    Oi    
+                        {{#if clientProfileData.firstName}}
+                           {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                             {{clientProfileData.firstName}}.
+                          {{/compare}}
+                        {{/if}}
+                , tudo bem?
                     recebemos sua solicitação para cancelarmos o pedido <strong>{{orderId}}</strong>, já está em
                     processo de cancelamento, e o seu pagamento será estornado.
                 </p>
