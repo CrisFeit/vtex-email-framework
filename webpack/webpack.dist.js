@@ -6,7 +6,7 @@ const options = {
   extraCss: '',
   insertPreservedExtraCss: true,
   applyStyleTags: true,
-  removeStyleTags: false,
+  removeStyleTags: true,
   preserveMediaQueries: true,
   preserveFontFaces: true,
   applyWidthAttributes: true,
