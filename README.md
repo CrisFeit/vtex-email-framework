@@ -8,21 +8,14 @@
 * Partial Files
 * Dashboard
 * Boilerplate
-* Syntax Highlight
-* Template Engine
 ### Production
 * Minify css
 * Autoprefixer
-* Inline styles
 * HTML Attributes
 * Embedded styles
 ## Requirements
 [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com)   
 [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
-## Install
-```bash
-  yarn install
-```
 ## Guide
 * Data and template file name must be the same
 ```
@@ -43,6 +36,10 @@ app
 <Shelf class="partial">{{> Shelf}}</Shelf>
 ```
 ## Comand
+- Install
+```bash
+  yarn install
+```
 - Development
 ```bash
 yarn dev
