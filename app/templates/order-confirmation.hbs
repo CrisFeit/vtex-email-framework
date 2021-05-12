@@ -52,7 +52,7 @@
           para verificar as suas informações, combinado?
         </p>
         <p class="paragraph">
-          <a class="link-button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
+          <a class="button button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
             Ver detalhes do pedido
           </a>
         </p>
@@ -180,8 +180,8 @@
         <div>Aguardando aprovação</div>
         {{#each payments}}
         {{#eq paymentSystemName 'Boleto Bancário'}}
-        <div class="link-button-wrap">
-          <a class="link-button--billet" href="{{replace url '{Installment}' installments}}">Boleto Bancário</a>
+        <div class="button-wrap">
+          <a class="button button--billet" href="{{replace url '{Installment}' installments}}">Boleto Bancário</a>
         </div>
         {{/eq}}
         {{/each}}
@@ -249,7 +249,7 @@
       </td>
     </tr>
     <tr class="status__row">
-      <td class="status__title status__title--first status__title--active status__title--success">
+      <td class="status__title status__title--first status__title--current status__title--success">
         Pedido Realizado
       </td>
       <td class="status__title">

@@ -1,12 +1,12 @@
 const fs = require('fs')
-const path = require('path')
+const { resolve } = require('path')
 const juice = require('juice')
 
 const options = {
   extraCss: '',
   insertPreservedExtraCss: true,
   applyStyleTags: true,
-  removeStyleTags: false,
+  removeStyleTags: true,
   preserveMediaQueries: true,
   preserveFontFaces: true,
   applyWidthAttributes: true,
@@ -16,10 +16,10 @@ const options = {
 }
 
 function dist(fileName) {
-  return path.resolve('app','dist', fileName)
+  return resolve('app','dist', fileName)
 }
 
-if (fs.existsSync(path.resolve('app', 'dist'))) {
+if (fs.existsSync(resolve('app', 'dist'))) {
   
   try {
     let js = dist('main.js')
@@ -32,7 +32,7 @@ if (fs.existsSync(path.resolve('app', 'dist'))) {
       })
     }
 
-  fs.readdirSync(path.resolve('app','dist')).forEach(file => {
+  fs.readdirSync(resolve('app','dist')).forEach(file => {
     const templateFile = fs.readFileSync(dist(file),'utf8')        
     fs.writeFileSync(dist(file),juice(templateFile,options))
   })

@@ -19,6 +19,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
+    new HTMLInlineCSSWebpackPlugin(),
     ...templateFiles.map(file =>{
       return new HtmlWebpackPlugin({
       filename: file,
@@ -35,7 +36,6 @@ module.exports = merge(common, {
         template_filename: [...templateFiles]
       })
     }),
-    new HTMLInlineCSSWebpackPlugin(),
   ],  
 
   module: {
