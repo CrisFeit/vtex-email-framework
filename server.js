@@ -1,13 +1,13 @@
 
-const {existsSync,readdirSync} = require('fs');
-const {resolve} = require('path');
+const { existsSync, readdirSync } = require('fs');
+const { resolve } = require('path');
 const hbs = require('hbs');
 const cors = require('cors')
 const express = require('express');
 const app = express();
 const { Router } = require('express');
 const router = new Router();
-const {Server} = require('ws')
+const { Server } = require('ws');
 
 function root(folders){
     return resolve(...folders.split('/'));
