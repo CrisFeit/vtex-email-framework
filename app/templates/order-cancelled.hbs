@@ -12,78 +12,80 @@
 </head>
 
 <body>
-<table class="main" align="center" border="0" cellpadding="0" cellspacing="0" role="presentation">
-  <tr>
-    <td class="main__body">
+    <table class="main" role="presentation" align="center" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="main__body">
 
-    <Header class="partial">{{> Header}}</Header>
+                <Header class="partial">{{> Header}}</Header>
 
-    <table class="notice" role="main">
-        <tr class="notice__client">
-            <td class="notice__client-wrap">
-                <h1 class="heading">
-                 {{#if clientProfileData.firstName}}
-                     {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                          Olá, {{clientProfileData.firstName}}.
-                      {{/compare}}
-                {{/if}}
-                </h1>
-                <p class="acknowledgment">seu pedido foi cancelado.</p>
-            </td>
-        </tr>
-        <tr class="notice__message">
-            <td class="notice__message-wrap">
-                <p class="paragraph">
-                    Oi    
-                        {{#if clientProfileData.firstName}}
-                           {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                             {{clientProfileData.firstName}}.
-                          {{/compare}}
-                        {{/if}}
-                , tudo bem?
-                    recebemos sua solicitação para cancelarmos o pedido <strong>{{orderId}}</strong>, já está em
-                    processo de cancelamento, e o seu pagamento será estornado.
-                </p>
+                <table class="notice" role="main">
+                    <tr class="notice__client">
+                        <td class="notice__client-wrap">
+                            <h1 class="heading">
+                                {{#if clientProfileData.firstName}}
+                                {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                                Olá, {{clientProfileData.firstName}}.
+                                {{/compare}}
+                                {{/if}}
+                            </h1>
+                            <p class="acknowledgment">seu pedido foi cancelado.</p>
+                        </td>
+                    </tr>
+                    <tr class="notice__message">
+                        <td class="notice__message-wrap">
+                            <p class="paragraph">
+                                Oi
+                                {{#if clientProfileData.firstName}}
+                                {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                                {{clientProfileData.firstName}}.
+                                {{/compare}}
+                                {{/if}}
+                                , tudo bem?
+                                recebemos sua solicitação para cancelarmos o pedido <strong>{{orderId}}</strong>, já
+                                está em
+                                processo de cancelamento, e o seu pagamento será estornado.
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+
+                <h3 class="subheading">
+                    Pedido Cancelado #{{orderId}}
+                </h3>
+
+                <Shelf class="partial">{{> Shelf}}</Shelf>
+                <Totals class="partial">{{> Totals}}</Totals>
+
+                <br />
+                <br />
+
+                {{!-- Diclaimer --}}
+                <table class="disclaimer">
+                    <tr class="disclaimer__row">
+                        <td class="disclaimer__wrap">
+
+                            <p class="paragraph">
+                                Queremos muito que você volte a comprar com a gente e realce ainda mais sua beleza com
+                                os nossos
+                                produtos!
+                            </p>
+                            <p class="paragraph">
+                                Até breve!
+                                <br />
+                                <strong>
+                                    Time {{_accountInfo.AccountName}}
+                                </strong>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+                {{!-- Diclaimer --}}
+
+                <Footer class="partial">{{> Footer}}</Footer>
+
             </td>
         </tr>
     </table>
-    
-    <h3 class="subheading">
-        Pedido Cancelado #{{orderId}}
-    </h3>
-
-    <Shelf  class="partial">{{> Shelf}}</Shelf>
-    <Totals class="partial">{{> Totals}}</Totals>
-
-    <br />
-    <br />
-
-    {{!-- Diclaimer --}}
-    <table class="disclaimer">
-        <tr class="disclaimer__row">
-            <td class="disclaimer__wrap">
-
-                <p class="paragraph">
-                    Queremos muito que você volte a comprar com a gente e realce ainda mais sua beleza com os nossos
-                    produtos!
-                </p>
-                <p class="paragraph">
-                    Até breve!
-                    <br />
-                    <strong>
-                        Time {{_accountInfo.AccountName}}
-                    </strong>
-                </p>
-            </td>
-        </tr>
-    </table>
-    {{!-- Diclaimer --}}
-
-    <Footer class="partial">{{> Footer}}</Footer>
-  
-  </td>
-  </tr>
-</table>
 </body>
 
 </html>

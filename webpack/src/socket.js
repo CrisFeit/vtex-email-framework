@@ -13,7 +13,7 @@ export function connect() {
         const reloadIfCanConnect = () => {
             attempts++;
             if (attempts >= maxAttempts) {
-                location.reload();
+                window.location.reload();
                 return;
             }
             connect()

@@ -2,7 +2,5 @@ import '../../app/sass/style.scss'
 import router from './router'
 import { connect } from './socket'
 
-(() => {
-    router(window.location)
-    connect()
-})()
+router(window.location)
+connect()

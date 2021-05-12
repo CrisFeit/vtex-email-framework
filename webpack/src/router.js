@@ -26,6 +26,4 @@ const router = ({ search, pathname }) => {
         })
 }
 
-window.onpopstate = () => router(window.location)
-
 export default router
