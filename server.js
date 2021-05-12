@@ -1,26 +1,26 @@
 
-const fs = require('fs');
-const path = require('path');
+const {existsSync,readdirSync} = require('fs');
+const {resolve} = require('path');
 const hbs = require('hbs');
 const cors = require('cors')
 const express = require('express');
 const app = express();
 const { Router } = require('express');
 const router = new Router();
-const webSocket = require('ws')
+const {Server} = require('ws')
 
 function root(folders){
-    return path.resolve(...folders.split('/'));
+    return resolve(...folders.split('/'));
 }
 
 function findModel(templateName){
-    if (fs.existsSync(root( 'app/templates/defaults'))) {
-        if(fs.readdirSync(root('app/templates/defaults')).includes(templateName)) return templateName
+    if (existsSync(root( 'app/templates/defaults'))) {
+        if(readdirSync(root('app/templates/defaults')).includes(templateName)) return templateName
     }
     return null
 }
 
-const viewFiles = fs.readdirSync(root('app/templates'));
+const viewFiles = readdirSync(root('app/templates'));
 const fileNames = viewFiles
     .filter(folder => /.hbs$/gi.test(folder))
     .map(template=> {
@@ -54,4 +54,4 @@ fileNames.forEach(({file}) => {
     })
 });
 
-app.listen( 5050 , ()=> new webSocket.Server({ port: 8090}))
+app.listen( 5050 , ()=> new Server({ port: 8090}))
