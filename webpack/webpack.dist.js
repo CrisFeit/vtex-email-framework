@@ -16,10 +16,10 @@ const options = {
 }
 
 function dist(fileName) {
-  return resolve('app','dist', fileName)
+  return resolve('emails','dist', fileName)
 }
 
-if (fs.existsSync(resolve('app', 'dist'))) {
+if (fs.existsSync(resolve('emails', 'dist'))) {
   
   try {
     let js = dist('main.js')
@@ -32,7 +32,7 @@ if (fs.existsSync(resolve('app', 'dist'))) {
       })
     }
 
-  fs.readdirSync(resolve('app','dist')).forEach(file => {
+  fs.readdirSync(resolve('emails','dist')).forEach(file => {
     const templateFile = fs.readFileSync(dist(file),'utf8')        
     fs.writeFileSync(dist(file),juice(templateFile,options))
   })

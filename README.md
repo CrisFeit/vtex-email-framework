@@ -19,7 +19,7 @@
 ## Guide
 * Data and template file name must be the same
 ```
-app
+emails
 │
 └───json
 │   │   order-confirmation.json

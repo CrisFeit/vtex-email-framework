@@ -7,12 +7,12 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
-const templateFiles = readdirSync(resolve('app','templates')).filter(folder => /.hbs$/gi.test(folder));
-const partialsFiles = readdirSync(resolve('app','templates','partials')).filter(folder => /.hbs$/gi.test(folder));
+const templateFiles = readdirSync(resolve('emails','templates')).filter(folder => /.hbs$/gi.test(folder));
+const partialsFiles = readdirSync(resolve('emails','templates','partials')).filter(folder => /.hbs$/gi.test(folder));
 
 module.exports = merge(common, {
   output: {
-    path: resolve('app','dist'),
+    path: resolve('emails','dist'),
   },
   mode: 'production',
 
@@ -23,14 +23,14 @@ module.exports = merge(common, {
     ...templateFiles.map(file =>{
       return new HtmlWebpackPlugin({
       filename: file,
-      template: `app/templates/${file}`,
+      template: `emails/templates/${file}`,
       inject:false,
       minify: false
       })
     }),
     ...partialsFiles.map(partial => {
       return new HtmlWebpackPartialsPlugin({
-        path: `app/templates/partials/${partial}`,
+        path: `emails/templates/partials/${partial}`,
         location:  partial.replace(/.hbs/gi,''),
         priority: 'replace',
         template_filename: [...templateFiles]

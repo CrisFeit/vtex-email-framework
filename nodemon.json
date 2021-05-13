@@ -9,6 +9,6 @@
   "env": {
     "NODE_ENV": "development"
   },
-  "watch":["app/templates","app/json"],
+  "watch":["emails/templates","emails/json"],
   "ext": "json,hbs"
 }
