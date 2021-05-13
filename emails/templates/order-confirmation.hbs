@@ -14,7 +14,7 @@
 <body>
   <table class="main" role="presentation" align="center" border="0" cellpadding="0" cellspacing="0">
     <tr>
-      <td class="main__body">
+      <td>
 
         <Header class="partial">{{> Header}}</Header>
 
@@ -72,7 +72,7 @@
             <th class="billing__header" cellspacing="10px">Endereço</th>
             <th class="billing__header" cellspacing="10px">Pagamento</th>
           </tr>
-          {{!-- Shipping --}}
+          
           <tr class="billing__row">
             <td class="billing__data" width="50%" cellspacing="10px">
               {{#each orders}}
@@ -138,9 +138,9 @@
               {{/richShippingData}}
               {{/each}}
             </td>
-            {{!-- Shipping --}}
+            
 
-            {{!-- Payment --}}
+            
             <td class="billing__data" width="50%" cellspacing="10px">
 
               {{#compare split "!=" true}}
@@ -239,10 +239,10 @@
               {{/compare}}
               {{/each}}
             </td>
-            {{!-- Payment --}}
+            
           </tr>
         </table>
-        {{!-- Status --}}
+        
 
         <table class="status" cellspacing="2px">
           <tr class="status__row">
@@ -291,7 +291,7 @@
             </td>
           </tr>
         </table>
-        {{!-- Status --}}
+        
 
 
         {{#each orders}}
@@ -306,7 +306,7 @@
         {{/each}}
         <br /><br />
 
-        {{!-- Diclaimer --}}
+        
         <table class="disclaimer">
           <tr class="disclaimer__row">
             <td class="disclaimer__wrap">
@@ -328,8 +328,7 @@
             </td>
           </tr>
         </table>
-        {{!-- Diclaimer --}}
-
+        
         <Footer class="partial">{{> Footer}}</Footer>
 
       </td>

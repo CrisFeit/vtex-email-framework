@@ -2,10 +2,6 @@
 
 .main{
     width: 100%;
-
-    &__body{
-        direction: ltr;
-        text-align:center;
-        background: colors.$background-grey;
-    }
+    text-align:center;
+    background: colors.$background-grey;
 }
