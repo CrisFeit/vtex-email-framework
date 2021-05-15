@@ -28,7 +28,7 @@
     "mini-css-extract-plugin": "^1.5.0",
     "nodemon": "^2.0.7",
     "sass": "^1.32.11",
-    "sass-loader": "^11.1.1",
+    "sass-loader": "^11.0.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.26.3",
     "webpack-cli": "^4.6.0",
