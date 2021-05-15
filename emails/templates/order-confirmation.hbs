@@ -18,7 +18,7 @@
 
         <Header class="partial">{{> Header}}</Header>
 
-        <table class="notice" role="main">
+        <table class="notice">
           <tr class="notice__topic">
             <td class="notice__topic-wrap">
               <a href="http://{{_accountInfo.AccountName}}.com.br">
@@ -55,7 +55,7 @@
                 para verificar as suas informações, combinado?
               </p>
               <p class="paragraph">
-                <a class="button button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
+                <a class="button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
                   Ver detalhes do pedido
                 </a>
               </p>
@@ -183,8 +183,8 @@
               <div>Aguardando aprovação</div>
               {{#each payments}}
               {{#eq paymentSystemName 'Boleto Bancário'}}
-              <div class="button-wrap">
-                <a class="button button--billet" href="{{replace url '{Installment}' installments}}">Boleto Bancário</a>
+              <div class="billing__button-wrap">
+                <a class="button--billet" href="{{replace url '{Installment}' installments}}">Boleto Bancário</a>
               </div>
               {{/eq}}
               {{/each}}

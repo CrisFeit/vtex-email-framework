@@ -1,7 +1,7 @@
 
 @use '../settings/colors';
 
-.button{
+%button{
   display: block;
   width: fit-content;
   width: 90%;
@@ -16,20 +16,23 @@
   box-sizing: border-box;
   white-space: nowrap;
 
-  &--dark{
-    color: colors.$text-light;
-    background-color: colors.$background-dark;
-  }
-  &--light{
-    color: colors.$text-dark;
-    background-color: colors.$background-light;
-    border: 1px solid colors.$background-dark;
-  }
-  &--billet{
-    font-size: 12px;
-    padding: 5% 2%;
-    width: 100%;
-    color: colors.$text-light;
-    background-color: colors.$background-dark;
-  }
+}
+.button--dark{
+  @extend %button;
+  color: colors.$text-light;
+  background-color: colors.$background-dark;
+}
+.button--light{
+  @extend %button;
+  color: colors.$text-dark;
+  background-color: colors.$background-light;
+  border: 1px solid colors.$background-dark;
+}
+.button--billet{
+  @extend %button;
+  font-size: 12px;
+  padding: 5% 2%;
+  width: 100%;
+  color: colors.$text-light;
+  background-color: colors.$background-dark;
 }

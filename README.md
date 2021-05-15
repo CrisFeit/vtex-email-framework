@@ -38,7 +38,7 @@ emails
 ## Comand
 - Install
 ```bash
-  yarn install
+yarn install
 ```
 - Development
 ```bash
