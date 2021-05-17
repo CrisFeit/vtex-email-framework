@@ -11,19 +11,20 @@
         <td class="product__img">
             {{#if detailUrl}}
             <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
-                <img alt="produto" src="{{imageUrl}}">
+                <img alt="produto" src="{{imageUrl}}" />
             </a>
             {{else}}
-            <img alt="produto" src="{{imageUrl}}">
+            <img alt="produto" src="{{imageUrl}}" />
             {{/if}}
         </td>
 
-        <td class="product__name">{{name}}
+        <td class="product__name">
+            {{name}}
         <td>
 
         <td class="product__price product__price--listprice" width="15%">
             {{#compare listPrice '>' sellingPrice}}
-                <p class="product__price--discount">R$ {{formatCurrency listPrice}}</p>
+            <p class="product__price--discount">R$ {{formatCurrency listPrice}}</p>
             {{/compare}}
         </td>
         <td class="product__price">
@@ -42,15 +43,16 @@
         <td class="product__img">
             {{#if detailUrl}}
             <a href="http://{{_accountInfo.AccountName}}.com.br{{detailUrl}}" target="_blank" rel="noopener noreferrer">
-                <img alt="produto" src="{{imageUrl}}">
+                <img alt="produto" src="{{imageUrl}}" />
             </a>
             {{else}}
-            <img alt="produto" src="{{imageUrl}}">
+            <img alt="produto" src="{{imageUrl}}" />
             {{/if}}
         </td>
         <td>
             <div class="mv1-ns">
-                {{name}}</div>
+                {{name}}
+            </div>
             <div>
                 {{quantity}} un.
                 {{#if price}}
@@ -67,8 +69,6 @@
     {{/each}}
 
     {{/each}}
-
-    </div>
     {{/group}}
     {{/group}}
     {{/richShippingData}}

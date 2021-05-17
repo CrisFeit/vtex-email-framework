@@ -72,7 +72,7 @@
             <th class="billing__header" cellspacing="10px">Endereço</th>
             <th class="billing__header" cellspacing="10px">Pagamento</th>
           </tr>
-          
+
           <tr class="billing__row">
             <td class="billing__data" width="50%" cellspacing="10px">
               {{#each orders}}
@@ -138,9 +138,9 @@
               {{/richShippingData}}
               {{/each}}
             </td>
-            
 
-            
+
+
             <td class="billing__data" width="50%" cellspacing="10px">
 
               {{#compare split "!=" true}}
@@ -239,10 +239,10 @@
               {{/compare}}
               {{/each}}
             </td>
-            
+
           </tr>
         </table>
-        
+
 
         <table class="status" cellspacing="2px">
           <tr class="status__row">
@@ -291,22 +291,21 @@
             </td>
           </tr>
         </table>
-        
+
 
 
         {{#each orders}}
 
-        <h3 class="subheading">
-          Pedido #{{orderId}}
-        </h3>
+        <h3 class="subheading">Pedido #{{orderId}}</h3>
 
         <Shelf class="partial">{{> Shelf}}</Shelf>
+
         <Totals class="partial">{{> Totals}}</Totals>
 
         {{/each}}
         <br /><br />
 
-        
+
         <table class="disclaimer">
           <tr class="disclaimer__row">
             <td class="disclaimer__wrap">
@@ -328,7 +327,7 @@
             </td>
           </tr>
         </table>
-        
+
         <Footer class="partial">{{> Footer}}</Footer>
 
       </td>

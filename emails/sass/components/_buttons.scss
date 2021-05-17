@@ -6,7 +6,6 @@
   width: fit-content;
   width: 90%;
   max-width: 300px;
-  text-align: center;
   font-size: 14px;
   margin: auto;
   text-align: center;
@@ -15,7 +14,6 @@
   border-radius: 50px;
   box-sizing: border-box;
   white-space: nowrap;
-
 }
 .button--dark{
   @extend %button;
@@ -29,10 +27,8 @@
   border: 1px solid colors.$background-dark;
 }
 .button--billet{
-  @extend %button;
+  @extend .button--dark;
   font-size: 12px;
   padding: 5% 2%;
   width: 100%;
-  color: colors.$text-light;
-  background-color: colors.$background-dark;
 }

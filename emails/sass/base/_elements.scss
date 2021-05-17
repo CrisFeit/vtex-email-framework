@@ -2,11 +2,6 @@
 @use '../settings/fonts';
 @use '../settings/colors';
 
-html ,body,table, caption, tbody, tfoot, thead, tr, th, td,a,p,div,ul,ol,li,img {
-    font-family: fonts.$main;
-    color: colors.$text-dark;
-    vertical-align: middle;
-}
 html,body{
     width: 100%;
     -webkit-text-size-adjust: 100%;
@@ -27,11 +22,14 @@ table{
     border-collapse: collapse;
     border-spacing: 0;
 }
+html ,body,table, caption, tbody, tfoot, thead,tr,th,td,
+a,p,div,ul,ol,li,img,strong,span,h1,h2,h3,h4,h5,h6 {
+    font-family: fonts.$main;
+    color: colors.$text-dark;
+    vertical-align: middle;
+    text-align: center;
+}
 
 img{
     max-width: 100%;
-}
-
-p,strong,span,img,h1,h2,h3,h4,h5,h6,a,td{
-    text-align: center;
 }
