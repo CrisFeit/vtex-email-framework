@@ -1,8 +1,8 @@
 {
 	"to": [
 		{
-			"name": "nome.sobrenome",
-			"email": "nome.sobrenome@gmail.com"
+			"name": "name.lastname",
+			"email": "name.lastname@gmail.com"
 		}
 	],
 	"aditionalData": {

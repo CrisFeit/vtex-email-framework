@@ -1,4 +1,4 @@
-import dashboard from './view'
+import { dashboard }from './view'
 
 export default async function router({ search, pathname }) {
     const path = search ? `/${search.split('?')[1]}` : pathname

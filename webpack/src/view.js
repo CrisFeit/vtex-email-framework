@@ -1,16 +1,16 @@
 
+export function dashboard() {
 
-export default function dashboard() {
-
-    if (getstorage()) switchActive()
+    if (getStorage()) switchActive()
     document.onchange = ({ target }) => switchChange(target)
-
+    
     function switchChange(target) {
-        storageFactory(target.value, target.checked)
+        const storage = storageFactory(target.value, target.checked)
+        setStorage(storage)
     }
 
     function switchActive() {
-        const storage = JSON.parse(getstorage())
+        const storage = JSON.parse(getStorage())
         for (let key in storage) {
             if (storage[key]) {
                 const toggle = document.getElementById(key)
@@ -19,7 +19,7 @@ export default function dashboard() {
         }
     }
 
-    function getstorage() {
+    function getStorage() {
         return localStorage.getItem('email-factory')
     }
 
@@ -28,8 +28,8 @@ export default function dashboard() {
     }
 
     function storageFactory(key, value) {
-        const storage = !getstorage() ? {} : JSON.parse(getstorage())
+        const storage = !getStorage() ? {} : JSON.parse(getStorage())
         storage[key] = value
-        setStorage(storage)
+        return storage
     }
 }

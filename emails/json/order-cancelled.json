@@ -141,7 +141,7 @@
 	"clientProfileData": {
 		"email": "0000000000000000000000@ct.vtex.com.br",
 		"firstName": "name",
-		"lastName": "sobrenome",
+		"lastName": "lastname",
 		"document": "0000000000",
 		"documentType": "cpf",
 		"phone": "+5500000000",
@@ -163,7 +163,7 @@
 		"address": {
 			
 				"addressType": "residential",
-				"receiverName": "nome sobrenome",
+				"receiverName": "name lastname",
 				"addressId": "4000000000002881",
 				"isDisposable": true,
 				"postalCode": "00000-001",
@@ -239,7 +239,7 @@
 		"selectedAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "nome sobrenome",
+				"receiverName": "name lastname",
 				"addressId": "4000000000000081",
 				"isDisposable": true,
 				"postalCode": "00000-001",
@@ -260,7 +260,7 @@
 		"availableAddresses": [
 			{
 				"addressType": "residential",
-				"receiverName": "nome sobrenome",
+				"receiverName": "name lastname",
 				"addressId": "4000000000002881",
 				"isDisposable": true,
 				"postalCode": "00000-001",

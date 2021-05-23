@@ -1,13 +1,14 @@
 
 const { existsSync, readdirSync } = require('fs');
 const { resolve } = require('path');
-const hbs = require('hbs');
 const cors = require('cors')
-const express = require('express');
-const app = express();
-const { Router } = require('express');
-const router = new Router();
+const app = require('express')();
 const { Server } = require('ws');
+const hbs = require('hbs');
+
+require(root('emails/helpers/vtex-helpers-v3.2.2'));
+hbs.registerHelper('clearText', (value)=> value.replace(/\W+/g,' '));
+hbs.registerPartials(root('emails/templates/partials'), function (err) {});
 
 function root(folders){
     return resolve(...folders.split('/'));
@@ -30,16 +31,9 @@ const fileNames = viewFiles
         }
 });
 
-require(root('emails/helpers/vtex-helpers-v3.2.2'));
-hbs.registerHelper('clearText', (value)=> value.replace(/\W+/g,' '));
-hbs.registerPartials(root('emails/templates/partials'), function (err) {});
-
 app.use(cors());
-app.use(express.json());
-app.use(express.static(__dirname));
 app.set('views',root('emails/templates'));
 app.set('view engine','hbs');
-app.use(router);
 
 app.get('/' , (req,res)=> {
     res.render(root('webpack/src/view'),{files:fileNames})
