@@ -27,7 +27,7 @@
             align-items: center;
             margin: auto;
             width: 100%;
-            margin-top: 20px;
+            padding: 10px;
             max-width: 1000px;
             box-sizing: border-box;
         }
@@ -56,14 +56,15 @@
 
         .card__link {
             margin: 5% auto;
-            padding: 4px 0;
+            padding: 2px 0;
             text-align: center;
-            width: 35%;
+            width: 30%;
             border-radius: 2px;
             cursor: pointer;
             text-decoration: none;
             text-transform: uppercase;
-            font: bold 11px var(--font-main);
+            letter-spacing: 0.2px;
+            font: bold 10px var(--font-main);
         }
         .card__link:hover {
             text-decoration: underline;
@@ -71,7 +72,6 @@
         .card__link--model {
             color: snow;
             background-color: var(--color-main);
-
         }
 
         .card__link--template {
@@ -145,11 +145,11 @@
             <h2 class="card__title">{{clearText file}}</h2>
             <div class="card__wrap">
                 {{#if model}}
-                <a class="card__link card__link--model" href="http://localhost:5050/templates/defaults/{{file}}" onclick="window.open(this.href,'emailwindow','height=1500,width=600,left=1000,top=auto,scrollbars=yes,menubar=no'); return false;">
+                <a class="card__link card__link--model" href="http://localhost:5050/templates/defaults/{{file}}" target="_blank">
                     Default
                 </a>
                 {{/if}}
-                <a class="card__link card__link--template js--template" href="/?{{file}}" id="{{file}}" onclick="window.open(this.href,'emailwindow','height=1500,width=600,left=1000,top=auto,scrollbars=yes,menubar=no'); return false;">
+                <a class="card__link card__link--template js--template" href="/?{{file}}" id="{{file}}">
                     Custom
                 </a>
             </div>
