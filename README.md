@@ -2,15 +2,11 @@
 ### Development environment setup for VTEX transactional emails
  [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/github/issues/CrisFeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/issues) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
 ##  Features
-### Development
 * Sass
 * Hot Reload
 * Partial Files
 * Dashboard
 * Boilerplate
-### Production
-* Minify css
-* Autoprefixer
 * Inline styles
 * HTML Attributes
 ## Requirements
@@ -51,9 +47,9 @@ yarn build
 ## References
 [Handlebars](https://handlebarsjs.com/)  
 
-[Emails Support](https://www.campaignmonitor.com/css/)  
-
 [Can I Email](https://www.caniemail.com/)
+
+[Emails Support](https://www.campaignmonitor.com/css/)  
 
 [Vtex Templates](https://help.vtex.com/tutorial/list-of-e-mail-templates-in-the-message-center--3g2S2kqBOoSGcCaqMYK2my)  
 
