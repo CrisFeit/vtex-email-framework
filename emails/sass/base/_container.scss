@@ -4,12 +4,16 @@
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
-    color: colors.$text-dark;
+    height: 100%;
     background: colors.$background-grey;
+    &__td{
+        vertical-align: baseline;
+    }
 }
 
 .email-container{
-    margin: auto;
+    margin: 0 auto;
+    height: auto;
     text-align: center;
     color: colors.$text-dark;
     background: colors.$background-grey;
