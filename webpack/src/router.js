@@ -1,5 +1,4 @@
-import { dashboard }from './view'
-import { partials } from './partials'
+import { dashboard, partials }from './view'
 
 export default async function router({ search, pathname }) {
     
