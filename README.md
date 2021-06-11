@@ -8,7 +8,7 @@
 * Dashboard
 * Boilerplate
 * Inline styles
-* HTML Attributes
+* Template Engine
 ## Guide
 * Data and template file name must be the same
 ```
