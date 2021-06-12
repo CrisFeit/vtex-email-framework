@@ -1,6 +1,6 @@
 import '../../emails/sass/style.scss'
 import router from './router'
-import { connect } from './socket'
+import connect from './socket'
 
 router(window.location)
 connect()

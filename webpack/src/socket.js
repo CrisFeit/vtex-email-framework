@@ -1,7 +1,7 @@
 
 import router from './router'
 
-export function connect() {
+export default function connect() {
 
     const socketUrl = 'ws://localhost:8090';
     let socket = new WebSocket(socketUrl);

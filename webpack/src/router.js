@@ -9,9 +9,6 @@ export default async function router({ search, pathname }) {
     const title = document.body.querySelector('title')
     if(title) document.title = title.text
 
-    if (path == "/"){
-        dashboard()
-    }else{
-        partials()
-    }
+    if (path == "/") dashboard()
+    else partials()
 }
