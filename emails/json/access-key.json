@@ -1,12 +1,12 @@
 {
 	"to": [
 		{
-			"name": "name.lastname",
+			"name": "name",
 			"email": "name.lastname@gmail.com"
 		}
 	],
 	"aditionalData": {
-		"accessKey": "00500",
+		"accessKey": "00000",
 		"locale": "pt-BR",
 		"userAgent": "Edge, Windows",
 		"geolocation": {
@@ -25,8 +25,8 @@
 		"IsOperating": false,
 		"CreationDate": "2021-01-01T00:00:00",
 		"OperationDate": null,
-		"CompanyName": " IMPORTACAO E EXPORTACAO LTDA",
-		"TradingName": " IMPORTACAO E EXPORTACAO LTDA",
+		"CompanyName": "My Store IMPORTACAO E EXPORTACAO LTDA",
+		"TradingName": "My Store",
 		"City": null,
 		"Complement": null,
 		"Country": null,

@@ -1,98 +1,63 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<Header class="partial">{{> Header}}</Header>
 
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
-    xmlns:v="urn:schemas-microsoft-com:vml">
+<table class="notice">
+    <tr class="notice__client">
+        <td class="notice__client-wrap">
+            <h1 class="heading">
+                {{#if clientProfileData.firstName}}
+                    {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                        Olá, {{clientProfileData.firstName}}.
+                    {{/compare}}
+                {{/if}}
+            </h1>
+            <p class="acknowledgment">seu pedido foi cancelado.</p>
+        </td>
+    </tr>
+    <tr class="notice__message">
+        <td class="notice__message-wrap">
+            <p class="paragraph">
+                Oi
+                {{#if clientProfileData.firstName}}
+                    {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                        {{clientProfileData.firstName}}.
+                    {{/compare}}
+                {{/if}}
+                , tudo bem?
+                recebemos sua solicitação para cancelarmos o pedido
+                <strong>{{orderId}}</strong>
+                , já está em processo de cancelamento,
+                e o seu pagamento será estornado.
+            </p>
+        </td>
+    </tr>
+</table>
 
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedido Cancelado | {{_accountInfo.AccountName}}</title>
-</head>
+<h3 class="subheading">
+    Pedido Cancelado #{{orderId}}
+</h3>
 
-<body>
-    <table class="email-body" align="center" border="0" cellpadding="0" cellspacing="0">
-        <tr>
-            <td class="email-body__td">
-                <table class="email-container" role="presentation" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td>
+<Shelf class="partial">{{> Shelf}}</Shelf>
+<Totals class="partial">{{> Totals}}</Totals>
 
-                            <Header class="partial">{{> Header}}</Header>
+<br />
+<br />
 
-                            <table class="notice">
-                                <tr class="notice__client">
-                                    <td class="notice__client-wrap">
-                                        <h1 class="heading">
-                                            {{#if clientProfileData.firstName}}
-                                            {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                                            Olá, {{clientProfileData.firstName}}.
-                                            {{/compare}}
-                                            {{/if}}
-                                        </h1>
-                                        <p class="acknowledgment">seu pedido foi cancelado.</p>
-                                    </td>
-                                </tr>
-                                <tr class="notice__message">
-                                    <td class="notice__message-wrap">
-                                        <p class="paragraph">
-                                            Oi
-                                            {{#if clientProfileData.firstName}}
-                                            {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                                            {{clientProfileData.firstName}}.
-                                            {{/compare}}
-                                            {{/if}}
-                                            , tudo bem?
-                                            recebemos sua solicitação para cancelarmos o pedido
-                                            <strong>{{orderId}}</strong>, já
-                                            está em
-                                            processo de cancelamento, e o seu pagamento será estornado.
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
+<table class="disclaimer">
+    <tr class="disclaimer__row">
+        <td class="disclaimer__wrap">
+            <p class="paragraph">
+                Queremos muito que você volte a comprar com a gente e 
+                realce ainda mais sua beleza com os nossos produtos!
+            </p>
+            <p class="paragraph">
+                Até breve!
+                <br />
+                <strong>
+                    Time {{_accountInfo.TradingName}}
+                </strong>
+            </p>
+        </td>
+    </tr>
+</table>
 
-                            <h3 class="subheading">
-                                Pedido Cancelado #{{orderId}}
-                            </h3>
-
-                            <Shelf class="partial">{{> Shelf}}</Shelf>
-                            <Totals class="partial">{{> Totals}}</Totals>
-
-                            <br />
-                            <br />
-
-                            <table class="disclaimer">
-                                <tr class="disclaimer__row">
-                                    <td class="disclaimer__wrap">
-
-                                        <p class="paragraph">
-                                            Queremos muito que você volte a comprar com a gente e realce ainda mais sua
-                                            beleza
-                                            com
-                                            os nossos
-                                            produtos!
-                                        </p>
-                                        <p class="paragraph">
-                                            Até breve!
-                                            <br />
-                                            <strong>
-                                                Time {{_accountInfo.AccountName}}
-                                            </strong>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <Footer class="partial">{{> Footer}}</Footer>
-
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</body>
-
-</html>
+<Footer class="partial">{{> Footer}}</Footer>

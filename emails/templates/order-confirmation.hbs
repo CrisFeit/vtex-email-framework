@@ -1,343 +1,139 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<Header class="partial">{{> Header}}</Header>
 
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
-  xmlns:v="urn:schemas-microsoft-com:vml">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pedido Confirmado | {{_accountInfo.AccountName}}</title>
-</head>
-
-<body>
-  <table class="email-body" align="center" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td class="email-body__td">
-        <table class="email-container" role="presentation" align="center" cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-
-              <Header class="partial">{{> Header}}</Header>
-
-              <table class="notice">
-                <tr class="notice__topic">
-                  <td class="notice__topic-wrap">
-                    <a href="http://{{_accountInfo.AccountName}}.com.br">
-                      <img class="notice__topic-img"
-                        src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/emails-order-confirmation.png"
-                        alt="Pedido Confirmado">
-                    </a>
-                  </td>
-                </tr>
-                <tr class="notice__client">
-                  <td class="notice__client-wrap">
-                    <h1 class="heading">
-                      {{#each orders}}
-                      {{#if clientProfileData.firstName}}
-                      {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                      Olá, {{clientProfileData.firstName}}.
-                      {{/compare}}
-                      {{/if}}
-                      {{/each}}
-                    </h1>
-                    <p class="acknowledgment">obrigada por comprar com a {{_accountInfo.AccountName}}</p>
-                  </td>
-                </tr>
-                <tr class="notice__message">
-                  <td class="notice__message-wrap">
-                    <p class="paragraph">
-                      Acabamos de receber o seu pedido.
-                      <br />
-                      Estamos aguardando a confirmação do seu pagamento para iniciar o envio.
-                    </p>
-                    <p class="paragraph">
-                      Qualquer dúvida, nossa equipe de atendimento poderá entrar em contato
-                      <br />
-                      para verificar as suas informações, combinado?
-                    </p>
-                    <p class="paragraph">
-                      <a class="button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
-                        Ver detalhes do pedido
-                      </a>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-
-              <h3 class="subheading">
-                Acompanhe seu pedido
-              </h3>
-              <table class="billing">
-                <tr class="billing__row">
-                  <th class="billing__header" cellspacing="10px">Endereço</th>
-                  <th class="billing__header" cellspacing="10px">Pagamento</th>
-                </tr>
-
-                <tr class="billing__row">
-                  <td class="billing__data" width="50%" cellspacing="10px">
-                    {{#each orders}}
-                    {{#richShippingData shippingData}}
-                    {{#group logisticsInfo by="addessId"}}
-                    <div>
-                      {{#compare items.0.selectedDeliveryChannel '==' null}}
-                      <div>
-                        <h4>
-                          Receber</h4>
-
-                        {{#if orders.0.giftRegistryData}}
-                        {{orders.0.giftRegistryData.description}}
-                        {{else}}
-                        {{#each ../../shippingData.availableAddresses}}
-                        {{#eq ../addressId AddressId}}
-                        <strong>{{receiverName}}</strong>
-                        <br />{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
-                        <br />{{neighborhood}} - {{city}} - {{state}}
-                        <br />CEP {{postalCode}}
-                        {{/eq}}
-                        {{/each}}
-                        {{/if}}
-                      </div>
-                      {{/compare}}
-
-                      {{#eq items.0.selectedDeliveryChannel "delivery"}}
-                      <div>
-                        <h4>
-                          Receber</h4>
-
-                        {{#if orders.0.giftRegistryData}}
-                        {{orders.0.giftRegistryData.description}}
-                        {{else}}
-                        {{#each ../../shippingData.availableAddresses}}
-                        {{#eq ../addressId AddressId}}
-                        <strong>{{receiverName}}</strong>
-                        <br />{{street}}, {{number}}{{#if complement}} - {{complement}}{{/if}}
-                        <br />{{neighborhood}} - {{city}} - {{state}}
-                        <br />CEP {{postalCode}}
-                        {{/eq}}
-                        {{/each}}
-                        {{/if}}
-                      </div>
-                      {{/eq}}
-                      {{#eq items.0.selectedDeliveryChannel "pickup-in-point"}}
-                      <div>
-                        <h4>
-                          Retirar</h4>
-                        {{#each items.0.slas}}
-                        {{#compare ../items.0.selectedSla '==' id}}
-                        <strong>{{pickupStoreInfo.friendlyName}}</strong>
-                        {{#with pickupStoreInfo.address}}
-                        <br />{{street}}, {{number}}{{#if complement}}, {{complement}}{{/if}}
-                        <br />{{neighborhood}}
-                        {{/with}}
-                        {{/compare}}
-                        {{/each}}
-                      </div>
-                      {{/eq}}
-                    </div>
-                    {{/group}}
-                    {{/richShippingData}}
-                    {{/each}}
-                  </td>
-
-
-
-                  <td class="billing__data" width="50%" cellspacing="10px">
-
-                    {{#compare split "!=" true}}
-                    {{#each orders.0.paymentData.transactions}}
-                    {{#compare payments.length "==" 1}}
-                    {{#each payments}}
-                    <div>
-                      {{paymentSystemName}}
-                      {{#if lastDigits}} final {{lastDigits}} {{/if}}
-                      <br />R$ {{formatCurrency value}}
-                      {{#eq installments 1}}
-                      à vista
-                      {{else}}
-                      em {{installments}}x
-                      {{/eq}}
-                    </div>
-
-                    {{/each}}
-                    {{/compare}}
-
-                    {{#compare payments.length "!=" 1}}
-                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                      {{#each payments}}
-                      <tr>
-                        <td align="left">
-                          {{paymentSystemName}}
-                          {{#if lastDigits}} final {{lastDigits}} {{/if}}
-                          {{#eq installments 1}}
-                          à vista
-                          {{else}}
-                          em {{installments}}x
-                          {{/eq}}
-                        </td>
-                        <td align="left">R$ {{formatCurrency value}}</td>
-                      </tr>
-                      {{/each}}
-                    </table>
-                    {{/compare}}
-
-                    <div>Aguardando aprovação</div>
-                    {{#each payments}}
-                    {{#eq paymentSystemName 'Boleto Bancário'}}
-                    <div class="billing__button-wrap">
-                      <a class="button--billet" href="{{replace url '{Installment}' installments}}">Boleto Bancário</a>
-                    </div>
-                    {{/eq}}
-                    {{/each}}
-                    {{/each}}
-                    {{/compare}}
-
-
-                    {{#each orders}}
-                    {{#compare split "==" true}}
-                    <div>
-                      <h3>
-                        Pagamento</h3>
-                      {{#each paymentData.transactions}}
-                      {{#compare payments.length "==" 1}}
-                      {{#each payments}}
-                      <div>
-                        {{paymentSystemName}}
-                        {{#if lastDigits}} final {{lastDigits}} {{/if}}
-                        <br />R$ {{formatCurrency value}}
-                        {{#eq installments 1}}
-                        à vista
-                        {{else}}
-                        em {{installments}}x
-                        {{/eq}}
-                      </div>
-                      {{/each}}
-                      {{/compare}}
-
-                      {{#compare payments.length "!=" 1}}
-                      <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                        {{#each payments}}
-                        <tr>
-                          <td align="left">
-                            {{paymentSystemName}}
-                            {{#if lastDigits}} final {{lastDigits}} {{/if}}
-                            {{#eq installments 1}}
-                            à vista
-                            {{else}}
-                            em {{installments}}x
-                            {{/eq}}
-                          </td>
-                          <td align="left">R$ {{formatCurrency value}}</td>
-                        </tr>
-                        {{/each}}
-                      </table>
-                      {{/compare}}
-                      <div>Aguardando aprovação</div>
-
-                      {{/each}}
-                    </div>
-
-                    {{/compare}}
-                    {{/each}}
-                  </td>
-
-                </tr>
-              </table>
-
-
-              <table class="status" cellspacing="2px">
-                <tr class="status__row">
-                  <td class="status__img-wrap" colspan="5">
-                    <img class="status__img"
-                      src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/status-order-confirmation.png" />
-                  </td>
-                </tr>
-                <tr class="status__row">
-                  <td class="status__title status__title--first status__title--current status__title--success">
-                    Pedido Realizado
-                  </td>
-                  <td class="status__title">
-                    Pagamento Confirmado
-                  </td>
-                  <td class="status__title">
-                    Pedido Faturado
-                  </td>
-                  <td class="status__title">
-                    Em Transporte
-                  </td>
-                  <td class="status__title">
-                    Pedido Entregue
-                  </td>
-                </tr>
-                <tr class="status__row">
-                  <td class="status__info-wrap">
-
-                    {{#each orders}}
-                    {{#if creationDate}}
-                    {{formatDateTime creationDate}}
-                    {{/if}}
-                    {{/each}}
-                  </td>
-                  <td class="status__info-wrap">
-
-                  </td>
-                  <td class="status__info-wrap">
-
-                  </td>
-                  <td class="status__info-wrap">
-
-                  </td>
-                  <td class="status__info-wrap">
-
-                  </td>
-                </tr>
-              </table>
-
-
-              {{#each orders}}
-              <h3 class="subheading">Pedido #{{orderId}}</h3>
-
-              <Shelf class="partial">{{> Shelf}}</Shelf>
-
-              <Totals class="partial">{{> Totals}}</Totals>
-              {{/each}}
-              <br />
-              <br />
-
-
-              <table class="disclaimer">
-                <tr class="disclaimer__row">
-                  <td class="disclaimer__wrap">
-                    <h3 class="disclaimer__heading">
-                      E agora, o que preciso fazer?
-                    </h3>
-                    <p class="paragraph">
-                      Assim que o pagamento for confirmado, enviaremos um e-mail com instruções para acompanhar o seu
-                      pedido.
-                      Você
-                      precisa apenas ficar de olho! :)
-                    </p>
-                    <p class="paragraph">
-                      Até breve!
-                      <br />
-                      <strong>
-                        Time {{_accountInfo.AccountName}}
-                      </strong>
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <Footer class="partial">{{> Footer}}</Footer>
-
-            </td>
-          </tr>
-          </table>
-      </td>
+<table class="notice">
+    <tr class="notice__topic">
+        <td class="notice__topic-wrap">
+            <a href="http://{{_accountInfo.AccountName}}.com.br">
+                <img class="notice__topic-img"
+                    src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/emails-order-confirmation.png"
+                    alt="Pedido Realizado" />
+            </a>
+        </td>
     </tr>
-  </table>
-</body>
+    <tr class="notice__client">
+        <td class="notice__client-wrap">
+            <h1 class="heading">
+                {{#each orders}}
+                    {{#if clientProfileData.firstName}}
+                        {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
+                            Olá, {{clientProfileData.firstName}}.
+                        {{/compare}}
+                    {{/if}}
+                {{/each}}
+            </h1>
+            <p class="acknowledgment">obrigada por comprar com a {{_accountInfo.AccountName}}</p>
+        </td>
+    </tr>
+    <tr class="notice__message">
+        <td class="notice__message-wrap">
+            <p class="paragraph">
+                Acabamos de receber o seu pedido.
+                <br />
+                Estamos aguardando a confirmação do seu pagamento para iniciar o envio.
+            </p>
+            <p class="paragraph">
+                Qualquer dúvida, nossa equipe de atendimento poderá entrar em contato
+                <br />
+                para verificar as suas informações, combinado?
+            </p>
+            <p class="paragraph">
+                <a class="button--dark" href="{{ordersUrl}}" target="_blank" rel="noopener noreferrer">
+                    Ver detalhes do pedido
+                </a>
+            </p>
+        </td>
+    </tr>
+</table>
 
-</html>
+<h3 class="subheading">
+    Acompanhe seu pedido
+</h3>
+
+{{#each orders}}
+    <Billing class="partial">{{> Billing}}</Billing>
+{{/each}}
+
+
+<table class="status" cellspacing="2px">
+    <tr class="status__row">
+        <td class="status__img-wrap" colspan="5">
+            <img class="status__img"
+                src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/status-order-confirmation.png" alt="status do pedido"/>
+        </td>
+    </tr>
+    <tr class="status__row">
+        <td class="status__title status__title--first status__title--current status__title--success">
+            Pedido Realizado
+        </td>
+        <td class="status__title">
+            Pagamento Confirmado
+        </td>
+        <td class="status__title">
+            Pedido Faturado
+        </td>
+        <td class="status__title">
+            Em Transporte
+        </td>
+        <td class="status__title">
+            Pedido Entregue
+        </td>
+    </tr>
+    <tr class="status__row">
+        <td class="status__info-wrap">
+            {{#each orders}}
+                {{#if creationDate}}
+                    {{formatDateTime creationDate}}
+                {{/if}}
+            {{/each}}
+        </td>
+        <td class="status__info-wrap">
+
+        </td>
+        <td class="status__info-wrap">
+
+        </td>
+        <td class="status__info-wrap">
+
+        </td>
+        <td class="status__info-wrap">
+
+        </td>
+    </tr>
+</table>
+
+
+{{#each orders}}
+    <h3 class="subheading">Pedido #{{orderId}}</h3>
+
+    <Shelf class="partial">{{> Shelf}}</Shelf>
+
+    <Totals class="partial">{{> Totals}}</Totals>
+{{/each}}
+
+<br />
+<br />
+
+<table class="disclaimer">
+    <tr class="disclaimer__row">
+        <td class="disclaimer__wrap">
+            <h3 class="disclaimer__heading">
+                E agora, o que preciso fazer?
+            </h3>
+            <p class="paragraph">
+                Assim que o pagamento for confirmado, enviaremos um e-mail com instruções para acompanhar o seu
+                pedido.
+                Você
+                precisa apenas ficar de olho! :)
+            </p>
+            <p class="paragraph">
+                Até breve!
+                <br />
+                <strong>
+                    Time {{_accountInfo.TradingName}}
+                </strong>
+            </p>
+        </td>
+    </tr>
+</table>
+
+<Footer class="partial">{{> Footer}}</Footer>

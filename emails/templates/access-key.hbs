@@ -1,70 +1,38 @@
-<!DOCTYPE html
-  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<Header class="partial">{{> Header}}</Header>
 
-<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office"
-  xmlns:v="urn:schemas-microsoft-com:vml">
-
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chave de Acesso | {{_accountInfo.AccountName}}</title>
-
-</head>
-
-<body>
-  <table class="email-body" align="center" border="0" cellpadding="0" cellspacing="0">
-    <tr>
-      <td class="email-body__td">
-        <table class="email-container" role="presentation" align="center" cellpadding="0" cellspacing="0">
-          <tr>
-            <td>
-
-              <Header class="partial">{{> Header}}</Header>
-
-              <table class="notice notice--access-key">
-                <tr class="notice__client">
-                  <td class="notice__client-wrap">
-                    <h1 class="heading">Olá {{to.0.name}},
-                    </h1>
-                  </td>
-                </tr>
-                <tr class="notice__message">
-                  <td class="notice__message-wrap">
-                    <p class="paragraph">
-                      Precisamos da sua confirmação para liberar a página que você está tentando acessar.
-                    </p>
-                  </td>
-                </tr>
-              </table>
-
-              <table class="status status--key">
-                <tr>
-                  <td>
-                    <h1 class="heading">
-                      {{aditionalData.accessKey}}
-                    </h1>
-                  </td>
-                </tr>
-                <p class="paragraph">Retorne à página e digite o código.</p>
-              </table>
-
-              <p class="paragraph">
-                Até breve!
-                <br />
-                <strong>
-                  Time {{_accountInfo.AccountName}}
-                </strong>
-              </p>
-
-              <Footer class="partial">{{> Footer}}</Footer>
-
-            </td>
-          </tr>
-        </table>
-      </td>
+<table class="notice notice--access-key">
+    <tr class="notice__client">
+        <td class="notice__client-wrap">
+            <h1 class="heading">Olá {{to.0.name}},
+            </h1>
+        </td>
     </tr>
-  </table>
-</body>
+    <tr class="notice__message">
+        <td class="notice__message-wrap">
+            <p class="paragraph">
+                Precisamos da sua confirmação para liberar a página que você está tentando acessar.
+            </p>
+        </td>
+    </tr>
+</table>
 
-</html>
+<table class="status status--key">
+    <tr>
+        <td>
+            <h1 class="heading">
+                {{aditionalData.accessKey}}
+            </h1>
+        </td>
+    </tr>
+    <p class="paragraph">Retorne à página e digite o código.</p>
+</table>
+
+<p class="paragraph">
+    Até breve!
+    <br />
+    <strong>
+        Time {{_accountInfo.AccountName}}
+    </strong>
+</p>
+
+<Footer class="partial">{{> Footer}}</Footer>
