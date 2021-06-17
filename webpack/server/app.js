@@ -3,7 +3,6 @@ const { existsSync, readdirSync } = require('fs');
 const { resolve } = require('path');
 const cors = require('cors')
 const app = require('express')();
-const { Server } = require('ws');
 const hbs = require('hbs');
 
 require(root('emails/helpers/vtex-helpers-v3.2.2'));
@@ -24,7 +23,7 @@ function findModel(templateName){
 const viewFiles = readdirSync(root('emails/templates'));
 const fileNames = viewFiles
     .filter(folder => /.hbs$/gi.test(folder))
-    .map(template=> {
+    .map(template => {
         return {
             file : template.split('.')[0],
             model: findModel(template)
@@ -36,7 +35,7 @@ app.set('views',root('emails/templates'));
 app.set('view engine','hbs');
 
 app.get('/' , (req,res)=> {
-    res.render(root('webpack/src/view'),{files:fileNames})
+    res.render(root('webpack/server/view'),{files:fileNames})
 });
 
 fileNames.forEach(({file}) => {
@@ -48,4 +47,4 @@ fileNames.forEach(({file}) => {
     })
 });
 
-app.listen( 5050 , ()=> new Server({ port: 8090}));
+module.exports =  app 
