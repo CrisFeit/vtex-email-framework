@@ -1,5 +1,5 @@
 # VTEX Email Framework
- [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node-dot-js)](https://nodejs.org) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
+ [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
  ### Transactional emails development architecture
 ##  Features
 * Sass
