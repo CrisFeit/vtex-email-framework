@@ -9,8 +9,8 @@
     "dev": "concurrently 'yarn:client' 'yarn:server'",
     "server": "nodemon webpack/server/server.js",
     "client": "webpack serve --config ./webpack/webpack.dev.js",
-    "build": "webpack --config ./webpack/webpack.prod.js && node ./webpack/webpack.dist.js && yarn test",
-    "test": "jest ./webpack"
+    "build": "webpack --config ./webpack/webpack.prod.js && node ./webpack/webpack.dist.js && yarn test:build",
+    "test:build": "jest"
   },
   "engines": {
     "node": ">=14"
