@@ -1,6 +1,6 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.5.1",
+  "version": "2.5.2",
   "main": "server.js",
   "license": "MIT",
   "author": "Cristiano Rocha",

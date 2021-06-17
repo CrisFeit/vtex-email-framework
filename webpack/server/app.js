@@ -6,16 +6,16 @@ const app = require('express')();
 const hbs = require('hbs');
 
 require(root('emails/helpers/vtex-helpers-v3.2.2'));
-hbs.registerHelper('clearText', (value)=> value.replace(/\W+/g,' '));
-hbs.registerPartials(root('emails/templates/partials'), function (err) {});
+hbs.registerHelper('clearText', (value) => value.replace(/\W+/g, ' '));
+hbs.registerPartials(root('emails/templates/partials'), function (err) { });
 
-function root(folders){
+function root(folders) {
     return resolve(...folders.split('/'));
 }
 
-function findModel(templateName){
-    if (existsSync(root( 'emails/templates/defaults'))) {
-        if(readdirSync(root('emails/templates/defaults')).includes(templateName)) return templateName
+function findModel(templateName) {
+    if (existsSync(root('emails/templates/defaults'))) {
+        if (readdirSync(root('emails/templates/defaults')).includes(templateName)) return templateName
     }
     return null
 }
@@ -25,26 +25,26 @@ const fileNames = viewFiles
     .filter(folder => /.hbs$/gi.test(folder))
     .map(template => {
         return {
-            file : template.split('.')[0],
+            file: template.split('.')[0],
             model: findModel(template)
         }
-});
+    });
 
 app.use(cors());
-app.set('views',root('emails/templates'));
-app.set('view engine','hbs');
+app.set('views', root('emails/templates'));
+app.set('view engine', 'hbs');
 
-app.get('/' , (req,res)=> {
-    res.render(root('webpack/server/view'),{files:fileNames})
+app.get('/', (req, res) => {
+    res.render(root('webpack/server/view'), { files: fileNames })
 });
 
-fileNames.forEach(({file}) => {
-    app.get(`/${file}` , (req,res)=> {
-        res.render(file,require(root(`emails/json/${file}.json`)))
+fileNames.forEach(({ file }) => {
+    app.get(`/${file}`, (req, res) => {
+        res.render(file, require(root(`emails/json/${file}.json`)))
     })
-    app.get(`/templates/defaults/${file}` , (req,res)=> {
-        res.render(root(`emails/templates/defaults/${file}`),require(root(`emails/json/${file}.json`)))
+    app.get(`/templates/defaults/${file}`, (req, res) => {
+        res.render(root(`emails/templates/defaults/${file}`), require(root(`emails/json/${file}.json`)))
     })
 });
 
-module.exports =  app 
+module.exports = app
