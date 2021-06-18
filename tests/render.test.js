@@ -22,9 +22,9 @@ describe("emails/dist", () => {
 
       const response = await request(`http://localhost:${port}/${template}`)
 
-      if (response.status >= 500 && response.status <= 590) {
+      if (response.status !== 200) {
         const message = await response.text()
-        throw new Error(`Error${message.split('.hbs')[1].split('<br>')[0].replace("&#39;", "'")}`)
+        throw new Error(`${message.split('<pre>')[1].split('<br>')[0].replace(/&#39;/g, "'")}`)
       }
 
       expect(response.status).toBe(200)
