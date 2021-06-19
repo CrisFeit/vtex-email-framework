@@ -1,14 +1,15 @@
-import { dashboard, partials }from './view'
+import {  render, error } from './view'
 
 export default async function router({ search, pathname }) {
-    
-    const path = search ? `/${search.split('?')[1]}` : pathname
-    
-    document.body.innerHTML = await (await fetch(`http://localhost:5050${path}`)).text()
-    
-    const title = document.body.querySelector('title')
-    if(title) document.title = title.text
 
-    if (path == "/") dashboard()
-    else partials()
+    const path = search ? `/${search.split('?')[1]}` : pathname
+    const response = await fetch(`http://localhost:5050${path}`)
+    const template = await response.text()
+
+    if (response.status === 200) {
+        render(path, template)
+    } else {
+        error(response.status, template)
+    }
+
 }

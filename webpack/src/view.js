@@ -28,20 +28,43 @@ function storageFactory(key, value) {
     return storage
 }
 
-export function dashboard() {
-
+function dashboard() {
     if (getStorage()) switchActive()
     document.onchange = ({ target }) => switchChange(target)
-
 }
 
-export function partials(){
+function partials() {
     const partials = [...document.querySelectorAll('.partial')]
-    if(partials.length >= 1){
+    if (partials.length >= 1) {
         partials.forEach(partial => {
             const children = partial.innerHTML
-            partial.insertAdjacentHTML('beforebegin',children)
+            partial.insertAdjacentHTML('beforebegin', children)
             partial.remove()
         })
     }
+}
+export function render(path, template) {
+
+    document.body.innerHTML = template
+    const title = document.body.querySelector('title')
+    if (title) document.title = title.text
+
+    if (path == "/") {
+        dashboard()
+    } else {
+        partials()
+    }
+
+}
+
+export function error(status, template) {
+    const errorPage = `
+<div style="margin:50px auto;">
+    <h2 style="display:inline-block;border-right:1px solid rgba(0, 0, 0,.3);margin:0;margin-right:20px;padding:10px 23px 10px 0;font-size:24px;font-weight:500;vertical-align:top;">${status}</h2>
+    <p style="display:inline-block;text-align:center;line-height:49px;height:49px;vertical-align:middle;">
+        ${template.split('<pre>')[1].split('<br>')[0]}
+    </p>
+</div>
+`
+    document.body.innerHTML = errorPage
 }
