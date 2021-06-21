@@ -1,23 +1,23 @@
 @use '../settings/colors';
 
-.header{
-        background-color: colors.$background-dark;
+.header {
+	background-color: colors.$background-dark;
 }
 
-.header__row{
-        width: 100%;
-        background-color: colors.$background-dark;
+.header__row {
+	background-color: colors.$background-dark;
+	width: 100%;
 }
 
-.header__wrap{
-        margin: auto;
-        padding: 4% 0;
-        text-align: center;
+.header__wrap {
+	margin: auto;
+	padding: 4% 0;
+	text-align: center;
 }
 
-.header__logo{
-        color: colors.$text-light;
-        width: 40%;
-        max-width: 145px;
-        margin: auto;
+.header__logo {
+	color: colors.$text-light;
+	margin: auto;
+	max-width: 145px;
+	width: 40%;
 }

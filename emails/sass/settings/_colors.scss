@@ -1,70 +1,71 @@
-/* 
-  Brand  Colors 
+/*
+  Brand  Colors
 */
-$brand-primary       : #FFB5C0;
-$brand-secondary     : #E3C2C2;
+$brand-primary: #ffb5c0;
+$brand-secondary: #e3c2c2;
 
-/* 
+/*
   Body Colors
 */
-$background-grey  : #eeeeee;
-$background-dark  : #383935;
-$background-light : #ffffff;
+$background-grey: #eeeeee;
+$background-dark: #383935;
+$background-light: #ffffff;
 
 /*
 Text Colors
-*/ 
-$text-dark        : #383935;
-$text-light       : #ffffff;
+*/
+$text-dark: #383935;
+$text-light: #ffffff;
+$text-grey: #778899;
 
 /*
 Border Colors
-*/ 
-$border-line      :#E5E5E5;
+*/
+$border-line: #e5e5e5;
 
-/* 
+/*
   Colors
 */
-$ice           : #F5F5F5;
-$silver        : #e7e7e7;
-$dark-middle   : #484747;
-$grey          : #aaaaaa;
-$grey-dark     : #807f7f;
-$grey-light    : #fbfbfb;
-$white-medium  : #f0f0f0;
+$ice: #f5f5f5;
+$silver: #e7e7e7;
+$dark-middle: #484747;
+$grey: #aaaaaa;
+$grey-dark: #807f7f;
+$grey-light: #fbfbfb;
+$white-medium: #f0f0f0;
 
 /*
  Box-Shadowns
 */
-$box-dark      : #0d0d0d; 
-$box-light     : #272626; 
+$box-dark: #0d0d0d;
+$box-light: #272626;
 
 /**
  * Alerts boxes
  */
- $success-text       : #3c763d !default;
- $success-background : #dff0d8 !default;
- $success-border     : darken($success-background, 5%) !default;
- 
- $info-text          : #31708f !default;
- $info-background    : #d9edf7 !default;
- $info-border        : darken($info-background, 7%) !default;
- 
- $warning-text       : #b8a435 !default;
- $warning-background : #faf2cc !default;
- $warning-border     : darken($warning-background, 15%) !default;
- 
- $danger-text        : #bb2a27 !default;
- $danger-background  : #f2dede !default;
- $danger-border      : darken($danger-background, 5%) !default;
- 
+$success-text: #3c763d !default;
+$success-background: #dff0d8 !default;
+$success-border: darken($success-background, 5%) !default;
+
+$info-text: #31708f !default;
+$info-background: #d9edf7 !default;
+$info-border: darken($info-background, 7%) !default;
+
+$warning-text: #b8a435 !default;
+$warning-background: #faf2cc !default;
+$warning-border: darken($warning-background, 15%) !default;
+
+$danger-text: #bb2a27 !default;
+$danger-background: #f2dede !default;
+$danger-border: darken($danger-background, 5%) !default;
+
 /*
   Social Media Colors
  */
- $facebook  : #526cac !default;
- $google    : #d34b37 !default;
- $instagram : #C13584 !default;
- $linkedin  : #0286be !default;
- $rss       : #f9a600 !default;
- $twitter   : #1ebaec !default;
- $youtube   : #c42232 !default;
+$facebook: #526cac !default;
+$google: #d34b37 !default;
+$instagram: #c13584 !default;
+$linkedin: #0286be !default;
+$rss: #f9a600 !default;
+$twitter: #1ebaec !default;
+$youtube: #c42232 !default;

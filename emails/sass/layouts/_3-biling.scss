@@ -1,36 +1,37 @@
 @use '../settings/colors';
 
-.billing{
-    padding: 0 2%;
-    border-collapse: separate;
-    border-spacing: 10px 0;
+.billing {
+	border-collapse: separate;
+	border-spacing: 10px 0;
+	padding: 0 2%;
 }
 
-.billing__row{
-    background-color: colors.$background-light;
+.billing__row {
+	background-color: colors.$background-light;
 }
 
-.billing__header{
-    text-align: left;
-    font-weight: bold;
-    font-size: 14px;
-    padding: 2% 2% 4% 2%;
-    width: 50%;
+.billing__header {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 2% 2% 4%;
+	text-align: left;
+	width: 50%;
 }
 
-.billing__data{
-    width: 50%;
-    text-align: left;
-    vertical-align: top;
-    font-size: 14px;
-    padding: 2%;
-    div{
-        text-align: left;
-    }
+.billing__data {
+	font-size: 14px;
+	padding: 2%;
+	text-align: left;
+	vertical-align: top;
+	width: 50%;
+
+	div {
+		text-align: left;
+	}
 }
 
-.billing__button-wrap{
-    padding: 10%;
-    text-align: center;
-    margin: auto;
+.billing__button-wrap {
+	margin: auto;
+	padding: 10%;
+	text-align: center;
 }

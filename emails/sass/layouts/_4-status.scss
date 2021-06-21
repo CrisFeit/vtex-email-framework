@@ -1,40 +1,48 @@
 @use '../settings/colors';
 
-.status{
-    padding: 4% 0;
-    border-collapse: separate;
-    border-spacing:  0 1px;
+.status {
+	border-collapse: separate;
+	border-spacing: 0 1px;
+	padding: 4% 0;
 
-    &--key{
-        padding: 4% 0;
-        width: 70%;
-        height: auto;
-        background-color: colors.$background-light;    
-        margin-bottom: auto;
-    }
+	&--key {
+		background-color: colors.$background-light;
+		height: auto;
+		margin-bottom: auto;
+		padding: 4% 0;
+		width: 70%;
+	}
 }
-.status__img-wrap{
-    padding: 0 5%;
+
+.status__img-wrap {
+	padding: 0 5%;
 }
-.status__info-wrap,.status__title{
-    text-align: center;
-    font-size: 12px;
-    box-sizing: content-box;
-    width: 19%;
+
+.status__info-wrap,
+.status__title {
+	box-sizing: content-box;
+	font-size: 12px;
+	text-align: center;
+	width: 19%;
 }
-.status__title{
-    color: lightslategray;
-    font-weight: bold;
-    &--success{
-        color: colors.$text-dark;
-    }
-    &--first{
-        padding-left: 2%;
-    }
-    &--current{
-        width: 24%;
-    }
+
+.status__title {
+	color: colors.$text-grey;
+	font-weight: bold;
+
+	&--success {
+		color: colors.$text-dark;
+	}
+
+	&--first {
+		padding-left: 2%;
+	}
+
+	&--current {
+		width: 24%;
+	}
 }
-.status__info-wrap{
-    padding: 2% 0 0 0;
+
+.status__info-wrap {
+	padding: 2% 0 0;
 }

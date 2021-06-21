@@ -1,6 +1,6 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.5.2",
+  "version": "2.6.0",
   "main": "server.js",
   "license": "MIT",
   "author": "Cristiano Rocha",
@@ -33,6 +33,8 @@
     "sass": "^1.34.1",
     "sass-loader": "^12.0.0",
     "style-loader": "^2.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-webpack-plugin": "^2.2.0",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2",

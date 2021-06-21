@@ -1,31 +1,32 @@
 @use '../settings/colors';
 
-.paragraph{
-  color: colors.$text-dark;
-  padding: 2% 0;
-  font-size: 14px;
-  text-align: center;
-  font-weight: normal;
-  line-height: 1.5;
+.paragraph {
+	color: colors.$text-dark;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.5;
+	padding: 2% 0;
+	text-align: center;
 }
 
-.heading{
-  text-transform: uppercase;
-  font-weight: normal;
-  color: colors.$text-dark;
-  font-size: 28px;
-}
-.subheading{
-  color: colors.$text-dark;
-  padding: 4% 0;
-  font-size: 20px;
-  text-align: center;
-  font-weight: normal;
+.heading {
+	color: colors.$text-dark;
+	font-size: 28px;
+	font-weight: normal;
+	text-transform: uppercase;
 }
 
-.acknowledgment{
-  text-transform: initial;
-  font-weight: bold;
-  font-size: 14px;
-  padding: 1% 0;
+.subheading {
+	color: colors.$text-dark;
+	font-size: 20px;
+	font-weight: normal;
+	padding: 4% 0;
+	text-align: center;
+}
+
+.acknowledgment {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 1% 0;
+	text-transform: initial;
 }

@@ -1,34 +1,36 @@
-
 @use '../settings/colors';
 
-%button{
-  display: block;
-  width: fit-content;
-  width: 90%;
-  max-width: 300px;
-  font-size: 14px;
-  margin: auto;
-  text-align: center;
-  padding: 2% 4%;
-  text-decoration: none;
-  border-radius: 50px;
-  box-sizing: border-box;
-  white-space: nowrap;
+%button {
+	border-radius: 50px;
+	box-sizing: border-box;
+	display: block;
+	font-size: 14px;
+	margin: auto;
+	max-width: 300px;
+	padding: 2% 4%;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	width: fit-content;
+	width: 90%;
 }
-.button--dark{
-  @extend %button;
-  color: colors.$text-light;
-  background-color: colors.$background-dark;
+
+.button--dark {
+	@extend %button;
+	background-color: colors.$background-dark;
+	color: colors.$text-light;
 }
-.button--light{
-  @extend %button;
-  color: colors.$text-dark;
-  background-color: colors.$background-light;
-  border: 1px solid colors.$background-dark;
+
+.button--light {
+	@extend %button;
+	background-color: colors.$background-light;
+	border: 1px solid colors.$background-dark;
+	color: colors.$text-dark;
 }
-.button--billet{
-  @extend .button--dark;
-  font-size: 12px;
-  padding: 5% 2%;
-  width: 100%;
+
+.button--billet {
+	@extend .button--dark;
+	font-size: 12px;
+	padding: 5% 2%;
+	width: 100%;
 }

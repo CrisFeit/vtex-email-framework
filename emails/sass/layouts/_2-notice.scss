@@ -1,31 +1,31 @@
 @use '../settings/colors';
 
-.notice{
-    background-color: colors.$background-light;
-    padding: 2% 0;
-    border-collapse: separate;
-    
-    &--access-key{
-        background-color: colors.$background-grey;
-        padding: 4%;
-    }
+.notice {
+	background-color: colors.$background-light;
+	border-collapse: separate;
+	padding: 2% 0;
+
+	&--access-key {
+		background-color: colors.$background-grey;
+		padding: 4%;
+	}
 }
 
-.notice__topic-wrap{
-    margin: auto;
-    padding: 0 10% 5% 10%;
+.notice__topic-wrap {
+	margin: auto;
+	padding: 0 10% 5%;
 }
 
-.notice__topic-img{
-    width: 100%;
-    margin: auto;
+.notice__topic-img {
+	margin: auto;
+	width: 100%;
 }
 
-.notice__client-wrap{
-    padding: 0 2%;
-    margin: auto;
+.notice__client-wrap {
+	margin: auto;
+	padding: 0 2%;
 }
 
-.notice__message-wrap{
-    padding: 0 2%;
+.notice__message-wrap {
+	padding: 0 2%;
 }

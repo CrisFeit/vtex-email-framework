@@ -1,47 +1,50 @@
 @use '../settings/colors';
 
-.footer{
-        padding: 2% 4%;
-        border-collapse: separate;
-        background-color: colors.$background-dark;
+.footer {
+	background-color: colors.$background-dark;
+	border-collapse: separate;
+	padding: 2% 4%;
 }
 
-.footer__row{
-        background-color: colors.$background-dark;
+.footer__row {
+	background-color: colors.$background-dark;
 }
 
-.footer__wrap-logo{
-        text-align: left;
+.footer__wrap-logo {
+	text-align: left;
 }
 
-.footer__logo{
-        color: colors.$text-light;
-        text-align: left;
-        width: 80%;
-        max-width: 145px;
-        margin: auto;
+.footer__logo {
+	color: colors.$text-light;
+	margin: auto;
+	max-width: 145px;
+	text-align: left;
+	width: 80%;
 }
 
-.footer__wrap-social-logo{
-        width: 95px;
-        margin-left: auto;
-        text-align: right;
-}
-.footer__social-text{
-        color: colors.$text-light;
-        padding-bottom: 5%;
-        text-align: right;
-        box-sizing: border-box;
+.footer__wrap-social-logo {
+	margin-left: auto;
+	text-align: right;
+	width: 95px;
 }
 
-.footer__social-logo{
-        display: inline-block;
-        width: 45%;
-        &--left{
-            text-align: left;
-            margin-right: auto;
-        }
-        &--right{
-                text-align: right;
-        }
+.footer__social-text {
+	box-sizing: border-box;
+	color: colors.$text-light;
+	padding-bottom: 5%;
+	text-align: right;
+}
+
+.footer__social-logo {
+	display: inline-block;
+	width: 45%;
+
+	&--left {
+		margin-right: auto;
+		text-align: left;
+	}
+
+	&--right {
+		text-align: right;
+	}
 }

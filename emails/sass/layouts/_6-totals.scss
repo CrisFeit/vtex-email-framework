@@ -1,40 +1,44 @@
 @use '../settings/colors';
 
-.totals{
-    width: 95%;
-    padding: 4% 2%;
-    border-collapse: separate;
-    background-color: colors.$background-light;
-    border-spacing: 0 15px;
-}
-.totals__space{
-    width: 40%;
-}
-.totals__item{
-    width: 40%;
-    padding-bottom: 4% 0 ;
-    text-align: left;
-    font-size: 14px;
-}
-.totals__item-value{
-    width: 25%;
-    font-size: 14px;
-    white-space: nowrap;
-}
-.totals__amount-title{
-    width: 40%;
-    padding: 4% 0 ;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: left;
-    border-top: 1px solid colors.$border-line;
+.totals {
+	background-color: colors.$background-light;
+	border-collapse: separate;
+	border-spacing: 0 15px;
+	padding: 4% 2%;
+	width: 95%;
 }
 
-.totals__amount-value{
-    width: 25%;
-    white-space: nowrap;
-    font-weight: bold;
-    font-size: 20px;
-    text-align: right;
-    border-top: 1px solid colors.$border-line;
+.totals__space {
+	width: 40%;
+}
+
+.totals__item {
+	font-size: 14px;
+	padding-bottom: 4% 0;
+	text-align: left;
+	width: 40%;
+}
+
+.totals__item-value {
+	font-size: 14px;
+	white-space: nowrap;
+	width: 25%;
+}
+
+.totals__amount-title {
+	border-top: 1px solid colors.$border-line;
+	font-size: 20px;
+	font-weight: bold;
+	padding: 4% 0;
+	text-align: left;
+	width: 40%;
+}
+
+.totals__amount-value {
+	border-top: 1px solid colors.$border-line;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: right;
+	white-space: nowrap;
+	width: 25%;
 }
