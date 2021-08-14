@@ -1,34 +1,67 @@
 # VTEX Email Framework
  [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
  ### Transactional emails development architecture
-##  Features
+
+#### [:mailbox: Homepage](https://github.com/crisfeit/vtex-email-framework)
+#### :crossed_swords: Features
 * Sass
 * Hot Reload
 * Partial Files
+* Inline CSS
 * Dashboard
 * Boilerplate
-* Inline styles
 * Template Engine
-## Guide
+#### :world_map: Guide
 * Data and template file name must be the same
 ```
 emails
 │
 └───json
 │   │   order-confirmation.json
-│   │   payment-aproved.json
+│   │   payment-approved.json
 └───templates
     │   order-confirmation.hbs
-    │   payment-aproved.hbs
+    │   payment-approved.hbs
     └───partials
         │   Header.hbs
         │   Shelf.hbs
 ```
 * Partials
+
+<table>
+<tr>
+<td>
+
+:white_check_mark:
+
+</td>
+<td>
+
 ```html
 <Shelf class="partial">{{> Shelf}}</Shelf>
 ```
-## Comand
+
+</td>
+</tr>
+<tr>
+<td>
+
+:x:
+
+</td>
+<td>
+
+```html
+<Shelf class="partial">
+    {{> Shelf}}
+</Shelf>
+```
+
+</td>
+</tr>
+</table>
+
+#### :video_game: Comands
 - Install
 ```bash
 yarn install
@@ -41,7 +74,7 @@ yarn dev
 ```bash
 yarn build
 ```
-## References
+#### :books: References
 [Handlebars](https://handlebarsjs.com/)  
 
 [Can I Email](https://www.caniemail.com/)
@@ -51,4 +84,3 @@ yarn build
 [Vtex Templates](https://help.vtex.com/tutorial/list-of-e-mail-templates-in-the-message-center--3g2S2kqBOoSGcCaqMYK2my)  
 
 [Vtex Message Center](https://help.vtex.com/en/tracks/transactional-emails--6IkJwttMw5T84mlY9RifRP/5uvq01BDu6nnDEJpseR1aH)
-
