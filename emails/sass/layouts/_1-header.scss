@@ -1,11 +1,11 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .header {
-	background-color: colors.$background-dark;
+	background-color: $background-dark;
 }
 
 .header__row {
-	background-color: colors.$background-dark;
+	background-color: $background-dark;
 	width: 100%;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .header__logo {
-	color: colors.$text-light;
+	color: $text-light;
 	margin: auto;
 	max-width: 145px;
 	width: 40%;

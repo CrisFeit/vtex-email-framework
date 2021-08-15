@@ -1,13 +1,13 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .footer {
-	background-color: colors.$background-dark;
+	background-color: $background-dark;
 	border-collapse: separate;
 	padding: 2% 4%;
 }
 
 .footer__row {
-	background-color: colors.$background-dark;
+	background-color: $background-dark;
 }
 
 .footer__wrap-logo {
@@ -15,7 +15,7 @@
 }
 
 .footer__logo {
-	color: colors.$text-light;
+	color: $text-light;
 	margin: auto;
 	max-width: 145px;
 	text-align: left;
@@ -30,7 +30,7 @@
 
 .footer__social-text {
 	box-sizing: border-box;
-	color: colors.$text-light;
+	color: $text-light;
 	padding-bottom: 5%;
 	text-align: right;
 }

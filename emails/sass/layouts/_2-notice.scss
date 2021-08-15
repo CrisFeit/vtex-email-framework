@@ -1,12 +1,12 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .notice {
-	background-color: colors.$background-light;
+	background-color: $background-light;
 	border-collapse: separate;
 	padding: 2% 0;
 
 	&--access-key {
-		background-color: colors.$background-grey;
+		background-color: $background-grey;
 		padding: 4%;
 	}
 }

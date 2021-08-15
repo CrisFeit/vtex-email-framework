@@ -1,3 +1,4 @@
+const { resolve } = require('path');
 const { merge } = require('webpack-merge')
 const common = require('./webpack.common')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -33,6 +34,9 @@ module.exports = merge(common, {
             loader: 'sass-loader',
             options: {
               implementation: require('sass'),
+              sassOptions: {
+                includePaths: [resolve('emails','sass')],
+              }
             },
           },
         ],

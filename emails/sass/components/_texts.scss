@@ -1,7 +1,7 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .paragraph {
-	color: colors.$text-dark;
+	color: $text-dark;
 	font-size: 14px;
 	font-weight: normal;
 	line-height: 1.5;
@@ -10,14 +10,14 @@
 }
 
 .heading {
-	color: colors.$text-dark;
+	color: $text-dark;
 	font-size: 28px;
 	font-weight: normal;
 	text-transform: uppercase;
 }
 
 .subheading {
-	color: colors.$text-dark;
+	color: $text-dark;
 	font-size: 20px;
 	font-weight: normal;
 	padding: 4% 0;

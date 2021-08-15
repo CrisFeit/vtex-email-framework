@@ -1,13 +1,13 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .disclaimer {
-	background-color: colors.$background-light;
+	background-color: $background-light;
 	border-collapse: separate;
 	padding: 0 2%;
 }
 
 .disclaimer__heading {
-	color: colors.$text-dark;
+	color: $text-dark;
 	font-size: 15px;
 	font-weight: normal;
 	padding: 5% 0 2%;

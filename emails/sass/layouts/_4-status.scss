@@ -1,4 +1,4 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .status {
 	border-collapse: separate;
@@ -6,7 +6,7 @@
 	padding: 4% 0;
 
 	&--key {
-		background-color: colors.$background-light;
+		background-color: $background-light;
 		height: auto;
 		margin-bottom: auto;
 		padding: 4% 0;
@@ -27,11 +27,11 @@
 }
 
 .status__title {
-	color: colors.$text-grey;
+	color: $text-grey;
 	font-weight: bold;
 
 	&--success {
-		color: colors.$text-dark;
+		color: $text-dark;
 	}
 
 	&--first {

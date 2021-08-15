@@ -1,8 +1,8 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 %border-line {
-	background-color: colors.$background-light;
-	border-bottom: 1px solid colors.$border-line;
+	background-color: $background-light;
+	border-bottom: 1px solid $border-line;
 	border-collapse: separate;
 	width: 95%;
 }

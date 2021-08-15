@@ -1,9 +1,13 @@
 # VTEX Email Framework
- [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
- ### Transactional emails development architecture
 
-#### [:mailbox: Homepage](https://github.com/crisfeit/vtex-email-framework)
-#### :crossed_swords: Features
+ [![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework)](https://github.com/CrisFeit/vtex-email-framework/releases) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org) [![dependencies Status](https://status.david-dm.org/gh/CrisFeit/vtex-email-framework.svg)](https://github.com/CrisFeit/vtex-email-framework/blob/master/package.json)
+
+## Transactional emails development architecture
+
+### [:mailbox: Homepage](https://github.com/crisfeit/vtex-email-framework)
+
+### :crossed_swords: Features
+
 * Sass
 * Hot Reload
 * Partial Files
@@ -11,9 +15,12 @@
 * Dashboard
 * Boilerplate
 * Template Engine
-#### :world_map: Guide
+
+### :world_map: Guide
+
 * Data and template file name must be the same
-```
+
+```bash
 emails
 │
 └───json
@@ -26,30 +33,16 @@ emails
         │   Header.hbs
         │   Shelf.hbs
 ```
+
 * Partials
 
-<table>
-<tr>
-<td>
-
-:white_check_mark:
-
-</td>
-<td>
+:white_check_mark: Do This
 
 ```html
 <Shelf class="partial">{{> Shelf}}</Shelf>
 ```
 
-</td>
-</tr>
-<tr>
-<td>
-
-:x:
-
-</td>
-<td>
+:x: Not This
 
 ```html
 <Shelf class="partial">
@@ -57,24 +50,36 @@ emails
 </Shelf>
 ```
 
-</td>
-</tr>
-</table>
+### :video_game: Comands
 
-#### :video_game: Comands
-- Install
+* Install
+
 ```bash
 yarn install
 ```
-- Development
+
+* Development
+
 ```bash
 yarn dev
 ```
-- Production
+
+* Production
+
 ```bash
 yarn build
 ```
-#### :books: References
+
+* Test
+
+```bash
+yarn test
+```
+
+### :books: References
+
+[Sass](https://sass-lang.com/guide)
+
 [Handlebars](https://handlebarsjs.com/)  
 
 [Can I Email](https://www.caniemail.com/)

@@ -1,7 +1,7 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .email-body {
-	background: colors.$background-grey;
+	background: $background-grey;
 	height: 100%;
 	margin: 0 auto;
 	max-width: 100%;
@@ -13,8 +13,8 @@
 }
 
 .email-container {
-	background: colors.$background-grey;
-	color: colors.$text-dark;
+	background: $background-grey;
+	color: $text-dark;
 	height: auto;
 	margin: 0 auto;
 	text-align: center;

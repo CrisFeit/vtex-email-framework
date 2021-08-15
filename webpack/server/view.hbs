@@ -7,7 +7,7 @@
     <title>Dashboard</title>
     <style>
         :root {
-            --color-main: #6a9e6a;
+            --color-main: #F71963;
             --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
         }
 
@@ -32,6 +32,12 @@
             box-sizing: border-box;
         }
 
+        @media(max-width: 390px) {
+            .container {
+                justify-content: center;
+            }
+        }
+
         .card {
             display: flex;
             width: 180px;
@@ -42,6 +48,7 @@
             background-color: #f3f3f3;
             box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.2);
             min-height: 100px;
+            border-radius: 3px;
         }
 
         .card__title {
@@ -67,9 +74,11 @@
             letter-spacing: 0.2px;
             font: bolder 10px var(--font-main);
         }
+
         .card__link:hover {
             text-shadow: 0 0 4px snow;
         }
+
         .card__link--model {
             background-color: grey;
         }
@@ -138,26 +147,35 @@
 </head>
 
 <body>
+    <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 200 200" fill="none">
+            <path
+                d="M173.969 26H44.0384C33.9635 26 27.5121 36.7275 32.2265 45.6457L45.223 70.2949H21.6617C20.1696 70.2954 18.7029 70.6818 17.4037 71.4167C16.1045 72.1516 15.0167 73.2101 14.2459 74.4896C13.475 75.7692 13.0471 77.2265 13.0037 78.7203C12.9602 80.2141 13.3027 81.6939 13.9979 83.0162L55.8016 162.263C56.5386 163.657 57.6409 164.823 58.9899 165.637C60.339 166.45 61.8839 166.88 63.4585 166.88C65.0332 166.88 66.5781 166.45 67.9272 165.637C69.2762 164.823 70.3785 163.657 71.1154 162.263L82.4688 140.857L96.7125 167.866C101.726 177.365 115.306 177.382 120.336 167.893L185.462 45.1481C190.065 36.4665 183.784 26 173.969 26V26ZM115.605 78.4441L87.5236 131.382C87.0328 132.309 86.2992 133.085 85.4016 133.625C84.504 134.166 83.4763 134.452 82.4288 134.452C81.3813 134.452 80.3536 134.166 79.456 133.625C78.5584 133.085 77.8249 132.309 77.3341 131.382L49.524 78.6668C49.0591 77.7879 48.8288 76.8036 48.8552 75.8094C48.8817 74.8151 49.164 73.8445 49.6749 72.9917C50.1857 72.1388 50.9078 71.4324 51.7712 70.9411C52.6346 70.4497 53.6101 70.19 54.6031 70.1871H110.651C111.619 70.1871 112.571 70.4381 113.413 70.9156C114.256 71.3931 114.961 72.0809 115.46 72.9121C115.958 73.7433 116.234 74.6896 116.259 75.6589C116.285 76.6283 116.059 77.5878 115.605 78.4441Z"
+                fill="#F71963" />
+        </svg>
+    </a>
     <main class="container">
         {{#each files}}
-        <div class="card">
-            <h2 class="card__title">{{clearText file}}</h2>
-            <div class="card__wrap">
-                {{#if model}}
-                <a class="card__link card__link--model" href="http://localhost:5050/templates/defaults/{{file}}" target="_blank">
-                    Default
-                </a>
-                {{/if}}
-                <a class="card__link card__link--template js--template" href="/?{{file}}" id="{{file}}">
-                    Custom
-                </a>
+            <div class="card">
+                <h2 class="card__title">{{clearText file}}</h2>
+                <div class="card__wrap">
+                    {{#if model}}
+                        <a class="card__link card__link--model" href="http://localhost:5050/templates/defaults/{{file}}"
+                            target="_blank">
+                            Default
+                        </a>
+                    {{/if}}
+                    <a class="card__link card__link--template js--template" href="/?{{file}}" id="{{file}}">
+                        Custom
+                    </a>
+                </div>
+                <div class="card__swicth">
+                    <input class="js-switch" type="checkbox" value="{{file}}-switch" id="{{file}}-switch" />
+                    <label for="{{file}}-switch"></label>
+                </div>
             </div>
-            <div class="card__swicth">
-                <input class="js-switch" type="checkbox" value="{{file}}-switch" id="{{file}}-switch" />
-                <label for="{{file}}-switch"></label>
-            </div>
-        </div>
         {{/each}}
     </main>
 </body>
+
 </html>

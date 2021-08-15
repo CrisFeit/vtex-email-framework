@@ -1,4 +1,4 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 %button {
 	border-radius: 50px;
@@ -17,15 +17,15 @@
 
 .button--dark {
 	@extend %button;
-	background-color: colors.$background-dark;
-	color: colors.$text-light;
+	background-color: $background-dark;
+	color: $text-light;
 }
 
 .button--light {
 	@extend %button;
-	background-color: colors.$background-light;
-	border: 1px solid colors.$background-dark;
-	color: colors.$text-dark;
+	background-color: $background-light;
+	border: 1px solid $background-dark;
+	color: $text-dark;
 }
 
 .button--billet {

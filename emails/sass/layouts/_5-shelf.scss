@@ -1,8 +1,8 @@
-@use '../settings/colors';
+@use 'settings' as *;
 
 .shelf {
-	background-color: colors.$background-light;
-	border-bottom: 1px solid colors.$border-line;
+	background-color: $background-light;
+	border-bottom: 1px solid $border-line;
 	border-collapse: separate;
 	border-spacing: 0 10px;
 	padding: 4% 2%;
@@ -14,7 +14,7 @@
 }
 
 .product__quantity {
-	background-color: colors.$brand-secondary;
+	background-color: $brand-secondary;
 	border-radius: 50%;
 	display: inline-block;
 	font-size: 11px;
@@ -43,12 +43,12 @@
 	width: 15%;
 
 	&--discount {
-		color: colors.$text-dark;
+		color: $text-dark;
 		text-decoration: line-through;
 	}
 
 	&--selling {
-		color: colors.$brand-primary;
+		color: $brand-primary;
 		font-weight: bold;
 		padding-left: 5%;
 	}
