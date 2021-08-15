@@ -4,11 +4,12 @@
 	background-color: $background-light;
 	border-collapse: separate;
 	padding: 2% 0;
+}
 
-	&--access-key {
-		background-color: $background-grey;
-		padding: 4%;
-	}
+.notice--access-key {
+	@extend .notice;
+	background-color: $background-grey;
+	padding: 4%;
 }
 
 .notice__topic-wrap {
