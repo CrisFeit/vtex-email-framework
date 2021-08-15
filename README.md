@@ -50,7 +50,7 @@ emails
 </Shelf>
 ```
 
-### :video_game: Comands
+### :video_game: Commands
 
 * Install
 
