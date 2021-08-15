@@ -4,14 +4,15 @@
 	border-collapse: separate;
 	border-spacing: 0 1px;
 	padding: 4% 0;
+}
 
-	&--key {
-		background-color: $background-light;
-		height: auto;
-		margin-bottom: auto;
-		padding: 4% 0;
-		width: 70%;
-	}
+.status--access-key {
+	@extend .status;
+	background-color: $background-light;
+	height: auto;
+	margin-bottom: auto;
+	padding: 4% 0;
+	width: 70%;
 }
 
 .status__img-wrap {
