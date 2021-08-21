@@ -8,12 +8,8 @@ module.exports = merge(common, {
   mode: 'development',
 
   devServer: {
-    hotOnly: true,
-    liveReload: false,
+    hot: 'only',
     open: true,
-    watchOptions: {
-      ignored: /node_modules/
-    }
   },
 
   plugins: [
@@ -35,7 +31,7 @@ module.exports = merge(common, {
             options: {
               implementation: require('sass'),
               sassOptions: {
-                includePaths: [resolve('emails','sass')],
+                includePaths: [resolve('emails', 'sass')],
               }
             },
           },

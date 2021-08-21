@@ -1,8 +1,8 @@
 const { join } = require('path')
 
 module.exports = {
-  entry: join(__dirname,'src'),
-  stats: 'errors-only',
+  entry: join(__dirname, 'src'),
+
   module: {
     rules: [
       {

@@ -36,13 +36,13 @@ emails
 
 * Partials
 
-:white_check_mark: Do This
+:white_check_mark: Right
 
 ```html
 <Shelf class="partial">{{> Shelf}}</Shelf>
 ```
 
-:x: Not This
+:x: Wrong
 
 ```html
 <Shelf class="partial">
@@ -77,6 +77,8 @@ yarn test
 ```
 
 ### :books: References
+
+[BEM](https://www.integralist.co.uk/posts/bem)
 
 [Sass](https://sass-lang.com/guide)
 
