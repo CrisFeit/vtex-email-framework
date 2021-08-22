@@ -53,6 +53,7 @@ export function render(path, template) {
         dashboard()
     } else {
         partials()
+        setTimeout(() => partials(), 500)
     }
 
 }
