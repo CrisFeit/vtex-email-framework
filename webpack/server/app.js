@@ -5,12 +5,12 @@ const cors = require('cors')
 const app = require('express')();
 const hbs = require('hbs');
 
-require(root('emails/helpers/vtex-helpers-v3.2.2'));
+require(resolve('helpers', 'vtex-helpers-v3.2.2'));
 hbs.registerHelper('clearText', (value) => value.replace(/\W+/g, ' '));
 hbs.registerPartials(root('emails/templates/partials'), function (err) { });
 
 function root(folders) {
-    return resolve(...folders.split('/'));
+    return resolve(process.cwd(), ...folders.split('/'));
 }
 
 function findModel(templateName) {

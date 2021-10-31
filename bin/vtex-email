@@ -1,3 +1,21 @@
 #! /usr/bin/env node
 
 console.log("Hello from Vtex Email Framework")
+
+const { execSync } = require('child_process');
+
+const runCommand = command => {
+    try {
+        execSync(`${command}`, { stdio: 'inherit' })
+    } catch (error) {
+        console.log(`Failed to execute ${command}`, error);
+        return false
+    }
+    return true;
+}
+
+const cammandName = process.argv[2]
+const commandScript = `cd ../vtex-email-framework && yarn ${cammandName}`
+
+const checkedOut = runCommand(commandScript);
+if (!checkedOut) process.exit(-1);

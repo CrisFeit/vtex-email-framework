@@ -1,19 +1,23 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.7.0",
+  "version": "2.7.2",
   "main": "server.js",
+  "bin": {
+    "vtex-email": "./bin/vtex-email"
+  },
   "license": "MIT",
   "author": "Cristiano Rocha",
   "homepage": "https://github.com/crisfeit/vtex-email-framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisfeit/vtex-email-framework.git"
+  },
   "scripts": {
     "dev": "concurrently 'yarn:client' 'yarn:server'",
     "server": "nodemon webpack/server/server.js",
     "client": "webpack serve --config ./webpack/webpack.dev.js",
     "build": "webpack --config ./webpack/webpack.prod.js && node ./webpack/webpack.dist.js && jest",
     "test": "jest"
-  },
-  "bin": {
-    "vtex-email": "./bin/vtex-email"
   },
   "engines": {
     "node": ">=14"
