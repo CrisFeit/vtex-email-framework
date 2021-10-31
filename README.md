@@ -1,16 +1,16 @@
 # VTEX Email Framework
 
- [![Badge](https://img.shields.io/npm/v/vtex-email-framework?color=%23CB3837&label=package&logo=npm)](https://github.com/CrisFeit/vtex-email-framework) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
+[![Badge](https://img.shields.io/npm/v/vtex-email-framework?color=%23CB3837&label=package&logo=npm)](https://github.com/CrisFeit/vtex-email-framework) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
 
 ## Transactional emails development architecture
 
-### :gear: Install
+### Installation
 
 ```bash
-npx create-vtex-email my-emails
+npx create-vtex-email my-store-emails
 ```
 
-### :crossed_swords: Features
+### Features
 
 * Sass
 * Hot Reload
@@ -21,7 +21,7 @@ npx create-vtex-email my-emails
 * Email Stylelint
 * Template Engine
 
-### :world_map: Guide
+### Guide
 
 * Data and template file name must be the same
 
@@ -39,23 +39,13 @@ emails
         │   Shelf.hbs
 ```
 
-* Partials
-
-:white_check_mark: Right
+* Partials import
 
 ```html
 <Shelf class="partial">{{> Shelf}}</Shelf>
 ```
 
-:x: Wrong
-
-```html
-<Shelf class="partial">
-    {{> Shelf}}
-</Shelf>
-```
-
-### :video_game: Commands
+### Commands
 
 * Development
 
@@ -69,7 +59,7 @@ yarn dev
 yarn build
 ```
 
-### :books: References
+### References
 
 [BEM](https://www.integralist.co.uk/posts/bem)
 
