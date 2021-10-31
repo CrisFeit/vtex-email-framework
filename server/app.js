@@ -35,7 +35,7 @@ app.set('views', root('emails/templates'));
 app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
-    res.render(root('webpack/server/view'), { files: fileNames })
+    res.render(root('server/view'), { files: fileNames })
 });
 
 fileNames.forEach(({ file }) => {

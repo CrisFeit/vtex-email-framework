@@ -53,7 +53,7 @@ module.exports = merge(common, {
             options: {
               implementation: require('sass'),
               sassOptions: {
-                includePaths: [resolve('emails', 'sass')],
+                includePaths: [resolve(process.cwd(),'emails', 'sass')],
               }
             },
           },

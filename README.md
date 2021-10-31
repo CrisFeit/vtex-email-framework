@@ -4,6 +4,12 @@
 
 ## Transactional emails development architecture
 
+* Install
+
+```bash
+npx create-vtex-email my-store-emails
+```
+
 ### [:mailbox: Homepage](https://github.com/crisfeit/vtex-email-framework)
 
 ### :crossed_swords: Features
@@ -14,6 +20,7 @@
 * Inline CSS
 * Dashboard
 * Boilerplate
+* Email Stylelint
 * Template Engine
 
 ### :world_map: Guide
@@ -52,12 +59,6 @@ emails
 
 ### :video_game: Commands
 
-* Install
-
-```bash
-yarn install
-```
-
 * Development
 
 ```bash
@@ -68,12 +69,6 @@ yarn dev
 
 ```bash
 yarn build
-```
-
-* Test
-
-```bash
-yarn test
 ```
 
 ### :books: References
