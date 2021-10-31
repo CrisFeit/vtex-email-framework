@@ -1,7 +1,7 @@
 const { readdirSync, existsSync } = require('fs');
 const { resolve } = require('path');
 const files = resolve(process.cwd(),'emails', 'dist')
-const app = require('../webpack/server/app')
+const app = require(resolve('server','app'))
 const request = require('isomorphic-fetch')
 const port = 3050
 
