@@ -1,6 +1,6 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.7.2",
+  "version": "2.7.4",
   "main": "server.js",
   "bin": {
     "vtex-email": "./bin/vtex-email.bin"
