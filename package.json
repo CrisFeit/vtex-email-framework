@@ -1,9 +1,9 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.7.4",
+  "version": "2.7.5",
   "main": "server.js",
   "bin": {
-    "vtex-email": "./bin/vtex-email.bin"
+    "vtex-email": "./bin/vtex-email"
   },
   "license": "MIT",
   "author": "Cristiano Rocha",
