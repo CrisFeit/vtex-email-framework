@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    ".git",
+    "fixtures/*",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": false,
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "watch": [
+    "emails/templates",
+    "emails/json"
+  ],
+  "ext": "json,hbs"
+}

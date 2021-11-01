@@ -1,6 +1,6 @@
 {
   "name": "create-vtex-email-beta",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Transactional emails development architecture",
   "main": "server.js",
   "bin": "./bin/create-vtex-email",

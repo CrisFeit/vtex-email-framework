@@ -1,17 +1,17 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.7.11",
+  "version": "2.7.13",
   "description": "Transactional emails development architecture",
   "main": "server.js",
-  "bin": {
-    "vtex-email": "./bin/vtex-email"
-  },
   "license": "MIT",
   "author": "Cristiano Rocha",
   "homepage": "https://github.com/crisfeit/vtex-email-framework",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/crisfeit/vtex-email-framework.git"
+  },
+  "bin": {
+    "vtex-email": "./bin/vtex-email"
   },
   "bugs": {
     "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
