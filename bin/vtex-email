@@ -27,7 +27,6 @@ async function getPkgJsonDir() {
 
 (async () => {
     const pkgJsonDir = await getPkgJsonDir();
-    console.log("pkgJsonDir", pkgJsonDir);
 
     const cammandName = process.argv[2]
 
