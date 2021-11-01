@@ -30,7 +30,7 @@ async function getPkgJsonDir() {
 
     const cammandName = process.argv[2]
 
-    const commandScript = cammandName == 'dev' ? `concurrently 'nodemon ${pkgJsonDir}/server/server.js' 'webpack serve --config ${pkgJsonDir}/webpack/webpack.dev.js'`
+    const commandScript = cammandName == 'dev' ? `concurrently "nodemon ${pkgJsonDir}/server/server.js" "webpack serve --config ${pkgJsonDir}/webpack/webpack.dev.js"`
         : cammandName == 'build' ? `webpack --config ${pkgJsonDir}/webpack/webpack.prod.js && node node_modules/vtex-email-framework/webpack/webpack.dist.js && jest`
             : cammandName
 

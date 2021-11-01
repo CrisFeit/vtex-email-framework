@@ -1,6 +1,6 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.7.8",
+  "version": "2.7.10",
   "description": "Transactional emails development architecture",
   "main": "server.js",
   "bin": {

@@ -53,10 +53,6 @@ emails
 
 ### References
 
-[BEM](https://www.integralist.co.uk/posts/bem)
-
-[Sass](https://sass-lang.com/guide)
-
 [Handlebars](https://handlebarsjs.com/)  
 
 [Can I Email](https://www.caniemail.com/)
