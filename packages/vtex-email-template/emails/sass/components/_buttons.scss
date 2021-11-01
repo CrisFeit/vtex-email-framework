@@ -1,0 +1,36 @@
+@use 'settings' as *;
+
+%button {
+	border-radius: 50px;
+	box-sizing: border-box;
+	display: block;
+	font-size: 14px;
+	margin: auto;
+	max-width: 300px;
+	padding: 2% 4%;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	width: fit-content;
+	width: 90%;
+}
+
+.button--dark {
+	@extend %button;
+	background-color: $background-dark;
+	color: $text-light;
+}
+
+.button--light {
+	@extend %button;
+	background-color: $background-light;
+	border: 1px solid $background-dark;
+	color: $text-dark;
+}
+
+.button--billet {
+	@extend .button--dark;
+	font-size: 12px;
+	padding: 5% 2%;
+	width: 100%;
+}

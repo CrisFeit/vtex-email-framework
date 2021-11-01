@@ -1,0 +1,11 @@
+{
+  "name": "my-store-emails",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vtex-email-framework dev",
+    "build": "vtex-email-framework build"
+  },
+  "dependencies": {
+    "vtex-email-framework": "^2.7.6"
+  }
+}

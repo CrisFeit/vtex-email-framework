@@ -1,0 +1,24 @@
+{
+  "name": "create-vtex-email-beta",
+  "version": "0.0.2",
+  "description": "Transactional emails development architecture",
+  "main": "server.js",
+  "bin": "bin/create-vtex-email",
+  "license": "MIT",
+  "author": "Cristiano Rocha",
+  "homepage": "https://github.com/crisfeit/vtex-email-framework",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisfeit/vtex-email-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
+  },
+  "scripts": {
+    "dev": "vtex-email-framework dev",
+    "build": "vtex-email-framework build"
+  },
+  "dependencies": {
+    "vtex-email-framework": "^2.7.6"
+  }
+}

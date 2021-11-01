@@ -1,0 +1,21 @@
+@use 'settings' as *;
+
+.email-body {
+	background: $background-grey;
+	height: 100%;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 100%;
+
+	&__td {
+		vertical-align: baseline;
+	}
+}
+
+.email-container {
+	background: $background-grey;
+	color: $text-dark;
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+}

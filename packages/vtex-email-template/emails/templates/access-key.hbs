@@ -1,0 +1,38 @@
+<Header class="partial">{{> Header}}</Header>
+
+<table class="notice--access-key">
+    <tr class="notice__client">
+        <td class="notice__client-wrap">
+            <h1 class="heading">Olá {{to.0.name}},
+            </h1>
+        </td>
+    </tr>
+    <tr class="notice__message">
+        <td class="notice__message-wrap">
+            <p class="paragraph">
+                Precisamos da sua confirmação para liberar a página que você está tentando acessar.
+            </p>
+        </td>
+    </tr>
+</table>
+
+<table class="status--access-key">
+    <tr>
+        <td>
+            <h1 class="heading">
+                {{aditionalData.accessKey}}
+            </h1>
+        </td>
+    </tr>
+    <p class="paragraph">Retorne à página e digite o código.</p>
+</table>
+
+<p class="paragraph">
+    Até breve!
+    <br />
+    <strong>
+        Time {{_accountInfo.AccountName}}
+    </strong>
+</p>
+
+<Footer class="partial">{{> Footer}}</Footer>

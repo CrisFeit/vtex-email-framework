@@ -25,6 +25,7 @@ build/
 *.map
 *.tgz
 *.lock
+
 # logs
 logs
 *.log
