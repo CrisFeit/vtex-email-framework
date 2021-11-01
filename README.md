@@ -6,7 +6,9 @@
 
 ### Installation
 
-`npx create-vtex-email my-store-emails`
+```bash
+npx create-vtex-email my-store-emails
+```
 
 ### Features
 
@@ -39,23 +41,15 @@ emails
 
 * Partials import
 
-```html
-<Shelf class="partial">{{> Shelf}}</Shelf>
+```handlebars
+<Header class="partial">{{> Header}}</Header>
 ```
 
 ### Commands
 
-* Development
+* Development `yarn dev`
 
-```bash
-yarn dev
-```
-
-* Production
-
-```bash
-yarn build
-```
+* Production `yarn build`
 
 ### References
 
