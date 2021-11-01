@@ -1,6 +1,6 @@
 # VTEX Email Framework
 
-[![Badge](https://img.shields.io/npm/v/vtex-email-framework?color=%23CB3837&label=package&logo=npm)](https://github.com/CrisFeit/vtex-email-framework) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
+[![Badge](https://img.shields.io/github/package-json/v/crisfeit/vtex-email-framework?color=%23F05032&logo=git)](https://github.com/CrisFeit/vtex-email-framework) ![Badge](https://img.shields.io/npm/dt/vtex-email-framework?color=%23CB3837&logo=npm) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
 
 ## Transactional emails development architecture
 
