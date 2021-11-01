@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Transactional emails development architecture",
   "main": "server.js",
-  "bin": "bin/create-vtex-email",
+  "bin": "./bin/create-vtex-email",
   "license": "MIT",
   "author": "Cristiano Rocha",
   "homepage": "https://github.com/crisfeit/vtex-email-framework",
