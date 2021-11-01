@@ -6,9 +6,7 @@
 
 ### Installation
 
-```bash
-npx create-vtex-email my-store-emails
-```
+`npx create-vtex-email my-store-emails`
 
 ### Features
 
@@ -25,7 +23,7 @@ npx create-vtex-email my-store-emails
 
 * Data and template file name must be the same
 
-```bash
+```javascript
 emails
 │
 └───json
