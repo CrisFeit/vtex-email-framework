@@ -1,6 +1,6 @@
 {
   "name": "create-vtex-email-beta",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Transactional emails development architecture",
   "main": "server.js",
   "bin": "./bin/create-vtex-email",
@@ -15,8 +15,8 @@
     "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
   },
   "scripts": {
-    "dev": "vtex-email-framework dev",
-    "build": "vtex-email-framework build"
+    "dev": "vtex-email dev",
+    "build": "vtex-email build"
   },
   "dependencies": {
     "vtex-email-framework": "^2.7.6"
