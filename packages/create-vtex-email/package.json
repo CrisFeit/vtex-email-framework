@@ -1,5 +1,5 @@
 {
-  "name": "create-vtex-email-beta",
+  "name": "create-vtex-email",
   "version": "0.0.5",
   "description": "Transactional emails development architecture",
   "main": "server.js",
@@ -14,6 +14,7 @@
   "bugs": {
     "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
   },
+  "keywords": ["vtex","emails"],
   "scripts": {
     "dev": "vtex-email dev",
     "build": "vtex-email build"

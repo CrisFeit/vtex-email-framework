@@ -1,6 +1,6 @@
 {
   "name": "vtex-email-framework",
-  "version": "2.7.13",
+  "version": "3.0.0",
   "description": "Transactional emails development architecture",
   "main": "server.js",
   "license": "MIT",
@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
   },
+  "keywords": ["vtex","emails"],
   "scripts": {
     "dev": "concurrently 'yarn:client' 'yarn:server'",
     "server": "nodemon ./server/server.js",
