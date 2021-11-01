@@ -1,7 +1,5 @@
 #! /usr/bin/env node
 
-console.log("Hello from Vtex Email Framework")
-
 const { execSync } = require('child_process');
 
 const runCommand = command => {
@@ -14,8 +12,29 @@ const runCommand = command => {
     return true;
 }
 
-const cammandName = process.argv[2]
-const commandScript = `cd ../vtex-email-framework && yarn ${cammandName}`
+async function getPkgJsonDir() {
+    const { dirname } = require('path');
+    const { constants, promises: { access } } = require('fs');
 
-const checkedOut = runCommand(commandScript);
-if (!checkedOut) process.exit(-1);
+    for (let path of module.paths) {
+        try {
+            let prospectivePkgJsonDir = dirname(path);
+            await access(path, constants.F_OK);
+            return prospectivePkgJsonDir;
+        } catch (e) { }
+    }
+}
+
+(async () => {
+    const pkgJsonDir = await getPkgJsonDir();
+    console.log("pkgJsonDir", pkgJsonDir);
+
+    const cammandName = process.argv[2]
+
+    const commandScript = cammandName == 'dev' ? `concurrently 'nodemon ${pkgJsonDir}/server/server.js' 'webpack serve --config ${pkgJsonDir}/webpack/webpack.dev.js'`
+        : cammandName == 'build' ? `webpack --config ${pkgJsonDir}/webpack/webpack.prod.js && node node_modules/vtex-email-framework/webpack/webpack.dist.js && jest`
+            : cammandName
+
+    const checkedOut = runCommand(commandScript);
+    if (!checkedOut) process.exit(-1);
+})();

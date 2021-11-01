@@ -5,13 +5,13 @@ const cors = require('cors')
 const app = require('express')();
 const hbs = require('hbs');
 
-require(resolve('helpers', 'vtex-helpers-v3.2.2'));
-hbs.registerHelper('clearText', (value) => value.replace(/\W+/g, ' '));
-hbs.registerPartials(root('emails/templates/partials'), function (err) { });
-
-function root(folders) {
+const root = (folders)=> {
     return resolve(process.cwd(), ...folders.split('/'));
 }
+
+require(resolve(__dirname, 'vtex-helpers-v3.2.2'));
+hbs.registerHelper('clearText', (value) => value.replace(/\W+/g, ' '));
+hbs.registerPartials(root('emails/templates/partials'), function (err) { });
 
 function findModel(templateName) {
     if (existsSync(root('emails/templates/defaults'))) {
@@ -35,7 +35,7 @@ app.set('views', root('emails/templates'));
 app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
-    res.render(root('server/view'), { files: fileNames })
+    res.render(resolve(__dirname, 'view'), { files: fileNames })
 });
 
 fileNames.forEach(({ file }) => {
