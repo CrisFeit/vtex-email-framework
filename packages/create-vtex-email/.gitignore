@@ -5,15 +5,12 @@
 
 # testing
 coverage
-emails
-.stylelintrc
 
 # production
 dist
 dist/
 build
 build/
-emails
 
 # misc
 .DS_Store
@@ -28,7 +25,7 @@ emails
 *.map
 *.tgz
 *.lock
-.stylelintrc
+
 # logs
 logs
 *.log
