@@ -1,6 +1,6 @@
 {
   "name": "create-vtex-email",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Transactional emails development architecture",
   "main": "server.js",
   "bin": "./bin/create-vtex-email",
@@ -20,6 +20,6 @@
     "build": "vtex-email build"
   },
   "dependencies": {
-    "vtex-email-framework": "^2.7.6"
+    "vtex-email-framework": "^3.0.0"
   }
 }
