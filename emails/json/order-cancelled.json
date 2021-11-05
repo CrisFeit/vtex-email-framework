@@ -1,0 +1,398 @@
+{
+	"package": null,
+	"subjectItemAttachment": {
+		"item": "Facial Cleaner ...",
+		"totalItems": 1
+	},
+	"cancellationReason": null,
+	"items": [
+		{
+			"additionalInfo": {
+				"categoriesIds": "/300/108/",
+				"productClusterId": "137",
+				"commercialConditionId": "1",
+				"dimension": {
+					"cubicweight": 1,
+					"height": 6.5,
+					"length": 6.5,
+					"weight": 0.08,
+					"width": 6.5
+				},
+				"brandName": "My-Store",
+				"brandId": "000000",
+				"offeringInfo": null,
+				"offeringType": null,
+				"offeringTypeId": null
+			},
+			"sellerSku": "107",
+			"priceTable": null,
+			"priceValidUntil": "2021-10-03T23:59:05Z",
+			"callCenterOperator": null,
+			"commission": 0,
+			"freightCommission": 0,
+			"taxCode": "8509.80.90",
+			"catalogProvider": "vrn:vtex.catalog-api-proxy:-:vtex.store:master:/proxy/authenticated/catalog/pvt/sku/stockkeepingunitbyid/107",
+			"costPrice": null,
+			"uniqueId": "0000000000000000000000",
+			"id": "107",
+			"productId": "509",
+			"productRefId": "AP6020710CR77",
+			"refId": "051_0_0_U",
+			"ean": "12345",
+			"name": " Facial Cleaner - Aparelho de Limpeza Facial",
+			"skuName": " Facial Cleaner - Aparelho de Limpeza Facial",
+			"modalType": null,
+			"parentItemIndex": null,
+			"parentAssemblyBinding": null,
+			"assemblies": [],
+			"tax": 0,
+			"priceDefinitions": null,
+			"price": 7000,
+			"listPrice": 10000,
+			"manualPrice": null,
+			"manualPriceAppliedBy": null,
+			"sellingPrice": 7000,
+			"skuSpecifications": null,
+			"orderRewardStatus": null,
+			"rewardValue": 0,
+			"isGift": false,
+			"preSaleDate": null,
+			"productCategoryIds": "/203/108/",
+			"productCategories": {
+				"303": "Cuidados para pele",
+				"308": "Olhos"
+			},
+			"quantity": 1,
+			"seller": "1",
+			"sellerChain": [
+				"1"
+			],
+			"imageUrl": "http://My-Store.vteximg.com.br/arquivos/ids/155410-55-55/AP2000710CR88_1.jpg?v=637418356089600000",
+			"detailUrl": "/mini-facial-cleaner---aparelho-de-limpeza-facial--ap2000710cr88/p",
+			"components": [],
+			"bundleItems": [],
+			"attachments": [],
+			"attachmentOfferings": [],
+			"offerings": [],
+			"priceTags": [],
+			"availability": "available",
+			"measurementUnit": "un",
+			"unitMultiplier": 1,
+			"manufacturerCode": ""
+		}
+	],
+	"sellers": [
+		{
+			"subSellerId": "1",
+			"fulfillmentEndpoint": "http://fulfillment.vtexcommerce.com.br/api/fulfillment?sc=1&an=My-Store",
+			"id": "1",
+			"name": " IMPORTACAO E EXPORTACAO LTDA",
+			"logo": ""
+		}
+	],
+	"giftRegistryData": null,
+	"receiptData": null,
+	"contextData": null,
+	"marketPlaceOrderId": "",
+	"marketPlaceOrderGroup": null,
+	"marketplaceServicesEndpoint": null,
+	"orderFormId": "00000000000000000000000000000",
+	"sequence": "500001",
+	"affiliateId": "",
+	"status": "",
+	"callCenterOperator": "",
+	"userProfileId": "0000000000000000000000000000000",
+	"hostName": "My-Store",
+	"creationVersion": null,
+	"creationEnvironment": null,
+	"lastChangeVersion": null,
+	"workflowInstanceId": null,
+	"marketplacePaymentValue": null,
+	"orderId": "0000000000000-01",
+	"orderGroup": "1000000000000002",
+	"state": "canceled",
+	"isCheckedIn": false,
+	"sellerOrderId": "00-000000000000000-01",
+	"storeId": null,
+	"checkedInPickupPointId": null,
+	"value": 7500,
+	"totals": [
+		{
+			"id": "Items",
+			"name": "Items Total",
+			"value": 7000
+		},
+		{
+			"id": "Discounts",
+			"name": "Discounts Total",
+			"value": 0
+		},
+		{
+			"id": "Shipping",
+			"name": "Shipping Total",
+			"value": 500
+		},
+		{
+			"id": "Tax",
+			"name": "Tax Total",
+			"value": 0
+		}
+	],
+	"clientProfileData": {
+		"email": "0000000000000000000000@ct.vtex.com.br",
+		"firstName": "Joanna",
+		"lastName": "lastname",
+		"document": "0000000000",
+		"documentType": "cpf",
+		"phone": "+5500000000",
+		"corporateName": null,
+		"tradeName": null,
+		"corporateDocument": null,
+		"stateInscription": "",
+		"corporatePhone": null,
+		"isCorporate": false,
+		"profileCompleteOnLoading": false,
+		"profileErrorOnLoading": false,
+		"customerClass": null
+	},
+	"ratesAndBenefitsData": {
+		"rateAndBenefitsIdentifiers": [],
+		"teaser": []
+	},
+	"shippingData": {
+		"address": {
+			"addressType": "residential",
+			"receiverName": "name lastname",
+			"addressId": "4000000000002881",
+			"isDisposable": true,
+			"postalCode": "00000-001",
+			"city": "São Paulo",
+			"state": "SP",
+			"country": "BRA",
+			"street": "Avenida Tal",
+			"number": "300",
+			"neighborhood": "Bairro",
+			"complement": "APTO 04",
+			"reference": null,
+			"geoCoordinates": [
+				-46.000000000,
+				-23.000000000000
+			]
+		},
+		"logisticsInfo": [
+			{
+				"itemIndex": 0,
+				"selectedSla": "Normal",
+				"selectedDeliveryChannel": "delivery",
+				"addressId": "4000000000002881",
+				"slas": [
+					{
+						"id": "Normal",
+						"deliveryChannel": "delivery",
+						"name": "Normal",
+						"deliveryIds": [
+							{
+								"courierId": "1",
+								"warehouseId": "1_1",
+								"dockId": "1",
+								"courierName": "Transportadora",
+								"quantity": 1,
+								"kitItemDetails": [],
+								"totalListPrice": 0
+							}
+						],
+						"shippingEstimate": "2bd",
+						"shippingEstimateDate": null,
+						"lockTTL": "6d",
+						"availableDeliveryWindows": [],
+						"deliveryWindow": null,
+						"price": 500,
+						"listPrice": 500,
+						"tax": 0,
+						"pickupStoreInfo": {
+							"isPickupStore": false,
+							"friendlyName": null,
+							"address": null,
+							"additionalInfo": null,
+							"dockId": null
+						},
+						"pickupPointId": null,
+						"pickupDistance": 0,
+						"polygonName": null,
+						"transitTime": "2bd"
+					}
+				],
+				"shipsTo": [
+					"BRA"
+				],
+				"itemId": "100",
+				"deliveryChannels": [
+					{
+						"id": "delivery",
+						"stockBalance": 0
+					}
+				]
+			}
+		],
+		"selectedAddresses": [
+			{
+				"addressType": "residential",
+				"receiverName": "name lastname",
+				"addressId": "4000000000000081",
+				"isDisposable": true,
+				"postalCode": "00000-001",
+				"city": "São Paulo",
+				"state": "SP",
+				"country": "BRA",
+				"street": "Avenida Tal",
+				"number": "300",
+				"neighborhood": "Bairro",
+				"complement": "APTO 04",
+				"reference": null,
+				"geoCoordinates": [
+					-46.000000000,
+					-23.000000000000
+				]
+			}
+		],
+		"availableAddresses": [
+			{
+				"addressType": "residential",
+				"receiverName": "name lastname",
+				"addressId": "4000000000002881",
+				"isDisposable": true,
+				"postalCode": "00000-001",
+				"city": "São Paulo",
+				"state": "SP",
+				"country": "BRA",
+				"street": "Avenida Tal",
+				"number": "300",
+				"neighborhood": "Bairro",
+				"complement": "APTO 04",
+				"reference": null,
+				"geoCoordinates": [
+					-46.000000000,
+					-23.000000000000
+				]
+			}
+		],
+		"pickupPoints": []
+	},
+	"paymentData": {
+		"giftCards": [],
+		"transactions": [
+			{
+				"isActive": true,
+				"transactionId": "000000000000000000000",
+				"merchantName": "my-store",
+				"payments": [
+					{
+						"id": "000000000000000000000",
+						"paymentSystem": "201",
+						"paymentSystemName": "Promissória teste",
+						"value": 7500,
+						"installments": 1,
+						"connectorResponses": {},
+						"referenceValue": 7500,
+						"cardHolder": null,
+						"cardNumber": null,
+						"firstDigits": null,
+						"lastDigits": null,
+						"cvv2": null,
+						"expireMonth": null,
+						"expireYear": null,
+						"url": null,
+						"koinUrl": null,
+						"tid": null,
+						"redemptionCode": null,
+						"giftCardId": null,
+						"giftCardProvider": null,
+						"giftCardAsDiscount": null,
+						"group": "promissory",
+						"dueDate": null,
+						"accountId": null,
+						"parentAccountId": null,
+						"bankIssuedInvoiceIdentificationNumber": null,
+						"bankIssuedInvoiceIdentificationNumberFormatted": null,
+						"bankIssuedInvoiceBarCodeNumber": null,
+						"bankIssuedInvoiceBarCodeType": null,
+						"billingAddress": null
+					}
+				],
+				"sharedTransaction": false
+			}
+		]
+	},
+	"clientPreferencesData": {
+		"locale": "en-US",
+		"optinNewsLetter": false
+	},
+	"commercialConditionData": null,
+	"marketingData": null,
+	"storePreferencesData": {
+		"countryCode": "BRA",
+		"saveUserData": false,
+		"timeZone": "E. South America Standard Time",
+		"currencyCode": "BRL",
+		"currencyLocale": 1046,
+		"currencySymbol": "R$",
+		"currencyFormatInfo": {
+			"currencyDecimalDigits": 2,
+			"currencyDecimalSeparator": ",",
+			"currencyGroupSeparator": ".",
+			"currencyGroupSize": 3,
+			"startsWithCurrencySymbol": true
+		}
+	},
+	"openTextField": null,
+	"invoiceData": null,
+	"itemMetadata": null,
+	"taxData": null,
+	"customData": null,
+	"hooksData": null,
+	"changeData": null,
+	"subscriptionData": null,
+	"salesChannel": "1",
+	"followUpEmail": "00000000000000000000000@ct.vtex.com.br",
+	"creationDate": "2021-01-01T00:00:00",
+	"lastChange": "2021-01-01T00:00:00",
+	"timeZoneCreationDate": "2020-12-03T21:00:07.3030556",
+	"timeZoneLastChange": "2020-12-29T21:00:36.8554346",
+	"isCompleted": true,
+	"merchantName": null,
+	"userType": "",
+	"roundingError": 0,
+	"allowEdition": false,
+	"allowCancellation": false,
+	"isUserDataVisible": false,
+	"allowChangeSeller": false,
+	"cancellationData": {
+		"requestedByUser": false,
+		"reason": null,
+		"cancellationDate": "2021-01-00T00:00:33.5015013Z"
+	},
+	"_accountInfo": {
+		"MainAccountName": "my-Store",
+		"AccountName": "my-Store",
+		"Cnpj": "0000001000001",
+		"Id": "00000000-000-000-000-0000000",
+		"IsActive": true,
+		"IsOperating": false,
+		"CreationDate": "2021-01-01T00:00:00",
+		"OperationDate": null,
+		"CompanyName": "My Store IMPORTACAO E EXPORTACAO LTDA",
+		"TradingName": "My Store",
+		"City": null,
+		"Complement": null,
+		"Country": null,
+		"State": null,
+		"Address": null,
+		"District": null,
+		"Number": null,
+		"PostalCode": null,
+		"Licences": null,
+		"ParentAccountName": null,
+		"InactivationDate": null,
+		"Platform": "vtex"
+	}
+}

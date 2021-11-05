@@ -1,16 +1,18 @@
 # VTEX Email Framework
 
-[![Badge](https://img.shields.io/npm/v/vtex-email-framework?color=%23CB3837&label=package&logo=npm)](https://www.npmjs.com/package/vtex-email-framework) [![Badge](https://img.shields.io/badge/%20yarn->=_1-blue?logo=yarn)](https://classic.yarnpkg.com) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
+[![Badge](https://img.shields.io/npm/v/vtex-email-framework?color=%23CB3837&label=package&logo=npm)](https://github.com/crisfeit/vtex-email-framework) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
 
 ## Transactional emails development architecture
 
-### Installation
+### 🎮 Commands
 
-```bash
-npx create-vtex-email my-store-emails
-```
+| npm | yarn |
+| ----------- | --- |
+|`npm install` | `yarn install`|
+|`npm run dev` | `yarn dev`|
+|`npm run build` | `yarn build`|
 
-### Features
+### ⚔️ Features
 
 * Sass
 * Hot Reload
@@ -21,7 +23,7 @@ npx create-vtex-email my-store-emails
 * Email Stylelint
 * Template Engine
 
-### Guide
+### 🗺️ Guide
 
 * Data and template file name must be the same
 
@@ -45,13 +47,11 @@ emails
 <Header class="partial">{{> Header}}</Header>
 ```
 
-### Commands
+### 📚 References
 
-* Development `yarn dev`
+[BEM](https://www.integralist.co.uk/posts/bem/)
 
-* Production `yarn build`
-
-### References
+[Sass](https://sass-lang.com/guide)
 
 [Handlebars](https://handlebarsjs.com/)  
 
