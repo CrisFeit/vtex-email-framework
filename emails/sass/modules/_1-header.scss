@@ -1,0 +1,23 @@
+@use 'settings' as *;
+
+.header {
+	background-color: $header-bg;
+}
+
+.header__row {
+	background-color: $header-bg;
+	width: 100%;
+}
+
+.header__box {
+	margin: auto;
+	padding: 4% 0;
+	text-align: center;
+}
+
+.header__logo {
+	color: $text-light;
+	margin: auto;
+	max-width: 145px;
+	width: 40%;
+}

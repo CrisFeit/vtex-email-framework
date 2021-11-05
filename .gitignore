@@ -1,34 +1,28 @@
 # dependencies
 /node_modules
+node_modules
+node_modules/
 /.pnp
 .pnp.js
+bin
 
 # testing
 coverage
-emails
-.stylelintrc
 
 # production
 dist
+/dist
 dist/
-build
-build/
-emails
 
 # misc
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
 # packages
 .yarn-integrity
 .npm
 *.map
 *.tgz
 *.lock
-.stylelintrc
+*-lock.json
 # logs
 logs
 *.log

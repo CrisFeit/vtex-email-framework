@@ -1,0 +1,32 @@
+@use 'settings' as *;
+
+.notice {
+	background-color: $background-light;
+	border-collapse: separate;
+	padding: 2% 0;
+}
+
+.notice--access-key {
+	@extend .notice;
+	background-color: $background-grey;
+	padding: 4%;
+}
+
+.notice__topic-box {
+	margin: auto;
+	padding: 0 10% 5%;
+}
+
+.notice__topic-img {
+	margin: auto;
+	width: 100%;
+}
+
+.notice__client-box {
+	margin: auto;
+	padding: 0 2%;
+}
+
+.notice__message-box {
+	padding: 0 2%;
+}

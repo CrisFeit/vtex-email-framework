@@ -1,0 +1,50 @@
+@use 'settings' as *;
+
+.footer {
+	background-color: $footer-bg;
+	border-collapse: separate;
+	padding: 2% 4%;
+}
+
+.footer__row {
+	background-color: $footer-bg;
+}
+
+.footer__box-logo {
+	text-align: left;
+}
+
+.footer__logo {
+	color: $text-light;
+	margin: auto;
+	max-width: 145px;
+	text-align: left;
+	width: 80%;
+}
+
+.footer__box-social-logo {
+	margin-left: auto;
+	text-align: right;
+	width: 95px;
+}
+
+.footer__social-text {
+	box-sizing: border-box;
+	color: $text-light;
+	padding-bottom: 5%;
+	text-align: right;
+}
+
+.footer__social-logo {
+	display: inline-block;
+	width: 45%;
+
+	&--left {
+		margin-right: auto;
+		text-align: left;
+	}
+
+	&--right {
+		text-align: right;
+	}
+}
