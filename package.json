@@ -1,6 +1,7 @@
 {
   "name": "my-store-emails",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "dev": "vtex-email dev",
     "build": "vtex-email build"
