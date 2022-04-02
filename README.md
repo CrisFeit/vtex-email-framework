@@ -1,6 +1,6 @@
 # VTEX Email Framework
-
-[![Badge](https://img.shields.io/npm/v/vtex-email-framework?color=%23CB3837&label=package&logo=npm)](https://github.com/crisfeit/vtex-email-framework) [![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
+[![Badge](https://img.shields.io/npm/dt/vtex-email-framework?color=%23CB3837&logo=npm)](https://www.npmjs.com/package/vtex-email-framework)
+[![Badge](https://img.shields.io/badge/%20node.js-%20%3E%3D_14-brightgreen?logo=node.js)](https://nodejs.org)
 
 ## Transactional emails development architecture
 
@@ -20,6 +20,7 @@
 * Inline CSS
 * Dashboard
 * Boilerplate
+* Render Test
 * Email Stylelint
 * Template Engine
 
@@ -49,7 +50,7 @@ emails
 
 ### 📚 References
 
-[BEM](https://www.integralist.co.uk/posts/bem/)
+[BEM](http://getbem.com/naming/)
 
 [Sass](https://sass-lang.com/guide)
 
