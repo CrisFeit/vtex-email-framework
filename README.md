@@ -53,7 +53,7 @@ emails
 
 ### 📚 References
 
-[BEM](https://www.integralist.co.uk/posts/bem/)
+[BEM](http://getbem.com/naming/)
 
 [Sass](https://sass-lang.com/guide)
 
