@@ -13,13 +13,11 @@
     <tr class="notice__client">
         <td class="notice__client-box">
             <h1 class="heading">
-                {{#each orders}}
-                    {{#if clientProfileData.firstName}}
-                        {{#compare clientProfileData.firstName '!=' 'isAnonymous'}}
-                            Olá, {{clientProfileData.firstName}}.
-                        {{/compare}}
-                    {{/if}}
-                {{/each}}
+                {{#if orders.0.clientProfileData.firstName}}
+                    {{#compare orders.0.clientProfileData.firstName '!=' 'isAnonymous'}}
+                        Olá, {{orders.0.clientProfileData.firstName}}.
+                    {{/compare}}
+                {{/if}}
             </h1>
             <p class="acknowledgment">obrigada por comprar com a {{_accountInfo.AccountName}}</p>
         </td>
@@ -46,7 +44,13 @@
 </table>
 
 <h3 class="subheading">
-    Acompanhe seu pedido
+    {{#compare orders.length '==' 1}}
+        Acompanhe seu pedido
+    {{/compare}}
+
+    {{#compare orders.length '!=' 1}}
+        Acompanhe seus pedidos
+    {{/compare}}
 </h3>
 
 {{#each orders}}
@@ -79,11 +83,9 @@
         </tr>
         <tr class="status__row">
             <td class="status__info-box">
-                {{#each orders}}
-                    {{#if creationDate}}
-                        {{formatDateTime creationDate}}
-                    {{/if}}
-                {{/each}}
+                {{#if creationDate}}
+                    {{formatDateTime creationDate}}
+                {{/if}}
             </td>
             <td class="status__info-box">
 
