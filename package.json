@@ -13,6 +13,6 @@
     "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
   },
   "dependencies": {
-    "vtex-email-framework": "^3.1.0"
+    "vtex-email-framework": "^3.2.0"
   }
 }

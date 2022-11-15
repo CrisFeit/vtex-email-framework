@@ -51,67 +51,64 @@
 
 {{#each orders}}
     <Billing class="partial">{{> Billing}}</Billing>
-{{/each}}
 
+    <table class="status" cellspacing="2px">
+        <tr class="status__row">
+            <td class="status__img-box" colspan="5">
+                <img class="status__img"
+                    src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/status-order-confirmation.png"
+                    alt="status do pedido" />
+            </td>
+        </tr>
+        <tr class="status__row">
+            <td class="status__title status__title--first status__title--current status__title--success">
+                Pedido Realizado
+            </td>
+            <td class="status__title">
+                Pagamento Confirmado
+            </td>
+            <td class="status__title">
+                Pedido Faturado
+            </td>
+            <td class="status__title">
+                Em Transporte
+            </td>
+            <td class="status__title">
+                Pedido Entregue
+            </td>
+        </tr>
+        <tr class="status__row">
+            <td class="status__info-box">
+                {{#each orders}}
+                    {{#if creationDate}}
+                        {{formatDateTime creationDate}}
+                    {{/if}}
+                {{/each}}
+            </td>
+            <td class="status__info-box">
 
-<table class="status" cellspacing="2px">
-    <tr class="status__row">
-        <td class="status__img-box" colspan="5">
-            <img class="status__img"
-                src="https://{{_accountInfo.AccountName}}.vtexassets.com/arquivos/status-order-confirmation.png"
-                alt="status do pedido" />
-        </td>
-    </tr>
-    <tr class="status__row">
-        <td class="status__title status__title--first status__title--current status__title--success">
-            Pedido Realizado
-        </td>
-        <td class="status__title">
-            Pagamento Confirmado
-        </td>
-        <td class="status__title">
-            Pedido Faturado
-        </td>
-        <td class="status__title">
-            Em Transporte
-        </td>
-        <td class="status__title">
-            Pedido Entregue
-        </td>
-    </tr>
-    <tr class="status__row">
-        <td class="status__info-box">
-            {{#each orders}}
-                {{#if creationDate}}
-                    {{formatDateTime creationDate}}
-                {{/if}}
-            {{/each}}
-        </td>
-        <td class="status__info-box">
+            </td>
+            <td class="status__info-box">
 
-        </td>
-        <td class="status__info-box">
+            </td>
+            <td class="status__info-box">
 
-        </td>
-        <td class="status__info-box">
+            </td>
+            <td class="status__info-box">
 
-        </td>
-        <td class="status__info-box">
+            </td>
+        </tr>
+    </table>
 
-        </td>
-    </tr>
-</table>
-
-
-{{#each orders}}
     <h3 class="subheading">Pedido #{{orderId}}</h3>
 
     <Shelf class="partial">{{> Shelf}}</Shelf>
 
     <Totals class="partial">{{> Totals}}</Totals>
+
+    <br />
 {{/each}}
 
-<br />
 <br />
 
 <table class="disclaimer">
