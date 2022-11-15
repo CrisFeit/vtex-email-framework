@@ -46,10 +46,8 @@
 <h3 class="subheading">
     {{#compare orders.length '==' 1}}
         Acompanhe seu pedido
-    {{/compare}}
-
-    {{#compare orders.length '!=' 1}}
-        Acompanhe seus pedidos
+        {{else}}
+            Acompanhe seus pedidos
     {{/compare}}
 </h3>
 
