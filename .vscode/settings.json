@@ -2,5 +2,7 @@
     "editor.formatOnSave": true,
     "html.format.enable": true,
     "html.format.indentHandlebars": true,
-    "html.format.maxPreserveNewLines": 2
+    "html.format.maxPreserveNewLines": 2,
+    "editor.guides.bracketPairs": "active",
+    "editor.bracketPairColorization.enabled": true,
 }

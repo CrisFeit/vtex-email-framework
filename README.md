@@ -24,6 +24,7 @@ npx create-vtex-email my-emails
 * Partial Files
 * Inline CSS
 * Dashboard
+* Render Test
 * Email Stylelint
 * Responsive Boilerplate
 
