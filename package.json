@@ -6,7 +6,10 @@
     "dev": "vtex-email dev",
     "build": "vtex-email build"
   },
+  "bugs": {
+    "url": "https://github.com/CrisFeit/vtex-email-framework/issues"
+  },
   "devDependencies": {
-    "vtex-email-framework": "^3.2.2"
+    "vtex-email-framework": "^3.2.3"
   }
 }

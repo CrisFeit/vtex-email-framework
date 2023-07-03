@@ -7,7 +7,7 @@
 ### 📦 Setup
 
 ```bash
-npx create-vtex-email my-emails
+npx create-vtex-email my-store-emails
 ```
 
 ### 🎮 Commands
