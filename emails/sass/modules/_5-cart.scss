@@ -1,6 +1,6 @@
 @use 'settings' as *;
 
-.shelf {
+.cart {
 	background-color: $background-light;
 	border-bottom: 1px solid $border-line;
 	border-collapse: separate;
@@ -9,7 +9,7 @@
 	width: 95%;
 }
 
-.shelf__row {
+.cart__row {
 	padding: 4% 0;
 }
 
