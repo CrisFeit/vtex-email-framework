@@ -1,6 +1,7 @@
 @use 'settings' as *;
 
-html, body {
+html,
+body {
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust: 100%;
 	-webkit-font-smoothing: antialiased;
@@ -8,8 +9,6 @@ html, body {
 	box-sizing: border-box;
 	width: 100%;
 	height: 100%;
-	margin: 0;
-	padding: 0;
 }
 
 table {
@@ -19,9 +18,41 @@ table {
 	height: auto;
 }
 
-html,body,table,caption,tbody,tfoot,thead,tr,th,td,
-a,p,div,ul,ol,li,img,b,strong,span,i,em,address,h1,h2,h3,h4,h5,h6 {
+html,
+body,
+table {
 	font-family: $font-main;
+	color: $text-dark;
+	vertical-align: middle;
+	text-align: center;
+}
+
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+a,
+p,
+div,
+ul,
+ol,
+li,
+img,
+b,
+strong,
+span,
+i,
+em,
+address,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	color: $text-dark;
 	vertical-align: middle;
 	text-align: center;
