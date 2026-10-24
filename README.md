@@ -54,7 +54,7 @@ emails
 
 ### 📚 References
 
-[BEM](http://getbem.com/naming/)
+[BEM](https://bem-cheat-sheet.9elements.com/)
 
 [Sass](https://sass-lang.com/guide)
 
@@ -62,4 +62,4 @@ emails
 
 [Can I Email](https://www.caniemail.com/)
 
-[Emails Support](https://www.campaignmonitor.com/css/)  
+[Emails Support](https://www.campaignmonitor.com/css/)
